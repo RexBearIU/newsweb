@@ -29,6 +29,7 @@
           id="HeadLineCarousel"
           class="carousel carousel-dark slide"
           data-bs-ride="carousel"
+          data-bs-interval="5000"
         >
           <!-- can be adjusted TODO -->
           <!-- headline-carousel-indicators -->
@@ -70,7 +71,7 @@
                   </div>
                   <div class="col-md-5 p-2 ">
                     <div class="card-body">
-                      <h5 class="card-title headline-card-title">牛津大學發起道路安全活動 盼交通事故零死亡</h5>
+                      <h5 class="card-title headline-card-title" style="color: blue;">牛津大學發起道路安全活動 盼交通事故零死亡</h5>
                       <p class="card-text headline-card-text">
                         行人站在汽機車呼嘯而過的街道，左看右看後快步穿越馬路，踩上安全島，看準車流空檔小跑步到對面街道，這是台灣的日常街景。反觀歐洲，牛津大學（University of Oxford, Oxford）於19日響應地區的「零死亡願景」（Vision Zero）計畫，舉辦道路安全活動，期盼能提升用路人的安全意識，並邁進零死亡的終極目標。(詳見全文)
                       </p>
@@ -120,6 +121,7 @@
         id="InternationalRowsCarousel"
         class="carousel slide carousel-dark"
         data-bs-ride="carousel"
+        data-bs-interval="false"
       >
         <div class="carousel-inner">
           <!-- first two news -->
@@ -239,7 +241,7 @@
           <!-- next two news -->
         </div>
         <button
-          class="carousel-control-prev"
+          class="carousel-control-prev news-rows-card-control"
           type="button"
           data-bs-target="#InternationalRowsCarousel"
           data-bs-slide="prev"
@@ -248,7 +250,7 @@
           <span class="visually-hidden">Previous</span>
         </button>
         <button
-          class="carousel-control-next"
+          class="carousel-control-next news-rows-card-control"
           type="button"
           data-bs-target="#InternationalRowsCarousel"
           data-bs-slide="next"
