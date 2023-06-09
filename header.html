@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <style>
+        .header {
+            position: relative;
+            white-space: nowrap;
+            display: inline-block;
+            vertical-align: middle;
+        }
+
+        .line {
+            display: inline-block;
+            border-top: 1px solid black;
+            width: 1050px;
+            height: 1.51px;
+            padding-top: 192px;
+            margin-left: 103px;
+        }
+
+        .header_font {
+            display: inline-block;
+            font-family: Noto Serif SC;
+            font-size: 37px;
+            font-weight: 400;
+            line-height: 53px;
+            letter-spacing: 0.06em;
+            text-align: center;
+            margin-top: 42px;
+            z-index: 1;
+            position: absolute;
+        }
+
+        .rectangle {
+            width: 207px;
+            height: 103px;
+            background-color: #937D54F2;
+        }
+
+        .footer {
+            position: relative;
+            white-space: nowrap;
+            display: inline-block;
+            vertical-align: middle;
+            width: 1280px;
+            height: 206px;
+            background-color: #937D54;
+            margin-bottom: 0px;
+        }
+
+        .footer_font {
+            display: inline-block;
+            font-family: Noto Serif SC;
+            font-size: 22px;
+            font-weight: 400;
+            line-height: 32px;
+            letter-spacing: 0.06em;
+            text-align: left;
+            white-space: pre-line;
+            margin-top: 41px;
+            z-index: 1;
+            position: absolute;
+        }
+
+        .link-container {
+            display: inline-block
+        }
+
+        .rectangle-hover {
+            position: relative;
+            color: black;
+        }
+
+        .rectangle-hover:hover {
+            color:white;
+        }
+
+        .rectangle-hover:hover::before {
+            content: '';
+            position: absolute;
+            text-align: center;
+            left: -47.5px;
+            top: -27px;
+            width: 204px;
+            height: 103px;
+            background-color: #937D54F2;
+            z-index: -1;
+            border-radius: 4px;
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <!--header-->
+    <div class="header">
+        <img src="./NS Logo_白_工作區域 1.svg" style="margin-left:90px;
+            margin-top:0px;
+            width:275px;
+            height:170px;">
+
+        <img src="./主頁banner_工作區域 1-01.svg" style="position:relative;
+            margin-left:132px;
+            margin-top:40px;
+            width:637px;
+            height:130px;
+            z-index:1;">
+
+        
+            <a href="https://example.com" span class="rectangle-hover" style="display:inline-block;
+        font-family: Noto Serif SC;
+        font-size: 37px;
+        font-weight: 400;
+        text-decoration: none;
+        line-height: 53px;
+        width:109px;
+        height:49px;
+        letter-spacing: 0.06em;
+        text-align: center;
+        margin-top:42px;
+        z-index:1;
+        position:absolute;
+        left:389px">國際</a>
+       
+
+        <a href="https://example.com" span class="rectangle-hover" style="display:inline-block;
+font-family: Noto Serif SC;
+font-size: 37px;
+font-weight: 400;
+text-decoration: none;
+line-height: 53px;
+width:109px;
+height:49px;
+letter-spacing: 0.06em;
+text-align: center;
+margin-top:42px;
+z-index:1;
+position:absolute;
+left:611px">生活</a>
+
+        <a href="https://example.com" span class="rectangle-hover" style="display:inline-block;
+font-family: Noto Serif SC;
+font-size: 37px;
+font-weight: 400;
+text-decoration: none;
+line-height: 53px;
+width:109px;
+height:49px;
+letter-spacing: 0.06em;
+text-align: center;
+margin-top:42px;
+z-index:1;
+position:absolute;
+left:834px">藝文</a>
+
+        <a href="https://example.com" span class="rectangle-hover" style="display:inline-block;
+font-family: Noto Serif SC;
+font-size: 37px;
+font-weight: 400;
+text-decoration: none;
+line-height: 53px;
+width:109px;
+height:49px;
+letter-spacing: 0.06em;
+text-align: center;
+margin-top:42px;
+z-index:1;
+position:absolute;
+left:1056px">新知</a>
+
+
+        <!--
+        <span class="rectangle-hover" style="display:inline-block;
+        font-family: Noto Serif SC;
+        font-size: 37px;
+        font-weight: 400;
+        line-height: 53px;
+        width:109px;
+        height:49px;
+        letter-spacing: 0.06em;
+        text-align: center;
+        margin-top:42px;
+        z-index:1;
+        position:absolute;
+        left:389px">國際</span>
+
+        <span class="rectangle-hover" style="display:inline-block;
+        font-family: Noto Serif SC;
+        font-size: 37px;
+        font-weight: 400;
+        line-height: 53px;
+        width:109px;
+        height:49px;
+        letter-spacing: 0.06em;
+        text-align: center;
+        margin-top:42px;
+        z-index:1;
+        position:absolute;
+        left:611px;">生活</span>
+
+        <span class="rectangle-hover" style="display:inline-block;
+        font-family: Noto Serif SC;
+        font-size: 37px;
+        font-weight: 400;
+        line-height: 53px;
+        width:109px;
+        height:49px;
+        letter-spacing: 0.06em;
+        text-align: center;
+        margin-top:42px;
+        z-index:1;
+        position:absolute;
+        left:834px;">藝文</span>
+
+        <span class="rectangle-hover" style="display:inline-block;
+        font-family: Noto Serif SC;
+        font-size: 37px;
+        font-weight: 400;
+        line-height: 53px;
+        width:109px;
+        height:49px;
+        letter-spacing: 0.06em;
+        text-align: center;
+        margin-top:42px;
+        z-index:1;
+        position:absolute;
+        left:1056px;">新知</span>-->
+
+    </div>
+    <div class="line"></div>
+
+
+    <!--footer-->
+    <div class="footer">
+        <img src="./NS Logo_工作區域 1.svg" style="margin-left:48px;
+        margin-bottom:20px;
+        width:275px;
+        height:170px;">
+
+        <div class="footer_font" style="margin-left:50px;color: white;">HUNTER｜江昇　方琮翔　鄧芯怡　陳孟樺
+            BIG BOSS｜李法賢
+            SHOOT｜donnot.bother.us@gmail.com
+        </div>
+
+        <div class="footer_font" style="left: 861px;margin-top:67px;color:#EBC151;;">copyright©2023 NEWS SAFARI
+        </div>
+
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+</body>
+
+
+</html>
