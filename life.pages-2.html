@@ -21,28 +21,55 @@
 
     .page-logo {
       width: 297px;
-      height: 268px;
-      margin-left: auto;margin-right: auto;
+      height: 268px; 
+       }
+    @media(max-width:860px){
+        .page-logo{
+            height: auto;
+            width:125px ;
+            display: inline-block;
+        }
     }
 
-    .page-info {
+    .page-info {  
       display: inline-block;
-      vertical-align: middle;
+      padding-top: 80px;
       width: 700px;
       font-family: Georgia, 'Times New Roman', Times, serif;
       font-weight: 350;
       font-size: 32px;
       line-height: 46px;
       color: #000000;
-      margin-right: auto;margin-left: auto;
+      
+    }
+    @media(max-width:860px){
+        .page-info{
+            font-size: 22px;
+            width: auto;
+            display: inline-block;
+            padding-top: 10px;
+        }
+    }
+    .page{
+      width: 980px;
+      display: inline-block;
+      display: flex;
+      margin-left: auto;
+      margin-right: auto;
     }
 
     .separation-line {
       width: 873px;
-      border-top: 1px solid #404040;
+      border-top: 0.5px solid #868484;
       margin-left: auto;
       margin-right: auto;
       position: relative;
+    }
+    @media(max-width:860px){
+        .separation-line{
+            max-width:356px;
+
+        }
     }
 
     .hero-img {
@@ -52,6 +79,16 @@
       padding-top: 15px;
       padding-bottom: 15px;
       object-fit: cover;
+    }
+    @media(max-width:860px){
+        .hero-img{
+            width:150px;
+            height: 130px;
+            margin-top: 50px;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
     }
 
     .page-newstitle {
@@ -64,6 +101,12 @@
       padding-top: 8px;
       width: 295px;
       color: #000000;
+    }
+    @media(max-width:860px){
+        .page-newstitle{
+            font-size: 20px;
+            width:auto;
+        }
     }
 
     .page-newshint {
@@ -78,6 +121,13 @@
       width: 295px;
       color: #000000;
     }
+    @media(max-width:860px){
+        .page-newshint{
+            font-size:16px;
+            width:auto;
+        }
+    }
+
 
     .this {
       width: 870px;
@@ -85,14 +135,31 @@
       display: flex;
       margin-left: auto;
       margin-right: auto;
+      
+    }
+    @media(max-width:860px){
+        .this>.hero-img{
+            float:right;
+        }
+    }
+
+    .page-newstitle:hover{
+        color:#ebc151;
+    }
+    .page-newshint:hover{
+        color:#3b3c36;
+    }
+    .hero-img:hover{
+        filter:grayscale(100%);
+        transition-delay: 0.2s;
     }
 
   </style>
 </head>
 
 <body class="body">
-  <div> <!--page還沒置中-->
-    <img src="resources/icon/svg/NS banner-06.svg" class="page-logo">
+  <div class="page"> <!--page還沒置中-->
+    <img src="./resources/icon/svg/NS banner-06.svg" class="page-logo">
     <span class="page-info">走遍全台各地，試圖從大大小小活動中，發現生活中的趣味，為議題創造更好入口的機會。</span>
   </div>
 
