@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <style>
+    .my-img-block {
+      width: 100%;
+      height: 60vh;
+      object-fit: contain;
+    }
+
+    .body {
+      background-color: #F8F8FF
+    }
+
+    .page-logo {
+      width: 297px;
+      height: 268px;
+    }
+
+    @media(max-width:860px) {
+      .page-logo {
+        height: auto;
+        width: 125px;
+        display: inline-block;
+      }
+    }
+
+    .page-info {
+      display: inline-block;
+      padding-top: 80px;
+      width: 700px;
+      font-family: Georgia, 'Times New Roman', Times, serif;
+      font-weight: 350;
+      font-size: 32px;
+      line-height: 46px;
+      color: #000000;
+
+    }
+
+    @media(max-width:860px) {
+      .page-info {
+        font-size: 22px;
+        height: 100%;
+        width: auto;
+        /* display: inline-block; */
+        padding-top: 10px;
+      }
+    }
+
+    .page {
+      width: 980px;
+      display: inline-block;
+      display: flex;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    @media(max-width:860px) {
+      .page {
+        width: auto;
+        padding-right: 10px;
+      }
+    }
+
+    .separation-line {
+      width: 873px;
+      border-top: 0.5px solid #868484;
+      margin-left: auto;
+      margin-right: auto;
+      position: relative;
+    }
+
+    @media(max-width:860px) {
+      .separation-line {
+        max-width: 400px;
+
+      }
+    }
+
+    .hero-img {
+      width: 550px;
+      height: 330px;
+      background-size: cover;
+      padding-top: 15px;
+      padding-bottom: 15px;
+      object-fit: cover;
+    }
+
+    @media(max-width:860px) {
+      .hero-img {
+        width: 150px;
+        height: 130px;
+        /* margin-top: 50px; */
+        display: inline-block;
+        /* margin-left: auto;
+            margin-right: auto; */
+      }
+    }
+
+    .page-newstitle {
+      font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+      font-size: 28px;
+      font-weight: 900;
+      Line-height: 40px;
+      display: inline-block;
+      vertical-align: top;
+      padding-top: 8px;
+      width: 295px;
+      color: #000000;
+    }
+
+    @media(max-width:860px) {
+      .page-newstitle {
+        font-size: 20px;
+        width: 210px;
+        display: inline-block;
+        padding-left: 0px;
+
+        /* padding-left: 0.1px; */
+        /* display: block; */
+      }
+    }
+
+    .page-newshint {
+      font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+      font-size: 22px;
+      font-weight: 330;
+      Line-height: 30px;
+      display: inline-block;
+      vertical-align: bottom;
+      padding-bottom: 8px;
+      padding-top: 10px;
+      width: 295px;
+      color: #000000;
+    }
+
+    @media(max-width:860px) {
+      .page-newshint {
+        display: none;
+      }
+    }
+
+
+    .this {
+      width: 870px;
+      display: block;
+      display: flex;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    @media(max-width:860px) {
+      .this {
+        /* display:block; */
+        width: 530px;
+      }
+    }
+
+    .page-newstitle:hover {
+      color: #ebc151;
+    }
+
+    .page-newshint:hover {
+      color: #3b3c36;
+    }
+
+    .hero-img:hover {
+      filter: grayscale(100%);
+      transition-delay: 0.2s;
+    }
+
+    .idk {}
+
+    @media(max-width:860px) {
+      .idk {
+        display: inline-block;
+        margin-left: 66px;
+        vertical-align: middle;
+      }
+    }
+  </style>
+</head>
+
+<body class="body">
+  <div class="page"> <!--page還沒置中-->
+    <img src="./resources/icon/svg/NS banner-08.svg" class="page-logo">
+    <span class="page-info">調查大學生在學術領域的傑出表現，在學習新知識的同時，讓學生的聰慧與創意更加耀眼。</span>
+  </div>
+
+  <div class="separation-line"></div>
+  <a href="page_S1.html" class="this">
+    <div display="inline-block" style="vertical-align: top; " class="this">
+      <div class="idk">
+        <img src="./resources/imgs/新知/龍華科大.jpg" class="hero-img">
+      </div>
+      <!--單獨用div包起來,再給位置＆大小-->
+      <div style="width: 295px; padding-left: 32px;">
+        <span class="page-newstitle">龍華科大改造通風球　以室內外溫差轉出電力</span>
+        <span class="page-newshint">為追求環保、可自給自足的再生能源，龍華科大學生研發「通風球液壓系統發電裝置」，希望達成自家用電、自家生產的理想⋯⋯ </span>
+      </div>
+    </div>
+  </a>
+
+  <div class="separation-line"></div>
+  <a href="page_S2.html" class="this">
+    <div display="inline-block" style="vertical-align: top; " class="this">
+      <div class="idk">
+        <img src="./resources/imgs/新知/測心壓.png" class="hero-img">
+      </div>
+      <div style="width: 295px; padding-left: 32px;">
+        <span class="page-newstitle">無線電量測即察心律異常　把握就醫黃金時間</span>
+        <span class="page-newshint">心臟疾病在發病前無明顯病徵，若患者無法在第一時間發覺異常，可能會因延誤就醫而面臨生命危險⋯⋯ </span>
+      </div>
+    </div>
+  </a>
+
+  <div class="separation-line"></div>
+  <a href="page_S3.html" class="this">
+    <div display="inline-block" style="vertical-align: top; " class="this">
+      <div class="idk">
+        <img src="./resources/imgs/新知/興大.jpg" class="hero-img">
+      </div>
+      <div style="width: 295px; padding-left: 32px;">
+        <span class="page-newstitle">興大創傷口敷藥新配方　加速糖尿病患傷口癒合</span>
+        <span class="page-newshint">興大學生研發「糖尿病患傷口敷藥新配方」，望能加速傷口痊癒，同時增強免疫功能避免感染⋯⋯ </span>
+      </div>
+    </div>
+  </a>
+
+  <div class="separation-line"></div>
+  <a href="page_S4.html" class="this">
+    <div display="inline-block" style="vertical-align: top; " class="this">
+      <div class="idk">
+        <img src="./resources/imgs/新知/高架林電.png" class="hero-img">
+      </div>
+      <div style="width: 295px; padding-left: 32px;">
+        <span class="page-newstitle">大同提高架林電共生方案 盼實現環境永續</span>
+        <span class="page-newshint">大同大學工業設計學系學生洪博翔、鍾鎰鴻提出「高架林電共生平台」概念，設想利用山腳林地架設太陽能板，盼能克服地理條件⋯⋯ </span>
+      </div>
+    </div>
+  </a>
+
+  <div class="separation-line"></div>
+  <a href="page_S5.html" class="this">
+    <div display="inline-block" style="vertical-align: top; " class="this">
+      <div class="idk">
+        <img src="./resources/imgs/新知/聊愈療愈.jpg" class="hero-img">
+      </div>
+      <div style="width: 295px; padding-left: 32px;">
+        <span class="page-newstitle">「聊癒療鬱」學習用戶用字習慣 打造專屬聊天機器人</span>
+        <span class="page-newshint">為解決現代人的聊天需求，輔仁大學資訊統計學系學生團隊開發「聊癒療鬱」應用程式，針對使用者不同個性，打造量身定制的聊天機器人⋯⋯ </span>
+      </div>
+    </div>
+  </a>
+
+  <div class="separation-line"></div>
+  <a href="page_S6.html" class="this">
+    <div display="inline-block" style="vertical-align: top; " class="this">
+      <div class="idk">
+        <img src="./resources/imgs/新知/signlens.jpg" class="hero-img">
+      </div>
+      <div style="width: 295px; padding-left: 32px;">
+        <span class="page-newstitle">SignLens翻譯手語 打造無障礙溝通環境</span>
+        <span class="page-newshint">國立政治大學資訊管理學系學生團隊開發「SignLens——手語語音辨識於混合實境應用」，透過智慧型眼鏡進行雙向辨識，提升溝通效率⋯⋯ </span>
+      </div>
+    </div>
+  </a>
+
+  <div class="separation-line"></div>
+  <a href="page_S7.html" class="this">
+    <div display="inline-block" style="vertical-align: top; " class="this">
+      <div class="idk">
+        <img src="./resources/imgs/新知/書法.jpg" class="hero-img">
+      </div>
+      <div style="width: 295px; padding-left: 32px;">
+        <span class="page-newstitle">AI辨識手寫軌跡 生成獨有書法字體</span>
+        <span class="page-newshint">勤益科大「書法大師」師生團隊，開發「空中揮毫書法生成系統」，透過模擬真實手寫狀態生成獨一無二的字，同時解決商用字體的版權問題⋯⋯ </span>
+      </div>
+    </div>
+  </a>
+</body>
