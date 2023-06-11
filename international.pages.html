@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <style>
+    .my-img-block {
+      width: 100%;
+      height: 60vh;
+      object-fit: contain;
+    }
+
+    .body {
+      background-color: #F8F8FF
+    }
+
+    .page-logo {
+      width: 297px;
+      height: 268px;
+    }
+
+    @media(max-width:860px) {
+      .page-logo {
+        height: auto;
+        width: 125px;
+        display: inline-block;
+      }
+    }
+
+    .page-info {
+      display: inline-block;
+      padding-top: 80px;
+      width: 700px;
+      font-family: Georgia, 'Times New Roman', Times, serif;
+      font-weight: 350;
+      font-size: 32px;
+      line-height: 46px;
+      color: #000000;
+
+    }
+
+    @media(max-width:860px) {
+      .page-info {
+        font-size: 22px;
+        height: 100%;
+        width: auto;
+        /* display: inline-block; */
+        padding-top: 10px;
+      }
+    }
+
+    .page {
+      width: 980px;
+      display: inline-block;
+      display: flex;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    @media(max-width:860px) {
+      .page {
+        width: auto;
+        padding-right: 10px;
+      }
+    }
+
+    .separation-line {
+      width: 873px;
+      border-top: 0.5px solid #868484;
+      margin-left: auto;
+      margin-right: auto;
+      position: relative;
+    }
+
+    @media(max-width:860px) {
+      .separation-line {
+        max-width: 400px;
+
+      }
+    }
+
+    .hero-img {
+      width: 550px;
+      height: 330px;
+      background-size: cover;
+      padding-top: 15px;
+      padding-bottom: 15px;
+      object-fit: cover;
+    }
+
+    @media(max-width:860px) {
+      .hero-img {
+        width: 150px;
+        height: 130px;
+        /* margin-top: 50px; */
+        display: inline-block;
+        /* margin-left: auto;
+            margin-right: auto; */
+      }
+    }
+
+    .page-newstitle {
+      font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+      font-size: 28px;
+      font-weight: 900;
+      Line-height: 40px;
+      display: inline-block;
+      vertical-align: top;
+      padding-top: 8px;
+      width: 295px;
+      color: #000000;
+    }
+
+    @media(max-width:860px) {
+      .page-newstitle {
+        font-size: 20px;
+        width: 210px;
+        display: inline-block;
+        padding-left: 0px;
+
+        /* padding-left: 0.1px; */
+        /* display: block; */
+      }
+    }
+
+    .page-newshint {
+      font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+      font-size: 22px;
+      font-weight: 330;
+      Line-height: 30px;
+      display: inline-block;
+      vertical-align: bottom;
+      padding-bottom: 8px;
+      padding-top: 10px;
+      width: 295px;
+      color: #000000;
+    }
+
+    @media(max-width:860px) {
+      .page-newshint {
+        display: none;
+      }
+    }
+
+
+    .this {
+      width: 870px;
+      display: block;
+      display: flex;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    @media(max-width:860px) {
+      .this {
+        /* display:block; */
+        width: 530px;
+      }
+    }
+
+    .page-newstitle:hover {
+      color: #ebc151;
+    }
+
+    .page-newshint:hover {
+      color: #3b3c36;
+    }
+
+    .hero-img:hover {
+      filter: grayscale(100%);
+      transition-delay: 0.2s;
+    }
+
+    .idk {}
+
+    @media(max-width:860px) {
+      .idk {
+        display: inline-block;
+        margin-left: 66px;
+        vertical-align: middle;
+      }
+    }
+  </style>
+</head>
+
+<body class="body">
+  <div class="page"> 
+    <img src="./resources/icon/svg/NS banner-05.svg" class="page-logo">
+    <span class="page-info">以大學生的觀點，蒐集全球各大學社群的新鮮事，讓校園的消息能擴大影響力至民眾的生活。</span>
+  </div>
+
+  <div class="separation-line"></div>
+  <a href="page_I1.html" class="this">
+    <div display="inline-block" style="vertical-align: top; " class="this">
+      <div class="idk">
+        <img src="./resources/imgs/國際/加州.jpg" class="hero-img">
+      </div>
+      <div style="width: 295px; padding-left: 32px;">
+        <span class="page-newstitle">食物補助金走入校園　加州學生有望告別糧食危機</span>
+        <span class="page-newshint">「學生們迫於預算常需要做出選擇，我有時就要捨棄健康食物買速食。」今年從美國UCLA畢業的學生黃瀟無奈地說道⋯⋯ </span>
+      </div>
+    </div>
+  </a>
+
+  <div class="separation-line"></div>
+  <a href="page_I2.html" class="this">
+    <div display="inline-block" style="vertical-align: top; " class="this">
+      <div class="idk">
+        <img src="./resources/imgs/國際/oxford.png" class="hero-img">
+      </div>
+      <div style="width: 295px; padding-left: 32px;">
+        <span class="page-newstitle">牛津大學發起道路安全活動　盼交通事故零死亡</span>
+        <span class="page-newshint">行人站在汽機車呼嘯而過的街道，左看右看後快步穿越馬路，踩上安全島，看準車流空檔小跑步到對面街道，這是台灣的日常街景⋯⋯ </span>
+      </div>
+    </div>
+  </a>
+
+  <div class="separation-line"></div>
+  <a href="page_I3.html" class="this">
+    <div display="inline-block" style="vertical-align: top; " class="this">
+      <div class="idk">
+        <img src="./resources/imgs/國際/香港.jpg" class="hero-img">
+      </div>
+      <div style="width: 295px; padding-left: 32px;">
+        <span class="page-newstitle">香港青年住屋問題嚴峻　李家超施政報告提政策建議</span>
+        <span class="page-newshint">「以前的年代會覺得買房是一個must-do，但我們現在根本不會想買房，太遙不可及了。」香港在職青年Sindy無奈嘆道⋯⋯ </span>
+      </div>
+    </div>
+  </a>
+
+  <div class="separation-line"></div>
+  <a href="page_I4.html" class="this">
+    <div display="inline-block" style="vertical-align: top; " class="this">
+      <div class="idk">
+        <img src="./resources/imgs/國際/性別.jpg" class="hero-img">
+      </div>
+      <div style="width: 295px; padding-left: 32px;">
+        <span class="page-newstitle">跨性別觀念開倒車　維吉尼亞學生控州政策剝奪權益</span>
+        <span class="page-newshint">「他們時常在廁所裡面臨歧視，更多時候他們乾脆只使用家裡的廁所。」維吉尼亞的同志社群經營者凱文・布萊斯無奈地說⋯⋯ </span>
+      </div>
+    </div>
+  </a>
+
+  <div class="separation-line"></div>
+  <a href="page_I5.html" class="this">
+    <div display="inline-block" style="vertical-align: top; " class="this">
+      <div class="idk">
+        <img src="./resources/imgs/國際/美私校.png" class="hero-img">
+      </div>
+      <div style="width: 295px; padding-left: 32px;">
+        <span class="page-newstitle">美私校被迫關閉　上千人昔日學分恐歸零</span>
+        <span class="page-newshint">「我們已經不遺餘力地拯救學校，卻因爲教育部而無法實現。」這是美國斯特拉福大學校長Richard R Shurtz日前宣佈閉校時的發言⋯⋯ </span>
+      </div>
+    </div>
+  </a>
+
+  <div class="separation-line"></div>
+  <a href="page_I6.html" class="this">
+    <div display="inline-block" style="vertical-align: top; " class="this">
+      <div class="idk">
+        <img src="./resources/imgs/國際/梨泰院.jpg" class="hero-img">
+      </div>
+      <div style="width: 295px; padding-left: 32px;">
+        <span class="page-newstitle">梨泰院踩踏事件釀百死　專家籲重視群眾控管</span>
+        <span class="page-newshint">南韓梨泰院發生大規模踩踏事故，導致156人死亡，上百人受傷。官方統計當天聚集十萬名民眾，派遣警力卻只有100餘人⋯⋯ </span>
+      </div>
+    </div>
+  </a>
+
+  <div class="separation-line"></div>
+  <a href="page_I7.html" class="this">
+    <div display="inline-block" style="vertical-align: top; " class="this">
+      <div class="idk">
+        <img src="./resources/imgs/國際/加拿大.png" class="hero-img">
+      </div>
+      <div style="width: 295px; padding-left: 32px;">
+        <span class="page-newstitle">不戴回口罩！　加拿大師生抗議校方防疫觀念倒退</span>
+        <span class="page-newshint">加拿大滑鐵盧大學（University of Waterloo，UW）於8日宣佈全體師生在教室內都必須佩戴口罩，因而引發熱議。⋯⋯ </span>
+      </div>
+    </div>
+  </a>
+
+  <div class="separation-line"></div>
+  <a href="page_I8.html" class="this">
+    <div display="inline-block" style="vertical-align: top; " class="this">
+      <div class="idk">
+        <img src="./resources/imgs/國際/中國.jpg" class="hero-img">
+      </div>
+      <div style="width: 295px; padding-left: 32px;">
+        <span class="page-newstitle">我們不再沉默　中國校內掀反封控抗議熱潮</span>
+        <span class="page-newshint">「我旁邊的大哥跟警察起了衝突，就在我眼前被拖走，我不敢回頭再多看。」上海學生Jane回憶26日烏魯木齊中路的抗議情形⋯⋯ </span>
+      </div>
+    </div>
+  </a>
+
+  <div class="separation-line"></div>
+  <a href="page_I9.html" class="this">
+    <div display="inline-block" style="vertical-align: top; " class="this">
+      <div class="idk">
+        <img src="./resources/imgs/國際/入境.png" class="hero-img">
+      </div>
+      <div style="width: 295px; padding-left: 32px;">
+        <span class="page-newstitle">各校入境許可標準不一　外籍醫學生盼重回中國校園</span>
+        <span class="page-newshint">中國2020年初因疫情關閉邊境，至今仍對出入境實行嚴格管控，但於10月底宣佈有條件允許外籍學生回到中國繼續學業⋯⋯ </span>
+      </div>
+    </div>
+  </a>
+
+  <div class="separation-line"></div>
+  <a href="page_I10.html" class="this">
+    <div display="inline-block" style="vertical-align: top; " class="this">
+      <div class="idk">
+        <img src="./resources/imgs/國際/天普.jpg" class="hero-img">
+      </div>
+      <div style="width: 295px; padding-left: 32px;">
+        <span class="page-newstitle">住宿區兩週三起入室搶劫　學生籲校方維護居住安全</span>
+        <span class="page-newshint">「三個男生持槍械闖入我的房子，我無法想像如果沒有馬上報警，會發生什麽事。」天普大學學生凱拉・巴榮恩描述他遭遇入室搶劫的經歷⋯⋯ </span>
+      </div>
+    </div>
+  </a>
+</body>
