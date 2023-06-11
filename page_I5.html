@@ -1,61 +1,182 @@
 <!DOCTYPE html>
 <html lang="en">
 
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>News Safari</title>
-    <link rel="stylesheet" href="css/page.css">
-  </head>
-  
-  <body>
-    <div>
-        
-        <!-- 文章首圖 -->
-        <img class="page-img"
-            src="resources/imgs/國際/美私校.png"
-            alt="新聞標題">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>美私校被迫關閉 上千人昔日學分恐歸零</title>
+  <link rel="stylesheet" href="css/page.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 
-        <!-- 文章大標 -->
-        <div class="page-title">美私校被迫關閉 上千人昔日學分恐歸零</div>
+  <style>
+    .header {
+      position: relative;
+      white-space: nowrap;
+      display: inline-block;
+      vertical-align: middle;
+    }
 
-        <!-- 文章內文 -->
-        <p class="page-text">　【記者鄧芯怡綜合報導】「我們已經不遺餘力地拯救學校，卻因爲教育部而無法實現。」這是美國斯特拉福大學（Stratford University）校長理查德．R．舒爾茨（ Richard R Shurtz）日前宣佈閉校時的發言。斯特拉福大學因其認可機構證照於8月遭撤銷無法繼續經營，造成2000多名學生被迫離校，甚至因無法畢業被迫放棄已經到手的工作機會。</p>
-        <p class="page-text">　校長舒爾茨在官方聲明中提及他們本有望獲得矽谷一家投資商的投資，但教育部卻讓這個提案破局。由於無法通過美國大學的認證標準，斯特拉福大學無法錄取學生，造成資金短缺。校方聲明將退還向學生們收取的學費，並協助他們轉至其他大學繼續學習，但無法保證之前修習的學分受到其他大學承認。</p>
-        <p class="page-text">　「其他大學都有學分認證上限的規定，因此我們必須重新修習那些曾付高昂學費修習過的課程。」護理系學生阿美希特．惠特克（Amethyst Whitaker）控訴道。他也補充，大部分同學因爲學校催繳，已經繳交下學期的學費，有些人甚至爲此背負沉重的學貸。惠特克是一名單親媽媽，爲了求學放棄原本的工作，甚至花光自己的積蓄，然而，這樣的情形並不罕見，他因此期盼大衆可以正視這個問題。</p>
-        <p class="page-text">　惠特克也表明類似事件發生在許多私立大學，但從來沒有學生出面發聲，他因而透過電子郵件向州長及官員求助，並利用社群媒體試圖引起關注。《今日美國（USA Today）》的教育新聞記者克里斯·肯塔納（Chris Quintana）指出，雖然該事件對美國高等教育界的影響還屬未知，但突如其來的閉校事件對其他大學也是個警醒。</p>
-        <p class="page-text">　台灣目前也因私立學校退場危機鬧得沸沸揚揚，但相比美國學生的境遇，全國私立學校產業工會理事長尤榮輝認爲，國內教育部不至於讓學生面臨如此窘境。「美國的州政府對於私立學校的管控和台灣不同，台灣政府的管理更加嚴格。」他也補充，政府訂立《私立高級中等以上學校退場條例》，讓學生的受教權更有保障。惠特克強調道：「斯特拉福大部分的學生都是外籍學生或在職學生，因此無法在公立大學就讀。」政府適時地伸出援手能夠減輕他們的負擔，免於修習重複學分的困境。</p>
+    .line {
+      display: inline-block;
+      border-top: 1px solid black;
+      width: 1050px;
+      height: 1.51px;
+      padding-top: 192px;
+      margin-left: 103px;
+    }
 
-        <!-- 推薦新聞 -->
-        <br>
-        <hr>
-        <br>
-        <div class="related-news-title">推薦新聞</div>
-        <div style="display:flex;
-                    flex-direction: row;
-                    justify-content: center;
-                    margin-top: 30px;
-                    margin-bottom:30px;">
-          <div>
-            <div class="related-news-board">
-                <img class="related-news-img" src="resources/imgs/國際/oxford.png">
-                <div class="related-news-cardtitle">牛津大學發起道路安全活動 盼交通事故零死亡</div>
-            </div>
-          </div>
-          <div>
-            <div class="related-news-board">
-                <img class="related-news-img" src="resources/imgs/國際/中國.jpg">
-                <div class="related-news-cardtitle">我們不再沉默 中國校內掀反封控抗議熱潮</div>
-            </div>
-          </div>
-          <div>
-            <div class="related-news-board">
-                <img class="related-news-img" src="resources/imgs/國際/香港.jpg">
-                <div class="related-news-cardtitle">香港青年住屋問題嚴峻 李家超施政報告提政策建議</div>
-            </div>
-          </div>
+    .header_font {
+      display: inline-block;
+      font-family: Noto Serif SC;
+      font-size: 37px;
+      font-weight: 400;
+      line-height: 53px;
+      color: black;
+      text-decoration: none;
+      letter-spacing: 0.06em;
+      text-align: center;
+      margin-top: 10px;
+      z-index: 1;
+      position: absolute;
+    }
+
+    .rectangle {
+      width: 207px;
+      height: 103px;
+      background-color: #937D54F2;
+      display: inline-block;
+      z-index: 2;
+    }
+
+    .footer {
+      position: relative;
+      white-space: nowrap;
+      display: inline-block;
+      vertical-align: middle;
+      width: 1280px;
+      height: 206px;
+      background-color: #937D54;
+      margin-bottom: 0px;
+    }
+
+    .footer_font {
+      display: inline-block;
+      font-family: Noto Serif SC;
+      font-size: 22px;
+      font-weight: 400;
+      line-height: 32px;
+      letter-spacing: 0.06em;
+      text-align: left;
+      white-space: pre-line;
+      margin-top: 41px;
+      z-index: 1;
+      position: absolute;
+    }
+  </style>
+</head>
+
+<body>
+  <div>
+    <!-- HEADER -->
+
+    <div class="header">
+      <img src="resources/icon/svg/NS Logo_白_工作區域 1.svg" style="margin-left:90px;
+          margin-top:0px;
+          width:275px;
+          height:170px;">
+
+      <img src="resources/icon/svg/NS banner_工作區域 1-01.svg" style="position:relative;
+          margin-left:132px;
+          margin-top:40px;
+          width:637px;
+          height:130px;">
+
+
+      <div class="header_font"
+        style="left:392px;background-color: #937D54F2;padding-left:50px;padding-right:50px;padding-top:25px;padding-bottom:25px;border-radius:8px;">
+        <a href="https://example.com" style="text-decoration: none;color:white;">國際</a>
+      </div>
+      <div class="header_font" style="left:660px;margin-top:40px;">
+        <a href="https://example.com" style="text-decoration: none;color:black;">生活</a>
+      </div>
+      <div class="header_font" style="left:834px;margin-top:40px;">
+        <a href="https://example.com" style="text-decoration: none;color:black;">藝文</a>
+      </div>
+      <div class="header_font" style="left: 1056px;margin-top:40px;">
+        <a href="https://example.com" style="text-decoration: none;color:black;">新知</a>
+      </div>
+
+    </div>
+    <span class="line"></span>
+    <!-- 文章首圖 -->
+    <img class="page-img" src="resources/imgs/國際/美私校.png" alt="新聞標題">
+
+    <!-- 文章大標 -->
+    <div class="page-title">美私校被迫關閉 上千人昔日學分恐歸零</div>
+
+    <!-- 文章內文 -->
+    <p class="page-text">　【記者鄧芯怡綜合報導】「我們已經不遺餘力地拯救學校，卻因爲教育部而無法實現。」這是美國斯特拉福大學（Stratford University）校長理查德．R．舒爾茨（ Richard R
+      Shurtz）日前宣佈閉校時的發言。斯特拉福大學因其認可機構證照於8月遭撤銷無法繼續經營，造成2000多名學生被迫離校，甚至因無法畢業被迫放棄已經到手的工作機會。</p>
+    <p class="page-text">
+      　校長舒爾茨在官方聲明中提及他們本有望獲得矽谷一家投資商的投資，但教育部卻讓這個提案破局。由於無法通過美國大學的認證標準，斯特拉福大學無法錄取學生，造成資金短缺。校方聲明將退還向學生們收取的學費，並協助他們轉至其他大學繼續學習，但無法保證之前修習的學分受到其他大學承認。
+    </p>
+    <p class="page-text">　「其他大學都有學分認證上限的規定，因此我們必須重新修習那些曾付高昂學費修習過的課程。」護理系學生阿美希特．惠特克（Amethyst
+      Whitaker）控訴道。他也補充，大部分同學因爲學校催繳，已經繳交下學期的學費，有些人甚至爲此背負沉重的學貸。惠特克是一名單親媽媽，爲了求學放棄原本的工作，甚至花光自己的積蓄，然而，這樣的情形並不罕見，他因此期盼大衆可以正視這個問題。
+    </p>
+    <p class="page-text">　惠特克也表明類似事件發生在許多私立大學，但從來沒有學生出面發聲，他因而透過電子郵件向州長及官員求助，並利用社群媒體試圖引起關注。《今日美國（USA
+      Today）》的教育新聞記者克里斯·肯塔納（Chris Quintana）指出，雖然該事件對美國高等教育界的影響還屬未知，但突如其來的閉校事件對其他大學也是個警醒。</p>
+    <p class="page-text">
+      　台灣目前也因私立學校退場危機鬧得沸沸揚揚，但相比美國學生的境遇，全國私立學校產業工會理事長尤榮輝認爲，國內教育部不至於讓學生面臨如此窘境。「美國的州政府對於私立學校的管控和台灣不同，台灣政府的管理更加嚴格。」他也補充，政府訂立《私立高級中等以上學校退場條例》，讓學生的受教權更有保障。惠特克強調道：「斯特拉福大部分的學生都是外籍學生或在職學生，因此無法在公立大學就讀。」政府適時地伸出援手能夠減輕他們的負擔，免於修習重複學分的困境。
+    </p>
+
+    <!-- 推薦新聞 -->
+    <br>
+    <hr>
+    <br>
+
+    <div class="related-news-title">推薦新聞</div>
+    <div style="display:flex;
+                        flex-direction: row;
+                        justify-content: center;
+                        margin-top: 30px;
+                        margin-bottom:30px;">
+      <div>
+        <div class="related-news-board">
+          <img class="related-news-img" src="resources/imgs/國際/oxford.png">
+          <div class="related-news-cardtitle">牛津大學發起道路安全活動 盼交通事故零死亡</div>
         </div>
-        <br>
-    </div> 
-  </body>
+      </div>
+      <div>
+        <div class="related-news-board">
+          <img class="related-news-img" src="resources/imgs/國際/中國.jpg">
+          <div class="related-news-cardtitle">我們不再沉默 中國校內掀反封控抗議熱潮</div>
+        </div>
+      </div>
+      <div>
+        <div class="related-news-board">
+          <img class="related-news-img" src="resources/imgs/國際/香港.jpg">
+          <div class="related-news-cardtitle">香港青年住屋問題嚴峻 李家超施政報告提政策建議</div>
+        </div>
+      </div>
+    </div>
+    <br>
+    <!--footer-->
+    <div class="footer">
+      <img src="resources/icon/svg/NS Logo_工作區域 1.svg" style="margin-left:48px;
+        margin-bottom:20px;
+        width:275px;
+        height:170px;">
+
+      <div class="footer_font" style="margin-left:50px;color: white;">HUNTER｜江昇　方琮翔　鄧芯怡　陳孟樺
+        BIG BOSS｜李法賢
+        SHOOT｜donnot.bother.us@gmail.com
+      </div>
+
+      <div class="footer_font" style="left: 861px;margin-top:67px;color:#EBC151;;">copyright©2023 NEWS SAFARI
+      </div>
+
+    </div>
+  </div>
+</body>

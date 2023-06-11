@@ -1,62 +1,186 @@
 <!DOCTYPE html>
 <html lang="en">
 
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>News Safari</title>
-    <link rel="stylesheet" href="css/page.css">
-  </head>
-  
-  <body>
-    <div>
-        
-        <!-- 文章首圖 -->
-        <img class="page-img"
-            src="resources/imgs/國際/中國.jpg"
-            alt="新聞標題">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>我們不再沉默 中國校內掀反封控抗議熱潮</title>
+  <link rel="stylesheet" href="css/page.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 
-        <!-- 文章大標 -->
-        <div class="page-title">我們不再沉默 中國校內掀反封控抗議熱潮</div>
+  <style>
+    .header {
+      position: relative;
+      white-space: nowrap;
+      display: inline-block;
+      vertical-align: middle;
+    }
 
-        <!-- 文章內文 -->
-        <p class="page-text">　【記者鄧芯怡綜合報導】「我旁邊的大哥跟警察起了衝突，就在我眼前被拖走，我不敢回頭再多看。」上海學生Jane（化名）回憶26日烏魯木齊中路的抗議情形，心有餘悸地說道。近期，中國境內爆發多起群眾抗議事件，多所大學學生也自發性聲援並組織抗議集會，成為全球關注的焦點。</p>
-        <p class="page-text">　26日下午，上海烏魯木齊中路聚集前來悼念和聲援的群眾，隨後演變為抗議活動。「我剛到的時候警方與民眾本來和平對峙，後來越來越多警力到現場，我感覺再不走會有危險。」Jane描述當天抗議的情景。他也補充，抗議群眾時不時高喊「放人！」、「黑社會」等口號。參與抗議的研究生Marcus（化名）也指出，現場有民眾喊出四通橋事件中的標語，要求政府改變現有的防疫政策。</p>
-        <p class="page-text">　起初警方以疫情管控為由要求民眾離開，之後便強制驅離。Jane形容現場抗議者堵住馬路，阻止警車進入，更阻擋載有被逮捕民眾的巴士駛離。「警方開始隨機抓人，前後不到30秒的時間就完成抓捕。」Marcus表示當下相當擔心自身安危，因此一直站在外圍的安全區。Marcus雖佩服抗議者的勇氣，卻也悲觀看待他們的犧牲，他無奈地說：「很可惜，我覺得政府不會因為這次抗議而態度軟化。」</p>
-        <p class="page-text">　26日晚間，南京傳媒學院為中國學生抗議浪潮開了第一槍，隨後迅速在各大學間蔓延。北京清華大學學生也於27日中午發起長達四小時的抗議，現場學生舉起白紙，除了為烏魯木齊發聲，也提出對學校封控政策的憂慮與不滿。清華大學的校風相對保守，在場目擊的該校學生Hannah（化名）驚訝地說：「我很感動，也感到很意外，怎麽大家（學生）都願意站出來説話！」</p>
-        <p class="page-text">　「我很想做點什麼，但我不知道周圍的人的立場，不確定可以信任誰。」中國社會科學院大學學生Mary（化名）說明自己的擔憂。但當他看到越來越多人發聲，便鼓起勇氣自製標語張貼於校園各個角落。中國某戲劇學院學生Sophia（化名）也分享，他原先因害怕所以將自己貼在廁所的紙條撕下，「隔天卻看見有人在同樣的地方貼了更大的標語，我覺得我的精神被延續了。」他欣慰地說道。</p>
-        <p class="page-text">　中國各地學生群起抗議，但多數校內的標語都迅速被清除，而各大學校方平息抗議活動後，皆表示不會追究學生的責任。「經歷彭載舟事件後，大家都在說『一個人的勇氣不應該沒有回聲』，我希望用自己的行動來回應先前勇敢行動的人。」Mary堅定表示。他認為個人的行動或許無法動搖政府決策，但他相信當群眾的力量匯集，必然產生龐大的影響力。</p>
+    .line {
+      display: inline-block;
+      border-top: 1px solid black;
+      width: 1050px;
+      height: 1.51px;
+      padding-top: 192px;
+      margin-left: 103px;
+    }
 
-        <!-- 推薦新聞 -->
-        <br>
-        <hr>
-        <br>
-        <div class="related-news-title">推薦新聞</div>
-        <div style="display:flex;
-                    flex-direction: row;
-                    justify-content: center;
-                    margin-top: 30px;
-                    margin-bottom:30px;">
-          <div>
-            <div class="related-news-board">
-                <img class="related-news-img" src="resources/imgs/國際/加州.jpg">
-                <div class="related-news-cardtitle">食物補助金走入校園 加州學生有望告別糧食危機</div>
-            </div>
-          </div>
-          <div>
-            <div class="related-news-board">
-                <img class="related-news-img" src="resources/imgs/國際/oxford.png">
-                <div class="related-news-cardtitle">牛津大學發起道路安全活動 盼交通事故零死亡</div>
-            </div>
-          </div>
-          <div>
-            <div class="related-news-board">
-                <img class="related-news-img" src="resources/imgs/國際/香港.jpg">
-                <div class="related-news-cardtitle">香港青年住屋問題嚴峻 李家超施政報告提政策建議</div>
-            </div>
-          </div>
+    .header_font {
+      display: inline-block;
+      font-family: Noto Serif SC;
+      font-size: 37px;
+      font-weight: 400;
+      line-height: 53px;
+      color: black;
+      text-decoration: none;
+      letter-spacing: 0.06em;
+      text-align: center;
+      margin-top: 10px;
+      z-index: 1;
+      position: absolute;
+    }
+
+    .rectangle {
+      width: 207px;
+      height: 103px;
+      background-color: #937D54F2;
+      display: inline-block;
+      z-index: 2;
+    }
+
+    .footer {
+      position: relative;
+      white-space: nowrap;
+      display: inline-block;
+      vertical-align: middle;
+      width: 1280px;
+      height: 206px;
+      background-color: #937D54;
+      margin-bottom: 0px;
+    }
+
+    .footer_font {
+      display: inline-block;
+      font-family: Noto Serif SC;
+      font-size: 22px;
+      font-weight: 400;
+      line-height: 32px;
+      letter-spacing: 0.06em;
+      text-align: left;
+      white-space: pre-line;
+      margin-top: 41px;
+      z-index: 1;
+      position: absolute;
+    }
+  </style>
+</head>
+
+<body>
+  <div>
+    <!-- HEADER -->
+
+    <div class="header">
+      <img src="resources/icon/svg/NS Logo_白_工作區域 1.svg" style="margin-left:90px;
+          margin-top:0px;
+          width:275px;
+          height:170px;">
+
+      <img src="resources/icon/svg/NS banner_工作區域 1-01.svg" style="position:relative;
+          margin-left:132px;
+          margin-top:40px;
+          width:637px;
+          height:130px;">
+
+
+      <div class="header_font"
+        style="left:392px;background-color: #937D54F2;padding-left:50px;padding-right:50px;padding-top:25px;padding-bottom:25px;border-radius:8px;">
+        <a href="https://example.com" style="text-decoration: none;color:white;">國際</a>
+      </div>
+      <div class="header_font" style="left:660px;margin-top:40px;">
+        <a href="https://example.com" style="text-decoration: none;color:black;">生活</a>
+      </div>
+      <div class="header_font" style="left:834px;margin-top:40px;">
+        <a href="https://example.com" style="text-decoration: none;color:black;">藝文</a>
+      </div>
+      <div class="header_font" style="left: 1056px;margin-top:40px;">
+        <a href="https://example.com" style="text-decoration: none;color:black;">新知</a>
+      </div>
+
+    </div>
+    <span class="line"></span>
+    <!-- 文章首圖 -->
+    <img class="page-img" src="resources/imgs/國際/中國.jpg" alt="新聞標題">
+
+    <!-- 文章大標 -->
+    <div class="page-title">我們不再沉默 中國校內掀反封控抗議熱潮</div>
+
+    <!-- 文章內文 -->
+    <p class="page-text">
+      　【記者鄧芯怡綜合報導】「我旁邊的大哥跟警察起了衝突，就在我眼前被拖走，我不敢回頭再多看。」上海學生Jane（化名）回憶26日烏魯木齊中路的抗議情形，心有餘悸地說道。近期，中國境內爆發多起群眾抗議事件，多所大學學生也自發性聲援並組織抗議集會，成為全球關注的焦點。
+    </p>
+    <p class="page-text">
+      　26日下午，上海烏魯木齊中路聚集前來悼念和聲援的群眾，隨後演變為抗議活動。「我剛到的時候警方與民眾本來和平對峙，後來越來越多警力到現場，我感覺再不走會有危險。」Jane描述當天抗議的情景。他也補充，抗議群眾時不時高喊「放人！」、「黑社會」等口號。參與抗議的研究生Marcus（化名）也指出，現場有民眾喊出四通橋事件中的標語，要求政府改變現有的防疫政策。
+    </p>
+    <p class="page-text">
+      　起初警方以疫情管控為由要求民眾離開，之後便強制驅離。Jane形容現場抗議者堵住馬路，阻止警車進入，更阻擋載有被逮捕民眾的巴士駛離。「警方開始隨機抓人，前後不到30秒的時間就完成抓捕。」Marcus表示當下相當擔心自身安危，因此一直站在外圍的安全區。Marcus雖佩服抗議者的勇氣，卻也悲觀看待他們的犧牲，他無奈地說：「很可惜，我覺得政府不會因為這次抗議而態度軟化。」
+    </p>
+    <p class="page-text">
+      　26日晚間，南京傳媒學院為中國學生抗議浪潮開了第一槍，隨後迅速在各大學間蔓延。北京清華大學學生也於27日中午發起長達四小時的抗議，現場學生舉起白紙，除了為烏魯木齊發聲，也提出對學校封控政策的憂慮與不滿。清華大學的校風相對保守，在場目擊的該校學生Hannah（化名）驚訝地說：「我很感動，也感到很意外，怎麽大家（學生）都願意站出來説話！」
+    </p>
+    <p class="page-text">
+      　「我很想做點什麼，但我不知道周圍的人的立場，不確定可以信任誰。」中國社會科學院大學學生Mary（化名）說明自己的擔憂。但當他看到越來越多人發聲，便鼓起勇氣自製標語張貼於校園各個角落。中國某戲劇學院學生Sophia（化名）也分享，他原先因害怕所以將自己貼在廁所的紙條撕下，「隔天卻看見有人在同樣的地方貼了更大的標語，我覺得我的精神被延續了。」他欣慰地說道。
+    </p>
+    <p class="page-text">
+      　中國各地學生群起抗議，但多數校內的標語都迅速被清除，而各大學校方平息抗議活動後，皆表示不會追究學生的責任。「經歷彭載舟事件後，大家都在說『一個人的勇氣不應該沒有回聲』，我希望用自己的行動來回應先前勇敢行動的人。」Mary堅定表示。他認為個人的行動或許無法動搖政府決策，但他相信當群眾的力量匯集，必然產生龐大的影響力。
+    </p>
+
+    <!-- 推薦新聞 -->
+    <br>
+    <hr>
+    <br>
+    <div class="related-news-title">推薦新聞</div>
+    <div style="display:flex;
+                        flex-direction: row;
+                        justify-content: center;
+                        margin-top: 30px;
+                        margin-bottom:30px;">
+      <div>
+        <div class="related-news-board">
+          <img class="related-news-img" src="resources/imgs/國際/oxford.png">
+          <div class="related-news-cardtitle">牛津大學發起道路安全活動 盼交通事故零死亡</div>
         </div>
-        <br>
-    </div> 
-  </body>
+      </div>
+      <div>
+        <div class="related-news-board">
+          <img class="related-news-img" src="resources/imgs/國際/中國.jpg">
+          <div class="related-news-cardtitle">我們不再沉默 中國校內掀反封控抗議熱潮</div>
+        </div>
+      </div>
+      <div>
+        <div class="related-news-board">
+          <img class="related-news-img" src="resources/imgs/國際/香港.jpg">
+          <div class="related-news-cardtitle">香港青年住屋問題嚴峻 李家超施政報告提政策建議</div>
+        </div>
+      </div>
+    </div>
+    <br>
+    <!--footer-->
+    <div class="footer">
+      <img src="resources/icon/svg/NS Logo_工作區域 1.svg" style="margin-left:48px;
+        margin-bottom:20px;
+        width:275px;
+        height:170px;">
+
+      <div class="footer_font" style="margin-left:50px;color: white;">HUNTER｜江昇　方琮翔　鄧芯怡　陳孟樺
+        BIG BOSS｜李法賢
+        SHOOT｜donnot.bother.us@gmail.com
+      </div>
+
+      <div class="footer_font" style="left: 861px;margin-top:67px;color:#EBC151;;">copyright©2023 NEWS SAFARI
+      </div>
+
+    </div>
+  </div>
+</body>
