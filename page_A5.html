@@ -7,10 +7,111 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>等比例再現廢棄空間 《1：1》紙上轉譯褪色記憶</title>
     <link rel="stylesheet" href="css/page.css">
-  </head>
-  
-  <body>
-    <div>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+<style>
+  .header{
+    position:relative;
+    white-space: nowrap;
+    display: inline-block;
+    vertical-align: middle;
+  }  
+
+  .line{
+    display:inline-block;
+    border-top: 1px solid black;
+    width:1050px;
+    height:1.51px;
+    padding-top: 192px;
+    margin-left:103px;
+  }
+
+  .header_font{
+    display:inline-block;
+    font-family: Noto Serif SC;
+    font-size: 37px;
+    font-weight: 400;
+    line-height: 53px;
+ 
+    letter-spacing: 0.06em;
+    text-align: center;
+    margin-top:42px;
+    z-index:1;
+    position:absolute;
+  }
+
+  .rectangle {
+    width: 207px;
+    height: 103px;
+    background-color: #937D54F2;
+    display:inline-block;
+    z-index: 2;
+  }
+
+  .footer{
+    position:relative;
+    white-space: nowrap;
+    display: inline-block;
+    vertical-align: middle;
+    width: 1280px;
+    height: 206px;
+    background-color:#937D54;
+    margin-bottom:0px;
+  }  
+
+  .footer_font{
+    display:inline-block;
+    font-family: Noto Serif SC;
+    font-size: 22px;
+    font-weight: 400;
+    line-height: 32px;
+    letter-spacing: 0.06em;
+    text-align: left;
+    white-space: pre-line;
+    margin-top:41px;
+    z-index:1;
+    position:absolute;
+  }
+
+</style>
+
+</head>
+
+<body>
+<!--HEADER-->
+<div class="header">
+    <img src="resources/icon/svg/NS Logo_白_工作區域 1.svg" 
+        style=
+        "margin-left:90px;
+        margin-top:0px;
+        width:275px;
+        height:170px;">
+     
+    <img src="resources/icon/svg/NS banner-03.svg" 
+        style=
+        "position:relative;
+        margin-left:132px;
+        margin-top:40px;
+        width:637px;
+        height:130px;">
+    
+    
+    <div class="header_font" style="left:392px;margin-top:40px;">
+      <a href ="https://example.com" style="text-decoration: none;color:black;">國際</a>
+    </div>
+    <div class="header_font" style="left:580px;margin: top 40px;">
+      <a href="https://example.com"style="text-decoration: none;color:black;">生活</a>
+    </div>
+    <div class="header_font" style="left:740px;margin-top:21px;background-color:#937D54F2;padding-left:50px;padding-right:50px;padding-top:25px;padding-bottom:25px;border-radius:8px;">
+      <a href="https://example.com"style="text-decoration: none;color:white;">藝文</a>
+    </div>
+    <div class="header_font" style="left: 1056px;margin-top:40px;">
+      <a href="https://example.com"style="text-decoration: none;color:black;">新知</a>
+    </div>
+
+</div>
+<span class="line"></div>
         
         <!-- 文章首圖 -->
         <img class="page-img"
@@ -28,34 +129,57 @@
         <p class="page-text">　「我轉化這麼多奇奇怪怪的形式，目的很簡單，希望他們再被看到一次。」丘智偉表示，他的創作對象就是一個即將消失的空間，總有一天，這些事物只能出現在其他地方，以其他的形式呈現。他更進一步說明，物件在遠離現場後，觀者的觀看體驗必然會不同，藝術家只能透過創作盡量還原空間之於個人的記憶與感受。</p>
 
         <!-- 推薦新聞 -->
-        <br>
-        <hr>
-        <br>
-        <div class="related-news-title">推薦新聞</div>
-        <div style="display:flex;
+    <br>
+    <hr>
+    <br>
+    <div class="related-news-title">推薦新聞</div>
+    <div style="display:flex;
                     flex-direction: row;
                     justify-content: center;
                     margin-top: 30px;
                     margin-bottom:30px;">
-          <div>
-            <div class="related-news-board">
-                <img class="related-news-img" src="resources/imgs/藝文/北辰.png">
-                <div class="related-news-cardtitle">澎湖是故鄉還是異地？ 〈記北辰市場〉寫盡身份混亂</div>
-            </div>
+      <div>
+        <a href="page_A1.html">
+          <div class="related-news-board">
+            <img class="related-news-img" src="resources/imgs/藝文/北辰.png">
+            <div class="related-news-cardtitle">澎湖是故鄉還是異地？ 〈記北辰市場〉寫盡身份混亂</div>
           </div>
-          <div>
-            <div class="related-news-board">
-                <img class="related-news-img" src="resources/imgs/藝文/引光入室.png">
-                <div class="related-news-cardtitle">茶湯融入空間設計 引光入室「濾」出茶道精神</div>
-            </div>
+        </a>
+      </div>
+      <div>
+        <a href="page_A2.html">
+          <div class="related-news-board">
+            <img class="related-news-img" src="resources/imgs/藝文/引光入室.png">
+            <div class="related-news-cardtitle">茶湯融入空間設計 引光入室「濾」出茶道精神</div>
           </div>
-          <div>
-            <div class="related-news-board">
-                <img class="related-news-img" src="resources/imgs/藝文/無眠.jpg">
-                <div class="related-news-cardtitle">《無眠》映生死徬徨心境 北藝大戲劇探自殺意義</div>
-            </div>
+        </a>
+      </div>
+      <div>
+        <a href="page_A3.html">
+          <div class="related-news-board">
+            <img class="related-news-img" src="resources/imgs/藝文/無眠.jpg">
+            <div class="related-news-cardtitle">《無眠》映生死徬徨心境 北藝大戲劇探自殺意義</div>
           </div>
-        </div>
-        <br>
+        </a>
+      </div>
+    </div>
+    <br>
+
+        <!--footer-->
+    <div class="footer">
+      <img src="resources/icon/svg/NS Logo_工作區域 1.svg" style="margin-left:48px;
+      margin-bottom:20px;
+      width:275px;
+      height:170px;">
+
+      <div class="footer_font" style="margin-left:50px;color: white;">HUNTER｜江昇　方琮翔　鄧芯怡　陳孟樺
+          BIG BOSS｜李法賢
+          SHOOT｜donnot.bother.us@gmail.com
+      </div>
+
+      <div class="footer_font" style="left: 861px;margin-top:67px;color:#EBC151;;">copyright©2023 NEWS SAFARI
+      </div>
+
+  </div>
     </div> 
   </body>
