@@ -1,61 +1,183 @@
 <!DOCTYPE html>
 <html lang="en">
 
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>News Safari</title>
-    <link rel="stylesheet" href="css/page.css">
-  </head>
-  
-  <body>
-    <div>
-        
-        <!-- 文章首圖 -->
-        <img class="page-img"
-            src="resources/imgs/國際/加拿大.png"
-            alt="新聞標題">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>不戴回口罩！ 加拿大師生抗議校方防疫觀念倒退</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 
-        <!-- 文章大標 -->
-        <div class="page-title">不戴回口罩！ 加拿大師生抗議校方防疫觀念倒退</div>
+  <style>
+    .header {
+      position: relative;
+      white-space: nowrap;
+      display: inline-block;
+      vertical-align: middle;
+    }
 
-        <!-- 文章內文 -->
-        <p class="page-text">　【記者鄧芯怡綜合報導】加拿大滑鐵盧大學（University of Waterloo，UW）於8日宣佈全體師生在教室內都必須佩戴口罩，因而引發熱議。該政策於9日開始實施，並將持續至學期結束。校方考量加拿大正處疫情升溫之際，除了保障師生的健康，要求他們戴口罩也是為了避免期末考受到影響。</p>
-        <p class="page-text">　在西方國家，政府已鮮少強制民眾佩戴口罩，突然的公告因此讓師生措手不及，也引發兩方意見的辯論。此外，校方也要求學生和助教晤談時佩戴口罩，只有教師在授課、學生進行報告時，才可以摘下口罩。滑鐵盧大學畢業生愛德華・波法・堤林（Edward Bofa Tilin）評論校方的要求過於嚴苛且沒有必要，他也補充，全世界都試圖和新冠肺炎共存，滑鐵盧大學卻反而在防疫政策上倒退。</p>
-        <p class="page-text">　然而，貴湖大學（University of Guelph，UoG）整合生物學系副教授肖珊娜・雅各布斯博士（Dr Shoshanah Jacobs）提出不同的意見：「我認為滑鐵盧大學的考量絕對是正確的，我們都應該這樣做。」他也補充，佩戴口罩是關心社會整體健康的行為，保護自己的同時，也照顧了老人、小孩這些容易受到感染的群體。他坦言加拿大社會忽視大眾健康，這樣的環境讓深切關心民眾未來的人備感壓力。</p>
-        <p class="page-text">　「西方國家推崇自由的風氣，因此人民應該有自行選擇佩戴口罩的權利。」堤林直言學校推行的政策侵犯了師生的自由。此外，堤林也提出目前美國數據顯示，在防疫管制上較嚴格的州與較寬鬆的州相比，新冠肺炎的傳播率並沒有太顯著的差異。因此，堤林和他的教授都認為口罩無法完全預防新冠肺炎的傳播。</p>
-        <p class="page-text">　滑鐵盧大學的口罩政策在社群媒體Twitter及Instagram上都引發高度關注，部分家長希望加拿大學校更重視學生的健康問題，因此予以支持；學生則認為課堂上本就無法避免師生之間近距離接觸，因此佩戴口罩其實沒有實質的效益。相比西方的開放政策，台灣目前仍維持公眾場合皆須佩戴口罩的規定。國立政治大學廣播電視學系學生謝明潔支持政府的決策，因為只有遵守防疫措施才可以讓學生免於重回遠距上課的命運。面對眾多的質疑，外界都在觀望校方將會如何應對。</p>
+    .line {
+      display: inline-block;
+      border-top: 1px solid black;
+      width: 1050px;
+      height: 1.51px;
+      padding-top: 192px;
+      margin-left: 103px;
+    }
 
-        <!-- 推薦新聞 -->
-        <br>
-        <hr>
-        <br>
-        <div class="related-news-title">推薦新聞</div>
-        <div style="display:flex;
-                    flex-direction: row;
-                    justify-content: center;
-                    margin-top: 30px;
-                    margin-bottom:30px;">
-          <div>
-            <div class="related-news-board">
-                <img class="related-news-img" src="resources/imgs/國際/oxford.png">
-                <div class="related-news-cardtitle">牛津大學發起道路安全活動 盼交通事故零死亡</div>
-            </div>
-          </div>
-          <div>
-            <div class="related-news-board">
-                <img class="related-news-img" src="resources/imgs/國際/中國.jpg">
-                <div class="related-news-cardtitle">我們不再沉默 中國校內掀反封控抗議熱潮</div>
-            </div>
-          </div>
-          <div>
-            <div class="related-news-board">
-                <img class="related-news-img" src="resources/imgs/國際/香港.jpg">
-                <div class="related-news-cardtitle">香港青年住屋問題嚴峻 李家超施政報告提政策建議</div>
-            </div>
-          </div>
+    .header_font {
+      display: inline-block;
+      font-family: Noto Serif SC;
+      font-size: 37px;
+      font-weight: 400;
+      line-height: 53px;
+      color: black;
+      text-decoration: none;
+      letter-spacing: 0.06em;
+      text-align: center;
+      margin-top: 10px;
+      z-index: 1;
+      position: absolute;
+    }
+
+    .rectangle {
+      width: 207px;
+      height: 103px;
+      background-color: #937D54F2;
+      display: inline-block;
+      z-index: 2;
+    }
+
+    .footer {
+      position: relative;
+      white-space: nowrap;
+      display: inline-block;
+      vertical-align: middle;
+      width: 1280px;
+      height: 206px;
+      background-color: #937D54;
+      margin-bottom: 0px;
+    }
+
+    .footer_font {
+      display: inline-block;
+      font-family: Noto Serif SC;
+      font-size: 22px;
+      font-weight: 400;
+      line-height: 32px;
+      letter-spacing: 0.06em;
+      text-align: left;
+      white-space: pre-line;
+      margin-top: 41px;
+      z-index: 1;
+      position: absolute;
+    }
+  </style>
+</head>
+
+<body>
+  <div>
+    <!-- HEADER -->
+
+    <div class="header">
+      <img src="resources/icon/svg/NS Logo_白_工作區域 1.svg" style="margin-left:90px;
+          margin-top:0px;
+          width:275px;
+          height:170px;">
+
+      <img src="resources/icon/svg/NS banner_工作區域 1-01.svg" style="position:relative;
+          margin-left:132px;
+          margin-top:40px;
+          width:637px;
+          height:130px;">
+
+
+      <div class="header_font"
+        style="left:392px;background-color: #937D54F2;padding-left:50px;padding-right:50px;padding-top:25px;padding-bottom:25px;border-radius:8px;">
+        <a href="https://example.com" style="text-decoration: none;color:white;">國際</a>
+      </div>
+      <div class="header_font" style="left:660px;margin-top:40px;">
+        <a href="https://example.com" style="text-decoration: none;color:black;">生活</a>
+      </div>
+      <div class="header_font" style="left:834px;margin-top:40px;">
+        <a href="https://example.com" style="text-decoration: none;color:black;">藝文</a>
+      </div>
+      <div class="header_font" style="left: 1056px;margin-top:40px;">
+        <a href="https://example.com" style="text-decoration: none;color:black;">新知</a>
+      </div>
+
+    </div>
+    <span class="line"></span>
+
+    <!-- 文章首圖 -->
+    <img class="page-img" src="resources/imgs/國際/加拿大.png" alt="新聞標題">
+
+    <!-- 文章大標 -->
+    <div class="page-title">不戴回口罩！ 加拿大師生抗議校方防疫觀念倒退</div>
+
+    <!-- 文章內文 -->
+    <p class="page-text">　【記者鄧芯怡綜合報導】加拿大滑鐵盧大學（University of
+      Waterloo，UW）於8日宣佈全體師生在教室內都必須佩戴口罩，因而引發熱議。該政策於9日開始實施，並將持續至學期結束。校方考量加拿大正處疫情升溫之際，除了保障師生的健康，要求他們戴口罩也是為了避免期末考受到影響。</p>
+    <p class="page-text">
+      　在西方國家，政府已鮮少強制民眾佩戴口罩，突然的公告因此讓師生措手不及，也引發兩方意見的辯論。此外，校方也要求學生和助教晤談時佩戴口罩，只有教師在授課、學生進行報告時，才可以摘下口罩。滑鐵盧大學畢業生愛德華・波法・堤林（Edward
+      Bofa Tilin）評論校方的要求過於嚴苛且沒有必要，他也補充，全世界都試圖和新冠肺炎共存，滑鐵盧大學卻反而在防疫政策上倒退。</p>
+    <p class="page-text">　然而，貴湖大學（University of Guelph，UoG）整合生物學系副教授肖珊娜・雅各布斯博士（Dr Shoshanah
+      Jacobs）提出不同的意見：「我認為滑鐵盧大學的考量絕對是正確的，我們都應該這樣做。」他也補充，佩戴口罩是關心社會整體健康的行為，保護自己的同時，也照顧了老人、小孩這些容易受到感染的群體。他坦言加拿大社會忽視大眾健康，這樣的環境讓深切關心民眾未來的人備感壓力。
+    </p>
+    <p class="page-text">
+      　「西方國家推崇自由的風氣，因此人民應該有自行選擇佩戴口罩的權利。」堤林直言學校推行的政策侵犯了師生的自由。此外，堤林也提出目前美國數據顯示，在防疫管制上較嚴格的州與較寬鬆的州相比，新冠肺炎的傳播率並沒有太顯著的差異。因此，堤林和他的教授都認為口罩無法完全預防新冠肺炎的傳播。
+    </p>
+    <p class="page-text">
+      　滑鐵盧大學的口罩政策在社群媒體Twitter及Instagram上都引發高度關注，部分家長希望加拿大學校更重視學生的健康問題，因此予以支持；學生則認為課堂上本就無法避免師生之間近距離接觸，因此佩戴口罩其實沒有實質的效益。相比西方的開放政策，台灣目前仍維持公眾場合皆須佩戴口罩的規定。國立政治大學廣播電視學系學生謝明潔支持政府的決策，因為只有遵守防疫措施才可以讓學生免於重回遠距上課的命運。面對眾多的質疑，外界都在觀望校方將會如何應對。
+    </p>
+
+    <!-- 推薦新聞 -->
+    <br>
+    <hr>
+    <br>
+    
+    <div class="related-news-title">推薦新聞</div>
+    <div style="display:flex;
+                        flex-direction: row;
+                        justify-content: center;
+                        margin-top: 30px;
+                        margin-bottom:30px;">
+      <div>
+        <div class="related-news-board">
+          <img class="related-news-img" src="resources/imgs/國際/oxford.png">
+          <div class="related-news-cardtitle">牛津大學發起道路安全活動 盼交通事故零死亡</div>
         </div>
-        <br>
-    </div> 
-  </body>
+      </div>
+      <div>
+        <div class="related-news-board">
+          <img class="related-news-img" src="resources/imgs/國際/中國.jpg">
+          <div class="related-news-cardtitle">我們不再沉默 中國校內掀反封控抗議熱潮</div>
+        </div>
+      </div>
+      <div>
+        <div class="related-news-board">
+          <img class="related-news-img" src="resources/imgs/國際/香港.jpg">
+          <div class="related-news-cardtitle">香港青年住屋問題嚴峻 李家超施政報告提政策建議</div>
+        </div>
+      </div>
+    </div>
+    <br>
+    <!--footer-->
+    <div class="footer">
+      <img src="resources/icon/svg/NS Logo_工作區域 1.svg" style="margin-left:48px;
+        margin-bottom:20px;
+        width:275px;
+        height:170px;">
+
+      <div class="footer_font" style="margin-left:50px;color: white;">HUNTER｜江昇　方琮翔　鄧芯怡　陳孟樺
+        BIG BOSS｜李法賢
+        SHOOT｜donnot.bother.us@gmail.com
+      </div>
+
+      <div class="footer_font" style="left: 861px;margin-top:67px;color:#EBC151;;">copyright©2023 NEWS SAFARI
+      </div>
+
+    </div>
+  </div>
+</body>
