@@ -1,61 +1,185 @@
 <!DOCTYPE html>
 <html lang="en">
 
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>News Safari</title>
-    <link rel="stylesheet" href="css/page.css">
-  </head>
-  
-  <body>
-    <div>
-        
-        <!-- 文章首圖 -->
-        <img class="page-img"
-            src="resources/imgs/國際/梨泰院.jpg"
-            alt="新聞標題">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>梨泰院踩踏事件釀百死 專家籲重視群眾控管</title>
+  <link rel="stylesheet" href="css/page.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 
-        <!-- 文章大標 -->
-        <div class="page-title">梨泰院踩踏事件釀百死 專家籲重視群眾控管</div>
+  <style>
+    .header {
+      position: relative;
+      white-space: nowrap;
+      display: inline-block;
+      vertical-align: middle;
+    }
 
-        <!-- 文章內文 -->
-        <p class="page-text">　【記者鄧芯怡綜合報導】「我們沿著大路往梨泰院走，就開始看到救護車，當下以為只是夜店出事。」當地學生Lena（化名）描述當天經歷。南韓梨泰院10月29日發生大規模踩踏事故，導致156人死亡，上百人受傷。官方統計當天聚集十萬名民眾，派遣警力卻只有100餘人，造成場面混亂，消防車和救護車都動彈不得。</p>
-        <p class="page-text">　南韓警方1日公佈報案通話記錄及出動時間，引發民眾對警方處理效率不滿。高麗大學學生李慈媛表示，梨泰院每逢節日或假日都人滿為患，群眾及交通管控因而是長期隱患。「大家都認為當天擠了十萬人很誇張，但疫情之前的萬聖節都會聚集至少12、13萬人，這不是無法預估的情況。」李慈媛無奈說道。他進一步解釋，事發前一天，梨泰院已湧入大量人潮，警方也接獲相關通報，他和朋友看到先前流傳的影片才打消前往念頭。</p>
-        <p class="page-text">　「不該指責任何人，這不是單純的疏失，而是大眾缺乏對群眾安全（crowd safety）的認知。」群眾控管專家，薩福克大學（University of Suffolk）客座教授G・基思・史迪爾（Professor Dr. G. Keith Still）指出。他也補充說明，南韓警方可能沒有受過相關訓練，與其一味究責，應該注重之後的技能培訓。此外，梨泰院以夜間活動為經濟重點，地方政府追求盈利時壓低維護街道安全的成本，犧牲了群眾與環境控管，史迪爾認為場地管理仍為第一優先，才能確保大眾的安危。</p>
-        <p class="page-text">　針對警方接獲通報後的應對措施，崔瓦卡拿撒勒大學（Trevecca Nazarene University）運動及娛樂活動管理學系副教授丹澤-巴塞爾（Danzey-Bussell）指出，政府必須制定完善的危機管理和應急行動計劃，前線指揮中心當下也應採取即時、透明並有效率的溝通方式。李慈媛則披露報案的處理標準作業流程複雜，從接電話的受理員到處理單位，需要層層上報得到長官指示後才能出動，可能是導致應對不及的原因之一。</p>
-        <p class="page-text">　梨泰院事件震驚全球，各國因而開始關注大型集會與活動的群眾控管。中央警察大學消防學系教授黃俊能指出，台灣設置《集會遊行法》，並要求舉辦活動的單位繳交《活動安全及交通維護計畫》；然而，《集會遊行法》不規範一般的大型活動，部分主辦方也省略呈交《活動安全及交通維護計畫》，他因此建議台灣應為1000人以上的活動訂立具強制執行性的法條。黃俊能也警示地說：「政府應關注公共區域的安全、執行演習，像是捷運這種人群聚集地，避免突發狀況導致的踩踏意外。」</p>
+    .line {
+      display: inline-block;
+      border-top: 1px solid black;
+      width: 1050px;
+      height: 1.51px;
+      padding-top: 192px;
+      margin-left: 103px;
+    }
 
-        <!-- 推薦新聞 -->
-        <br>
-        <hr>
-        <br>
-        <div class="related-news-title">推薦新聞</div>
-        <div style="display:flex;
-                    flex-direction: row;
-                    justify-content: center;
-                    margin-top: 30px;
-                    margin-bottom:30px;">
-          <div>
-            <div class="related-news-board">
-                <img class="related-news-img" src="resources/imgs/國際/oxford.png">
-                <div class="related-news-cardtitle">牛津大學發起道路安全活動 盼交通事故零死亡</div>
-            </div>
-          </div>
-          <div>
-            <div class="related-news-board">
-                <img class="related-news-img" src="resources/imgs/國際/中國.jpg">
-                <div class="related-news-cardtitle">我們不再沉默 中國校內掀反封控抗議熱潮</div>
-            </div>
-          </div>
-          <div>
-            <div class="related-news-board">
-                <img class="related-news-img" src="resources/imgs/國際/香港.jpg">
-                <div class="related-news-cardtitle">香港青年住屋問題嚴峻 李家超施政報告提政策建議</div>
-            </div>
-          </div>
+    .header_font {
+      display: inline-block;
+      font-family: Noto Serif SC;
+      font-size: 37px;
+      font-weight: 400;
+      line-height: 53px;
+      color: black;
+      text-decoration: none;
+      letter-spacing: 0.06em;
+      text-align: center;
+      margin-top: 10px;
+      z-index: 1;
+      position: absolute;
+    }
+
+    .rectangle {
+      width: 207px;
+      height: 103px;
+      background-color: #937D54F2;
+      display: inline-block;
+      z-index: 2;
+    }
+
+    .footer {
+      position: relative;
+      white-space: nowrap;
+      display: inline-block;
+      vertical-align: middle;
+      width: 1280px;
+      height: 206px;
+      background-color: #937D54;
+      margin-bottom: 0px;
+    }
+
+    .footer_font {
+      display: inline-block;
+      font-family: Noto Serif SC;
+      font-size: 22px;
+      font-weight: 400;
+      line-height: 32px;
+      letter-spacing: 0.06em;
+      text-align: left;
+      white-space: pre-line;
+      margin-top: 41px;
+      z-index: 1;
+      position: absolute;
+    }
+  </style>
+</head>
+
+<body>
+  <div>
+    <!-- HEADER -->
+
+    <div class="header">
+      <img src="resources/icon/svg/NS Logo_白_工作區域 1.svg" style="margin-left:90px;
+          margin-top:0px;
+          width:275px;
+          height:170px;">
+
+      <img src="resources/icon/svg/NS banner_工作區域 1-01.svg" style="position:relative;
+          margin-left:132px;
+          margin-top:40px;
+          width:637px;
+          height:130px;">
+
+
+      <div class="header_font"
+        style="left:392px;background-color: #937D54F2;padding-left:50px;padding-right:50px;padding-top:25px;padding-bottom:25px;border-radius:8px;">
+        <a href="https://example.com" style="text-decoration: none;color:white;">國際</a>
+      </div>
+      <div class="header_font" style="left:660px;margin-top:40px;">
+        <a href="https://example.com" style="text-decoration: none;color:black;">生活</a>
+      </div>
+      <div class="header_font" style="left:834px;margin-top:40px;">
+        <a href="https://example.com" style="text-decoration: none;color:black;">藝文</a>
+      </div>
+      <div class="header_font" style="left: 1056px;margin-top:40px;">
+        <a href="https://example.com" style="text-decoration: none;color:black;">新知</a>
+      </div>
+
+    </div>
+    <span class="line"></span>
+    <!-- 文章首圖 -->
+    <img class="page-img" src="resources/imgs/國際/梨泰院.jpg" alt="新聞標題">
+
+    <!-- 文章大標 -->
+    <div class="page-title">梨泰院踩踏事件釀百死 專家籲重視群眾控管</div>
+
+    <!-- 文章內文 -->
+    <p class="page-text">
+      　【記者鄧芯怡綜合報導】「我們沿著大路往梨泰院走，就開始看到救護車，當下以為只是夜店出事。」當地學生Lena（化名）描述當天經歷。南韓梨泰院10月29日發生大規模踩踏事故，導致156人死亡，上百人受傷。官方統計當天聚集十萬名民眾，派遣警力卻只有100餘人，造成場面混亂，消防車和救護車都動彈不得。
+    </p>
+    <p class="page-text">
+      　南韓警方1日公佈報案通話記錄及出動時間，引發民眾對警方處理效率不滿。高麗大學學生李慈媛表示，梨泰院每逢節日或假日都人滿為患，群眾及交通管控因而是長期隱患。「大家都認為當天擠了十萬人很誇張，但疫情之前的萬聖節都會聚集至少12、13萬人，這不是無法預估的情況。」李慈媛無奈說道。他進一步解釋，事發前一天，梨泰院已湧入大量人潮，警方也接獲相關通報，他和朋友看到先前流傳的影片才打消前往念頭。
+    </p>
+    <p class="page-text">　「不該指責任何人，這不是單純的疏失，而是大眾缺乏對群眾安全（crowd safety）的認知。」群眾控管專家，薩福克大學（University of
+      Suffolk）客座教授G・基思・史迪爾（Professor Dr. G. Keith
+      Still）指出。他也補充說明，南韓警方可能沒有受過相關訓練，與其一味究責，應該注重之後的技能培訓。此外，梨泰院以夜間活動為經濟重點，地方政府追求盈利時壓低維護街道安全的成本，犧牲了群眾與環境控管，史迪爾認為場地管理仍為第一優先，才能確保大眾的安危。
+    </p>
+    <p class="page-text">　針對警方接獲通報後的應對措施，崔瓦卡拿撒勒大學（Trevecca Nazarene
+      University）運動及娛樂活動管理學系副教授丹澤-巴塞爾（Danzey-Bussell）指出，政府必須制定完善的危機管理和應急行動計劃，前線指揮中心當下也應採取即時、透明並有效率的溝通方式。李慈媛則披露報案的處理標準作業流程複雜，從接電話的受理員到處理單位，需要層層上報得到長官指示後才能出動，可能是導致應對不及的原因之一。
+    </p>
+    <p class="page-text">
+      　梨泰院事件震驚全球，各國因而開始關注大型集會與活動的群眾控管。中央警察大學消防學系教授黃俊能指出，台灣設置《集會遊行法》，並要求舉辦活動的單位繳交《活動安全及交通維護計畫》；然而，《集會遊行法》不規範一般的大型活動，部分主辦方也省略呈交《活動安全及交通維護計畫》，他因此建議台灣應為1000人以上的活動訂立具強制執行性的法條。黃俊能也警示地說：「政府應關注公共區域的安全、執行演習，像是捷運這種人群聚集地，避免突發狀況導致的踩踏意外。」
+    </p>
+
+    <!-- 推薦新聞 -->
+    <br>
+    <hr>
+    <br>
+    
+    <div class="related-news-title">推薦新聞</div>
+    <div style="display:flex;
+                        flex-direction: row;
+                        justify-content: center;
+                        margin-top: 30px;
+                        margin-bottom:30px;">
+      <div>
+        <div class="related-news-board">
+          <img class="related-news-img" src="resources/imgs/國際/oxford.png">
+          <div class="related-news-cardtitle">牛津大學發起道路安全活動 盼交通事故零死亡</div>
         </div>
-        <br>
-    </div> 
-  </body>
+      </div>
+      <div>
+        <div class="related-news-board">
+          <img class="related-news-img" src="resources/imgs/國際/中國.jpg">
+          <div class="related-news-cardtitle">我們不再沉默 中國校內掀反封控抗議熱潮</div>
+        </div>
+      </div>
+      <div>
+        <div class="related-news-board">
+          <img class="related-news-img" src="resources/imgs/國際/香港.jpg">
+          <div class="related-news-cardtitle">香港青年住屋問題嚴峻 李家超施政報告提政策建議</div>
+        </div>
+      </div>
+    </div>
+    <br>
+    <!--footer-->
+    <div class="footer">
+      <img src="resources/icon/svg/NS Logo_工作區域 1.svg" style="margin-left:48px;
+        margin-bottom:20px;
+        width:275px;
+        height:170px;">
+
+      <div class="footer_font" style="margin-left:50px;color: white;">HUNTER｜江昇　方琮翔　鄧芯怡　陳孟樺
+        BIG BOSS｜李法賢
+        SHOOT｜donnot.bother.us@gmail.com
+      </div>
+
+      <div class="footer_font" style="left: 861px;margin-top:67px;color:#EBC151;;">copyright©2023 NEWS SAFARI
+      </div>
+
+    </div>
+  </div>
+</body>
