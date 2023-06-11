@@ -1,62 +1,193 @@
 <!DOCTYPE html>
 <html lang="en">
 
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>News Safari</title>
-    <link rel="stylesheet" href="css/page.css">
-  </head>
-  
-  <body>
-    <div>
-        
-        <!-- 文章首圖 -->
-        <img class="page-img"
-            src="resources/imgs/生活/南方影展.jpg"
-            alt="新聞標題">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>傳統精神接軌嘻哈潮流 「客+潮」發揚客家文化</title>
+  <link rel="stylesheet" href="css/page.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 
-        <!-- 文章大標 -->
-        <div class="page-title">南方影展凝聚台南電影人 首增學生獎鼓勵新銳創作</div>
+  <style>
+    .header {
+      position: relative;
+      white-space: nowrap;
+      display: inline-block;
+      vertical-align: middle;
+    }
 
-        <!-- 文章內文 -->
-        <p class="page-text">　【記者陳孟樺台南報導】昔日幽靜的大南門城如今擠滿攤商與民眾，所有人準備迎接今年的電影盛會。2022南方影展於 1 日舉辦套票首賣日派對，市集攤販圍繞城門開賣販售，影展代言人余佩真也來到現場和民眾共襄盛舉。</p>
-        <p class="page-text">　睽違兩年，南方影展今年再度回到實體影廳舉辦，首賣日派對為 11 月的影展放映週暖熱場子。民眾除了在喜愛的攤位上消費，許多人也早已準備野餐墊在城內的草地上，等待余佩真現場演唱作品，她甚至邀請粉絲合唱自己的熱門歌曲《甘吧爹ㄋㄟ 》，逗得大家拍手叫好。</p>
-        <p class="page-text">　本屆南方影展另一項矚目焦點則是新增設的南方學生獎，影展競賽統籌楊珂溦表示，南方團隊發現近年影展界能夠入圍到大型影展的新銳導演們，都已是擁有較多資源的人，因此南方影展秉持一貫的「南方精神」，希望盡力為資源更少的獨立電影創作者，提供嶄露頭角的機會。</p>
-        <p class="page-text">　談及學生製片的困境，本屆入圍的學生導演劉行坦言，經費就是最大的問題。影展的藝術總監黃柏喬也說：「有些創作題材冷門，形式特殊、前衛，或者是很實驗的，這些不是不好，但申請補助時就可能會卡關。」所以影展團隊收到影像平台「其中短片頻道」的資金補助後，彼此便積極合作以幫助獨立創作者。</p>
-        <p class="page-text">　導演贏得影展競賽能獲得獎金，不過劉行指出，參加影展更是為了曝光度，「影展就是他們可以跟觀眾交流的地方，拍完片要有觀眾啊，因為這種短片又不會上院線，所以影展是他們唯一可以讓觀眾看到的途徑。」同樣入圍的導演楊竣宇也說：「拍攝作品本身就是我想講一個故事、想告訴大家這一段經歷。」這兩位導演即將迎來第一次映後座談，期待能與現場觀眾交流想法，以供未來製片參考。</p>
-        <p class="page-text">　套票首賣日是南方影展的傳統，「看到老粉絲每次都覺得很感動。」楊珂溦開心地笑著說道。除了影展粉絲，現場攤商們也早成為過去幾屆首賣日派對的熟面孔。黃柏喬點頭補充道，相較大規模的金馬影展，南方影展最多就二十年，「可能就沒辦法讓所有人都知道我們，但我覺得就是慢慢做吧，像人脈的建立一樣慢慢累積。」他們認為，南方影展深耕在台南地區，齊聚一群關注電影的人，拉近導演與觀眾的距離，更是南方影展存在的特殊意義。</p>
+    .line {
+      display: inline-block;
+      border-top: 1px solid black;
+      width: 1050px;
+      height: 1.51px;
+      padding-top: 192px;
+      margin-left: 103px;
+    }
 
-        <!-- 推薦新聞 -->
-        <br>
-        <hr>
-        <br>
-        <div class="related-news-title">推薦新聞</div>
-        <div style="display:flex;
+    .header_font {
+      display: inline-block;
+      font-family: Noto Serif SC;
+      font-size: 37px;
+      font-weight: 400;
+      line-height: 53px;
+
+      letter-spacing: 0.06em;
+      text-align: center;
+      margin-top: 42px;
+      z-index: 1;
+      position: absolute;
+    }
+
+    .rectangle {
+      width: 207px;
+      height: 103px;
+      background-color: #937D54F2;
+      display: inline-block;
+      z-index: 2;
+    }
+
+    .footer {
+      position: relative;
+      white-space: nowrap;
+      display: inline-block;
+      vertical-align: middle;
+      width: 1280px;
+      height: 206px;
+      background-color: #937D54;
+      margin-bottom: 0px;
+    }
+
+    .footer_font {
+      display: inline-block;
+      font-family: Noto Serif SC;
+      font-size: 22px;
+      font-weight: 400;
+      line-height: 32px;
+      letter-spacing: 0.06em;
+      text-align: left;
+      white-space: pre-line;
+      margin-top: 41px;
+      z-index: 1;
+      position: absolute;
+    }
+  </style>
+</head>
+
+<body>
+  <div>
+    <!-- HEADER -->
+    <div class="header">
+      <img src="resources/icon/svg/NS Logo_白_工作區域 1.svg" style="margin-left:90px;
+          margin-top:0px;
+          width:275px;
+          height:170px;">
+
+      <img src="resources/icon/svg/NS banner-03.svg" style="position:relative;
+          margin-left:132px;
+          margin-top:40px;
+          width:637px;
+          height:130px;">
+
+
+      <div class="header_font" style="left:392px;margin-top:40px;">
+        <a href="https://example.com" style="text-decoration: none;color:black;">國際</a>
+      </div>
+      <div class="header_font" style="left:580px;margin: top 40px;">
+        <a href="https://example.com" style="text-decoration: none;color:black;">生活</a>
+      </div>
+      <div class="header_font"
+        style="left:740px;margin-top:21px;background-color:#937D54F2;padding-left:50px;padding-right:50px;padding-top:25px;padding-bottom:25px;border-radius:8px;">
+        <a href="https://example.com" style="text-decoration: none;color:white;">藝文</a>
+      </div>
+      <div class="header_font" style="left: 1056px;margin-top:40px;">
+        <a href="https://example.com" style="text-decoration: none;color:black;">新知</a>
+      </div>
+
+    </div>
+    <span class="line">
+  </div>
+
+  <!-- 文章首圖 -->
+  <img class="page-img" src="resources/imgs/生活/客+潮.jpg" alt="新聞標題">
+
+  <!-- 文章大標 -->
+  <div class="page-title">傳統精神接軌嘻哈潮流 「客+潮」發揚客家文化</div>
+
+  <!-- 文章內文 -->
+  <p class="page-text">
+    　【記者陳孟樺台北報導】2022臺北客家義民嘉年華自22日起至24日以「義民35．客＋潮」為主題展開活動。義民嘉年華來到第35週年，乘著客家文化的浪，與現代潮流結合，衝上前所未見的浪峰。這次以嘻哈元素貫穿活動，期盼能拉近客家原生文化與年輕一輩的距離，同時也帶給民眾新穎體驗。
+  </p>
+  <p class="page-text">
+    　本屆以「客＋潮」融合傳統與新潮流，更擴大規模舉辦往年的「迎神繞境」與「安座大典」，特別邀請全台35間宮廟參與。廟宇人員聲勢浩大，來自台灣各地的神轎一齊座落在自由廣場中央。安座大典啟動的那一刻，所有民眾肅立，專注地看著廟方將一尊尊義民爺與忠勇公請出轎，接著由典禮人員們小心翼翼地把義民爺牌位一ㄧ接過手傳至主祭台上。
+  </p>
+  <p class="page-text">
+    　今年客家義民嘉年華融合傳統與潮流，主辦方祭出嘻哈主題曲「承蒙臺北」的舞蹈比賽，歌詞以客語道出義民來到台北的故事，詞曲中新舊雜揉與碰撞成為一大特點。而「創意踩街」受風雨影響而取消，令許多表演團隊感到惋惜，原定受邀參與的國立臺北大學熱舞社學生吳俞蓁認為：「平常不會注意到這類型的活動，但有結合熱舞表演就能吸引許多大學生與街舞圈年輕人的關注。」
+  </p>
+  <p class="page-text">
+    　出身不同世代卻同樣關注、喜歡客家文化的民眾匯聚在義民嘉年華。會場中鑼鼓喧囂夾雜現代嘻哈音樂，針對本次主辦方嘗試結合兩種文化，臺北市政府客家事務委員會主任委員徐世勲説：「想讓民眾耳目一新，不見得是要完全顛覆，而是在某種既有的客家特色下變得非常潮流。」
+  </p>
+  <p class="page-text">
+    　傳統與潮流在活動中交會，主辦方期待能重新詮釋當代客家精神。徐世勲認為，客家文化在創新或者與其他文化融合都有所突破，不過「客語傳承」仍是最大困境。國立臺灣大學客家研究社副社長吳廷宇認為，對客家青年而言，具備客語能力與擁有使用客語的環境同樣重要，「我們對公眾場合中出現這些語言可能還不習慣，像臺大學生會今年迎新傳單使用多元語言，就有些人不習慣而引發爭議。」主辦方這次嘗試交融兩種文化，吳廷宇也表示，大家會感到新潮，或許也有人因活動而想認識客家文化。
+  </p>
+  <p class="page-text">
+    　本屆客家義民嘉年華為客家文化翻開嶄新的一頁，談及下一頁該如何續寫，徐世勲表示，未來計畫讓客家結合全球當代文化，「甚至讓大家覺得原來，我們客家人也可以引領潮流。」另一方面，吳廷宇點出，主辦方可以讓民眾體驗客家人的生活，「畢竟文化本質上是一種生活方式，所以民眾參與過這樣的生活方式後，推廣效度或深度都才會是持續的。」客家精神透過本次活動與潮流接軌，讓客家傳統以新形式發揚光大。
+  </p>
+
+  <!-- 推薦新聞 -->
+  <br>
+  <hr>
+  <br>
+  <div class="related-news-title">推薦新聞</div>
+  <div style="display:flex;
                     flex-direction: row;
                     justify-content: center;
                     margin-top: 30px;
                     margin-bottom:30px;">
-          <div>
-            <div class="related-news-board">
-                <img class="related-news-img" src="resources/imgs/生活/客+潮.jpg">
-                <div class="related-news-cardtitle">傳統精神接軌嘻哈潮流 「客+潮」發揚客家文化</div>
-            </div>
-          </div>
-          <div>
-            <div class="related-news-board">
-                <img class="related-news-img" src="resources/imgs/生活/虎獅.jpg">
-                <div class="related-news-cardtitle">全台唯一「舞虎」！ 虎獅派對促陣頭文化傳承</div>
-            </div>
-          </div>
-          <div>
-            <div class="related-news-board">
-                <img class="related-news-img" src="resources/imgs/生活/人權.jpg">
-                <div class="related-news-cardtitle">「聲」入人權議題 黑手那卡西唱出街頭抗爭史</div>
-            </div>
-          </div>
+    <div>
+      <a href="page_L1.html">
+        <div class="related-news-board">
+          <img class="related-news-img" src="resources/imgs/生活/南方影展.jpg">
+          <div class="related-news-cardtitle">南方影展凝聚台南電影人 首增學生獎鼓勵新銳創作</div>
         </div>
-        <br>
-    </div> 
-  </body>
+      </a>
+    </div>
+    <div>
+      <a href="page_L3.html">
+        <div class="related-news-board">
+          <img class="related-news-img" src="resources/imgs/生活/虎獅.jpg">
+          <div class="related-news-cardtitle">全台唯一「舞虎」！ 虎獅派對促陣頭文化傳承</div>
+        </div>
+      </a>
+    </div>
+    <div>
+      <a href="page_L4.html">
+        <div class="related-news-board">
+          <img class="related-news-img" src="resources/imgs/生活/人權.jpg">
+          <div class="related-news-cardtitle">「聲」入人權議題 黑手那卡西唱出街頭抗爭史</div>
+        </div>
+      </a>
+    </div>
+  </div>
+  <br>
+
+  <!--footer-->
+  <div class="footer">
+    <img src="resources/icon/svg/NS Logo_工作區域 1.svg" style="margin-left:48px;
+      margin-bottom:20px;
+      width:275px;
+      height:170px;">
+
+    <div class="footer_font" style="margin-left:50px;color: white;">HUNTER｜江昇　方琮翔　鄧芯怡　陳孟樺
+      BIG BOSS｜李法賢
+      SHOOT｜donnot.bother.us@gmail.com
+    </div>
+
+    <div class="footer_font" style="left: 861px;margin-top:67px;color:#EBC151;;">copyright©2023 NEWS SAFARI
+    </div>
+
+  </div>
+  </div>
+</body>
