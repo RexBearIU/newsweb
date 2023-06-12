@@ -17,6 +17,10 @@
             vertical-align: middle;
         }
 
+        .none {
+            display: inline-block;
+        }
+
         .line {
             display: inline-block;
             border-top: 1px solid black;
@@ -80,7 +84,7 @@
         }
 
         .rectangle-hover:hover {
-            color:white;
+            color: white;
         }
 
         .rectangle-hover:hover::before {
@@ -96,28 +100,160 @@
             border-radius: 4px;
         }
 
+        .mobileheader {
+            display: none;
+        }
+
+        .mobilefooter{
+            display:none;
+        }
+
+        @media(max-width:760px) {
+
+            .header {
+                display: none;
+            }
+
+            .mobileheader {
+                display: flex;
+                justify-content: center;
+            }
+
+            .line {
+                display: none;
+            }
+
+            .none {
+                display: none;
+            }
+
+            .container {
+                width: fit-content;
+                /* Set the width of the container */
+                margin: 0 auto;
+                /* Center the container horizontally */
+                display: flex;
+                justify-content:right;
+                height: fit-content;
+                top: 90px;
+            }
+
+            .mobileline {
+                position: relative;
+                display: flex;
+                justify-content: center;
+                border-top: 1px solid black;
+                width: 75%;
+                height: 1.51px;
+                padding-top: 192px;
+                margin-left: 103px;
+            }
+
+            /* CSS for dropdown menu */
+            .dropdown-menu {
+                position: relative;
+                display: flex;
+                white-space: pre-line;
+                line-height: 10px;
+                height: fit-content;
+                margin-top: 80px;
+                border: none;
+            }
+
+            .dropdown-menu>a {
+                display: flex;
+                justify-content: right;
+                padding: 10px;
+                color: #333;
+                text-decoration: none;
+            }
+
+            .dropdown-menu ul {
+                position: absolute;
+                top: 100%;
+                left: 0;
+                display: none;
+                text-decoration: none;
+                background-color: #f9f9f9;
+                padding: 10px;
+                margin: 0;
+                list-style-type: none;
+            }
+
+            .dropdown-menu ul li {
+                margin-bottom: 5px;
+                text-decoration: none;
+            }
+
+            .dropdown-menu:hover ul {
+                display: block;
+                text-decoration: none;
+                color: white;
+            }
+
+            .mobilefont {
+                text-decoration: none;
+                font-family: Noto Serif SC;
+                font-size: 37px;
+                font-weight: 400;
+                line-height: 53px;
+                letter-spacing: 0.06em;
+                text-align: center;
+                margin-top: 42px;
+                color: black;
+            }
+
+            .footer {
+                display: none;
+            }
+
+            .mobilefooter {
+                display: flex;
+                justify-content: center;
+                height: 206px;
+                background-color: #937D54;
+                margin-bottom: 0px;
+            }
+
+            .mobilefooterfont{
+            display: block;
+            font-family: Noto Serif SC;
+            font-size: 15px;
+            font-weight: 400;
+            line-height: 20px;
+            letter-spacing: 0.06em;
+            text-align: left;
+            white-space: pre-line;
+            margin-top: auto;
+            margin-bottom:auto;
+            margin-right:0px;
+            position: relative;
+            color:white
+            }
+        }
     </style>
 
 </head>
 
 <body>
 
-    <!--header-->
-    <div class="header">
-        <img src="resources/icon/svg/NS Logo_白_工作區域 1.svg" style="margin-left:90px;
+    <!--header desktop-->
+    <div class="none">
+        <div class="header">
+            <img src="resources/icon/svg/NS Logo_白_工作區域 1.svg" style="margin-left:90px;
             margin-top:0px;
             width:275px;
             height:170px;">
 
-        <img src="resources/icon/svg/主頁banner_工作區域 1-01.svg" style="position:relative;
+            <img src="resources/icon/svg/主頁banner_工作區域 1-01.svg" style="position:relative;
             margin-left:132px;
             margin-top:40px;
             width:637px;
             height:130px;
             z-index:1;">
 
-        
-            <a href="https://example.com" span class="rectangle-hover" style="display:inline-block;
+
+            <a href="international.pages.html" class="rectangle-hover" style="display:inline-block;
         font-family: Noto Serif SC;
         font-size: 37px;
         font-weight: 400;
@@ -131,59 +267,13 @@
         z-index:1;
         position:absolute;
         left:389px">國際</a>
-       
-
-        <a href="https://example.com" span class="rectangle-hover" style="display:inline-block;
-font-family: Noto Serif SC;
-font-size: 37px;
-font-weight: 400;
-text-decoration: none;
-line-height: 53px;
-width:109px;
-height:49px;
-letter-spacing: 0.06em;
-text-align: center;
-margin-top:42px;
-z-index:1;
-position:absolute;
-left:611px">生活</a>
-
-        <a href="https://example.com" span class="rectangle-hover" style="display:inline-block;
-font-family: Noto Serif SC;
-font-size: 37px;
-font-weight: 400;
-text-decoration: none;
-line-height: 53px;
-width:109px;
-height:49px;
-letter-spacing: 0.06em;
-text-align: center;
-margin-top:42px;
-z-index:1;
-position:absolute;
-left:834px">藝文</a>
-
-        <a href="https://example.com" span class="rectangle-hover" style="display:inline-block;
-font-family: Noto Serif SC;
-font-size: 37px;
-font-weight: 400;
-text-decoration: none;
-line-height: 53px;
-width:109px;
-height:49px;
-letter-spacing: 0.06em;
-text-align: center;
-margin-top:42px;
-z-index:1;
-position:absolute;
-left:1056px">新知</a>
 
 
-        <!--
-        <span class="rectangle-hover" style="display:inline-block;
+            <a href="life.pages-2.html" class="rectangle-hover" style="display:inline-block;
         font-family: Noto Serif SC;
         font-size: 37px;
         font-weight: 400;
+        text-decoration: none;
         line-height: 53px;
         width:109px;
         height:49px;
@@ -192,12 +282,13 @@ left:1056px">新知</a>
         margin-top:42px;
         z-index:1;
         position:absolute;
-        left:389px">國際</span>
+        left:611px">生活</a>
 
-        <span class="rectangle-hover" style="display:inline-block;
+            <a href="art.pages.html" span class="rectangle-hover" style="display:inline-block;
         font-family: Noto Serif SC;
         font-size: 37px;
         font-weight: 400;
+        text-decoration: none;
         line-height: 53px;
         width:109px;
         height:49px;
@@ -206,12 +297,13 @@ left:1056px">新知</a>
         margin-top:42px;
         z-index:1;
         position:absolute;
-        left:611px;">生活</span>
+        left:834px">藝文</a>
 
-        <span class="rectangle-hover" style="display:inline-block;
+            <a href="knowledge.pages.html" span class="rectangle-hover" style="display:inline-block;
         font-family: Noto Serif SC;
         font-size: 37px;
         font-weight: 400;
+        text-decoration: none;
         line-height: 53px;
         width:109px;
         height:49px;
@@ -220,27 +312,47 @@ left:1056px">新知</a>
         margin-top:42px;
         z-index:1;
         position:absolute;
-        left:834px;">藝文</span>
+        left:1056px">新知</a>
 
-        <span class="rectangle-hover" style="display:inline-block;
-        font-family: Noto Serif SC;
-        font-size: 37px;
-        font-weight: 400;
-        line-height: 53px;
-        width:109px;
-        height:49px;
-        letter-spacing: 0.06em;
-        text-align: center;
-        margin-top:42px;
-        z-index:1;
-        position:absolute;
-        left:1056px;">新知</span>-->
+        </div>
+
+        <div class="line"></div>
 
     </div>
-    <div class="line"></div>
+
+    <!--headermobile-->
+    <div class="mobileheader">
+
+        <img src="resources/icon/svg/NS Logo_白_工作區域 1.svg" style="margin-left:90px;
+        margin-top:0px;
+        width:275px;
+        height:170px;
+        justify-content: right;">
+        <div class="container"></div>
+        <div class="dropdown-menu" style:="margin-right:0px;">
+            <a href="#">____
+                ____
+                ____</a>
+            <ul>
+                <li><a href="international.pages.html" class="mobilefont">國際</a></li>
+                <li><a href="life.pages-2.html" class="mobilefont">生活</a></li>
+                <li><a href="art.pages.html" class="mobilefont">藝文</a></li>
+                <li><a href="knowledge.pages.html" class="mobilefont">新知</a></li>
+            </ul>
+        </div>
+
+        
+    </div>
 
 
-    <!--footer-->
+
+    </div>
+
+    <div class="mobileline"></div>
+
+
+
+    <!--footerdesktop-->
     <div class="footer">
         <img src="resources/icon/svg/NS Logo_工作區域 1.svg" style="margin-left:48px;
         margin-bottom:20px;
@@ -255,6 +367,36 @@ left:1056px">新知</a>
         <div class="footer_font" style="left: 861px;margin-top:67px;color:#EBC151;;">copyright©2023 NEWS SAFARI
         </div>
 
+        </div>
+
+        
+    <!--footermobile-->
+        <div class="mobilefooter">
+            
+        <img src="resources/icon/svg/NS Logo_工作區域 1.svg" style="
+        margin-left:90px;
+        margin-top:auto;
+        margin-bottom:auto;
+        width:275px;
+        height:170px;
+        display:flex;
+        justify-content: right;">
+        
+        <div class="container"></div>
+        <div class="mobilefooterfont" style="color: white;width:max-content;margin-bottom:0px;">HUNTER｜
+                江昇　方琮翔　鄧芯怡　陳孟樺
+                BIG BOSS｜
+                李法賢
+                SHOOT｜
+                donnot.bother.us@gmail.com
+            <div class="mobilefooterfont" style="color:#EBC151;margin-top:0px;">copyright©
+                2023 NEWS SAFARI
+            </div>
+        </div>
+
+        
+
+        </div>
     </div>
 
 
