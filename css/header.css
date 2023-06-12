@@ -12,10 +12,10 @@
 .line {
     display: inline-block;
     border-top: 1px solid black;
-    width: 1263px;
+    width: 100%;
     height: 1.51px;
     /* padding-top: 192px; */
-    margin-left: 20px;
+    /* margin-left: 20px; */
 }
 
 .header_font {
@@ -44,7 +44,7 @@
     margin-left: auto;
     margin-right: auto;
     /* vertical-align: middle; */
-    width: 1290px;
+    width: 100%;
     height: 206px;
     background-color: #937D54;
     margin-bottom: 0px;
@@ -52,7 +52,7 @@
 
 .footer_font {
     display: inline-block;
-    font-family: Noto Serif SC;
+    font-family: "Noto Serif SC";
     font-size: 22px;
     font-weight: 400;
     line-height: 32px;
@@ -133,7 +133,7 @@
         display: block;
         justify-content: center;
         border-top: 1px solid black;
-        width: 75%;
+        width: 95%;
         height: 1.51px;
         /* padding-top: 192px; */
         margin-left: auto;
@@ -187,7 +187,7 @@
 
     .mobilefont {
         text-decoration: none;
-        font-family: Noto Serif SC;
+        font-family: "Noto Serif SC";
         font-size: 37px;
         font-weight: 400;
         line-height: 53px;
@@ -211,7 +211,7 @@
 
     .mobilefooterfont{
     display: block;
-    font-family: Noto Serif SC;
+    font-family: "Noto Serif HK";
     font-size: 15px;
     font-weight: 400;
     line-height: 20px;
