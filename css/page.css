@@ -22,7 +22,7 @@ body {
 
 .page-text {
   font-size: 18px;
-  font-family: "Noto Serif HK";
+  font-family: "Noto Serif SC";
   font-weight: lighter;
   color:#3B3C36;
   width:600px;
@@ -47,7 +47,7 @@ body {
 .related-news-title{
   font-weight: 550;
   font-size: 36px;
-  font-family: "Noto Serif HK";
+  font-family: "Noto Serif SC";
   color:#3B3C36;
   margin-left:12%;
 }
@@ -189,7 +189,7 @@ a{text-decoration: none;}
 
 .m-page-text {
   font-size: 18px;
-  font-family: "Noto Serif HK";
+  font-family: "Noto Serif SC";
   font-weight: lighter;
   color:#3B3C36;
   width:400px;
@@ -214,7 +214,7 @@ a{text-decoration: none;}
 .m-related-news-title{
   font-weight: 550;
   font-size: 36px;
-  font-family: "Noto Serif HK";
+  font-family: "Noto Serif SC";
   color:#3B3C36;
   margin-left:40%;
 }
