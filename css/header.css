@@ -117,7 +117,7 @@
         display: none;
     }
 
-    .container {
+    .my-container {
         width: fit-content;
         /* Set the width of the container */
         margin: 0 auto;
@@ -129,14 +129,15 @@
     }
 
     .mobileline {
-        position: relative;
-        display: flex;
+        /* position: relative; */
+        display: block;
         justify-content: center;
         border-top: 1px solid black;
         width: 75%;
         height: 1.51px;
-        padding-top: 192px;
-        margin-left: 103px;
+        /* padding-top: 192px; */
+        margin-left: auto;
+        margin-right: auto;
     }
 
     /* CSS for dropdown menu */
@@ -148,6 +149,9 @@
         height: fit-content;
         margin-top: 80px;
         border: none;
+        background-color: #f8f8ff;
+        left: 100px;
+        bottom: 35px;
     }
 
     .dropdown-menu>a {

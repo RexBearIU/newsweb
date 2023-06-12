@@ -26,6 +26,8 @@ a:hover{
   border-color: #3B3C36;
   /* max-height: 500px; */
   background-color: #f8f8ff;
+  padding-left: 1px;
+  padding-right: 1px;
 }
 
 
