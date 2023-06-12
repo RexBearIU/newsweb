@@ -4,6 +4,8 @@ body {
   background-color:#f8f8ff;
 }
 
+
+@media (min-width:760px){
 /* 文章頁的標題、內文、圖片 */
 
 .page-title {
@@ -11,7 +13,7 @@ body {
   font-size: 48px;
   font-family: "Inter";
   color:#3B3C36;
-  width:auto;
+  width:600px;
   text-align: center;
   margin-left:auto;
   margin-right:auto;
@@ -19,19 +21,19 @@ body {
 }
 
 .page-text {
-  font-size: 20px;
+  font-size: 18px;
   font-family: "Noto Serif HK";
   font-weight: lighter;
   color:#3B3C36;
-  width:1000px;
+  width:600px;
   text-align:justify;
   margin-left:auto;
   margin-right:auto;
 }
 
 .page-img{
-  width: 1000px;
-  height: 550px;
+  width: 600px;
+  height: 375px;
   margin-left: auto;
   margin-right: auto;
   margin-top:30px;
@@ -44,27 +46,36 @@ body {
 
 .related-news-title{
   font-weight: 550;
-  font-size: 48px;
+  font-size: 36px;
   font-family: "Noto Serif HK";
   color:#3B3C36;
-  margin-left:260px;
+  margin-left:12%;
 }
 
 .related-news-board{
-    border:2px solid #3B3C36;
+    border:1.5px solid #3B3C36;
     width:300px;
     height: 350px;
     display:block;
     margin-left:25px;
 }
+
+.related-news-board:hover{
+  transform: scale(1.05);
+}
+
 .related-news-img{
     height: 210px;
     width: 280px;
-    margin-left: 10px;
-    margin-right: 10px;
+    margin-left: auto;
+    margin-right: auto;
     margin-top:10px;
     display: block;
     object-fit:cover
+}
+
+.related-news-img:hover{
+  filter:grayscale(100%);
 }
 
 .related-news-cardtitle{
@@ -78,4 +89,176 @@ body {
     font-weight:bolder;
     color:#3B3C36;
     display:block;
+}
+
+.related-news-cardtitle:hover{
+  color:#ebc151;
+}
+
+.m-page-title {
+  display:none;
+}
+
+.m-page-text {
+  display:none;
+}
+
+.m-page-img{
+  display:none;
+}
+
+/* 推薦新聞的標題、邊框、圖片、內文 */
+
+.m-related-news-title{
+  display:none;
+}
+
+.m-related-news-board{
+  display:none;
+}
+
+.m-related-news-board:hover{
+  transform: scale(1.05);
+}
+
+.m-related-news-img{
+  display:none;
+}
+
+.m-related-news-img:hover{
+  filter:grayscale(100%);
+}
+
+.m-related-news-cardtitle{
+  display:none;
+}
+
+.m-related-news-cardtitle:hover{
+  color:#ebc151;
+}
+}
+
+a{text-decoration: none;}
+
+/* 手機板 */
+
+@media (max-width:760px){
+
+  .page-title {
+    display:none;
+  }
+  
+  .page-text {
+    display:none;
+  }
+  
+  .page-img{
+    display:none;
+  }
+
+  .related-news-title{
+    display:none;
+  }
+  
+  .related-news-board{
+    display:none;
+  }
+  
+  .related-news-img{
+    display:none;
+  }
+  
+  .related-news-cardtitle{
+    display:none;
+  }
+
+
+  /* 文章頁的標題、內文、圖片 */
+
+.m-page-title {
+  font-weight: bolder;
+  font-size: 48px;
+  font-family: "Inter";
+  color:#3B3C36;
+  width:400px;
+  text-align: center;
+  margin-left:auto;
+  margin-right:auto;
+  margin-bottom: 30px;
+}
+
+.m-page-text {
+  font-size: 18px;
+  font-family: "Noto Serif HK";
+  font-weight: lighter;
+  color:#3B3C36;
+  width:400px;
+  text-align:justify;
+  margin-left:auto;
+  margin-right:auto;
+}
+
+.m-page-img{
+  width: 400px;
+  height: 250px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top:30px;
+  margin-bottom:30px;
+  display: block;
+  object-fit:cover;
+}
+
+/* 推薦新聞的標題、邊框、圖片、內文 */
+
+.m-related-news-title{
+  font-weight: 550;
+  font-size: 36px;
+  font-family: "Noto Serif HK";
+  color:#3B3C36;
+  margin-left:40%;
+}
+
+.m-related-news-board{
+    border:1.5px solid #3B3C36;
+    width:300px;
+    height: 350px;
+    display:block;
+    margin-left:25px;
+}
+
+.m-related-news-board:hover{
+  transform: scale(1.05);
+}
+
+.m-related-news-img{
+    height: 210px;
+    width: 280px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top:10px;
+    display: block;
+    object-fit:cover;
+}
+
+.m-related-news-img:hover{
+  filter:grayscale(100%);
+}
+
+.m-related-news-cardtitle{
+    font-family: "Inter";
+    text-align:justify;
+    font-size: 24px;
+    width:250px;
+    margin-top:8px;
+    margin-left:25px;
+    margin-right:25px;
+    font-weight:bolder;
+    color:#3B3C36;
+    display:block;
+}
+
+.m-related-news-cardtitle:hover{
+  color:#ebc151;
+}
 }
