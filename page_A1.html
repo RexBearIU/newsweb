@@ -7,8 +7,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>澎湖是故鄉還是異地？ 〈記北辰市場〉寫盡身份混亂</title>
   <link rel="stylesheet" href="css/page.css">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 
   <style>
     .header {
@@ -23,7 +21,6 @@
       border-top: 1px solid black;
       width: 1050px;
       height: 1.51px;
-      padding-top: 192px;
       margin-left: 103px;
     }
 
@@ -73,6 +70,136 @@
       z-index: 1;
       position: absolute;
     }
+
+    .mobileheader {
+      display: none;
+    }
+
+    .mobilefooter {
+      display: none;
+    }
+
+    @media(max-width:760px) {
+
+      .header {
+        display: none;
+      }
+
+      .mobileheader {
+        display: flex;
+        justify-content: center;
+      }
+
+      .line {
+        display: none;
+      }
+
+
+
+      .container {
+        width: fit-content;
+        /* Set the width of the container */
+        margin: 0 auto;
+        /* Center the container horizontally */
+        display: flex;
+        justify-content: right;
+        height: fit-content;
+        top: 90px;
+      }
+
+      .mobileline {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        border-top: 1px solid black;
+        width: 75%;
+        height: 1.51px;
+        padding-top: 192px;
+        margin-left: 103px;
+      }
+
+      /* CSS for dropdown menu */
+      .dropdown-menu {
+        position: relative;
+        display: flex;
+        white-space: pre-line;
+        line-height: 10px;
+        height: fit-content;
+        margin-top: 80px;
+        border: none;
+      }
+
+      .dropdown-menu>a {
+        display: flex;
+        justify-content: right;
+        padding: 10px;
+        color: #333;
+        text-decoration: none;
+      }
+
+      .dropdown-menu ul {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        display: none;
+        text-decoration: none;
+        background-color: #f9f9f9;
+        padding: 10px;
+        margin: 0;
+        list-style-type: none;
+      }
+
+      .dropdown-menu ul li {
+        margin-bottom: 5px;
+        text-decoration: none;
+      }
+
+      .dropdown-menu:hover ul {
+        display: block;
+        text-decoration: none;
+        color: white;
+      }
+
+      .mobilefont {
+        text-decoration: none;
+        font-family: Noto Serif SC;
+        font-size: 37px;
+        font-weight: 400;
+        line-height: 53px;
+        letter-spacing: 0.06em;
+        text-align: center;
+        margin-top: 42px;
+        color: black;
+      }
+
+      .footer {
+        display: none;
+      }
+
+      .mobilefooter {
+        display: flex;
+        justify-content: center;
+        height: 206px;
+        background-color: #937D54;
+        margin-bottom: 0px;
+      }
+
+      .mobilefooterfont {
+        display: block;
+        font-family: Noto Serif SC;
+        font-size: 15px;
+        font-weight: 400;
+        line-height: 20px;
+        letter-spacing: 0.06em;
+        text-align: left;
+        white-space: pre-line;
+        margin-top: auto;
+        margin-bottom: auto;
+        margin-right: 0px;
+        position: relative;
+        color: white
+      }
+    }
   </style>
 
 </head>
@@ -93,97 +220,209 @@
 
 
     <div class="header_font" style="left:392px;margin-top:40px;">
-      <a href="https://example.com" style="text-decoration: none;color:black;">國際</a>
+      <a href="international.pages.html" style="text-decoration: none;color:black;">國際</a>
     </div>
     <div class="header_font" style="left:580px;margin: top 40px;">
-      <a href="https://example.com" style="text-decoration: none;color:black;">生活</a>
+      <a href="life.pages-2.html" style="text-decoration: none;color:black;">生活</a>
     </div>
     <div class="header_font"
       style="left:740px;margin-top:21px;background-color:#937D54F2;padding-left:50px;padding-right:50px;padding-top:25px;padding-bottom:25px;border-radius:8px;">
-      <a href="https://example.com" style="text-decoration: none;color:white;">藝文</a>
+      <a href="art.pages.html" style="text-decoration: none;color:white;">藝文</a>
     </div>
     <div class="header_font" style="left: 1056px;margin-top:40px;">
-      <a href="https://example.com" style="text-decoration: none;color:black;">新知</a>
+      <a href="knowledge.pages.html" style="text-decoration: none;color:black;">新知</a>
     </div>
 
   </div>
-  <span class="line"></div>
+  <span class="line"></span>
 
-    <!-- 文章首圖 -->
-    <img class="page-img" src="resources/imgs/藝文/北辰.png" alt="新聞標題">
+  <!--headermobile-->
+  <div class="mobileheader">
 
-    <!-- 文章大標 -->
-    <div class="page-title">澎湖是故鄉還是異地？ 〈記北辰市場〉寫盡身份混亂</div>
+    <img src="resources/icon/svg/NS Logo_白_工作區域 1.svg" style="margin-left:90px;
+  margin-top:0px;
+  width:275px;
+  height:170px;
+  justify-content: right;">
+    <div class="container"></div>
+    <div class="dropdown-menu" style:="margin-right:0px;">
+      <a href="#">____
+        ____
+        ____</a>
+      <ul>
+        <li><a href="international.pages.html" class="mobilefont">國際</a></li>
+        <li><a href="life.pages-2.html" class="mobilefont">生活</a></li>
+        <li><a href="art.pages.html" class="mobilefont">藝文</a></li>
+        <li><a href="knowledge.pages.html" class="mobilefont">新知</a></li>
+      </ul>
+    </div>
 
-    <!-- 文章內文 -->
-    <p class="page-text">
-      　【記者江昇綜合報導】「土魠魚游進歸返的早晨／遲滯於花火和漁火／父親倒入酸澀的懷念／衝破羹麵膠著，提醒／我們還是海的孩子」國立成功大學台灣文學系學生高于棋以〈記北辰市場〉一詩，獲得第25屆菊島文學獎社會組現代詩佳作，為32名得獎者中唯一的大學生。
-    </p>
-    <p class="page-text">
-      　〈記北辰市場〉詩中，高于棋以花火節、風茹茶、肪片龜等澎湖人文特色，描寫自身對於「故鄉」澎湖的印象。對於在台中生長的高于棋而言，父親的家鄉——澎湖北辰市場，始終帶給他介於故鄉與異地之間的複雜感受，正如他本人之於澎湖的關係，也在澎湖的孩子、觀光客兩種身份間搖擺，「菜市場擺攤的阿嬤對我有種疏離感，覺得我一看就是台灣本島來的。」因此在作品中，他並不想單以外來者的視角描寫北辰市場的光景，也想重新思索自己在澎湖的定位。
-    </p>
-    <p class="page-text">
-      　「神明以叫賣聲宣誓／海口腔將信仰加密／語言吐出虔誠的交易」高于棋認為，北辰市場的熙攘叫賣聲含有一種「童叟無欺的信任」，因此他用虔誠來形容小販，還原市場居民真誠的互動方式。而小販使用的海口腔和其他閩南語腔調的差異較大，這令他聯想到澎湖與台灣本島之間，共為一體卻又彼此疏離的關係。他表示，這種疏離感與自己的身份混亂不謀而合，「別人問你是哪裡人時，有時是在問你爸爸是哪裡人，但我不覺得自己算是一個澎湖人。」
-    </p>
-    <p class="page-text">　「這首詩目前還是聚焦得不夠明確，想講的東西太多，導致敘事有點混亂。」對於這首第一
-      次在社會組文學獎得獎的詩作，高于棋承認本詩還不盡完美，在結構安排上還有可改進之處。國立政治大學長廊詩社副社長陳安文便點出，詩中羅列出的各個意象並未經適當串連，導致他難以體會到作者欲傳達的鄉土關懷精神。讀者謝美娟也認為，詩中有許多用詞不易理解，但他仍能感受到作者身為遊子的流離心境。高于棋表示，儘管作品仍有些許破綻，不過他依然感謝評審的肯定。
-    </p>
-    <p class="page-text">
-      　高于棋說明，上大學以前的他並不熟悉澎湖的在地文化，但在台文系就讀期間，他有機會接觸更多與澎湖相關的文史資料，因此得以在創作〈記北辰市場〉時，重新反思自己的身份定位，「也許哪一天我放下一切，回澎湖種田看海，那時它對我來說就是真真實實的故鄉。」他說。
-    </p>
 
-    <!-- 推薦新聞 -->
-    <br>
-    <hr>
-    <br>
-    <div class="related-news-title">推薦新聞</div>
-    <div style="display:flex;
+  </div>
+
+  </div>
+
+  <div class="mobileline"></div>
+
+  <!-- 文章首圖 -->
+  <img class="page-img" src="resources/imgs/藝文/北辰.png" alt="新聞標題">
+
+  <!-- 文章大標 -->
+  <div class="page-title">澎湖是故鄉還是異地？ 〈記北辰市場〉寫盡身份混亂</div>
+
+  <!-- 文章內文 -->
+  <p class="page-text">
+    　【記者江昇綜合報導】「土魠魚游進歸返的早晨／遲滯於花火和漁火／父親倒入酸澀的懷念／衝破羹麵膠著，提醒／我們還是海的孩子」國立成功大學台灣文學系學生高于棋以〈記北辰市場〉一詩，獲得第25屆菊島文學獎社會組現代詩佳作，為32名得獎者中唯一的大學生。
+  </p>
+  <p class="page-text">
+    　〈記北辰市場〉詩中，高于棋以花火節、風茹茶、肪片龜等澎湖人文特色，描寫自身對於「故鄉」澎湖的印象。對於在台中生長的高于棋而言，父親的家鄉——澎湖北辰市場，始終帶給他介於故鄉與異地之間的複雜感受，正如他本人之於澎湖的關係，也在澎湖的孩子、觀光客兩種身份間搖擺，「菜市場擺攤的阿嬤對我有種疏離感，覺得我一看就是台灣本島來的。」因此在作品中，他並不想單以外來者的視角描寫北辰市場的光景，也想重新思索自己在澎湖的定位。
+  </p>
+  <p class="page-text">
+    　「神明以叫賣聲宣誓／海口腔將信仰加密／語言吐出虔誠的交易」高于棋認為，北辰市場的熙攘叫賣聲含有一種「童叟無欺的信任」，因此他用虔誠來形容小販，還原市場居民真誠的互動方式。而小販使用的海口腔和其他閩南語腔調的差異較大，這令他聯想到澎湖與台灣本島之間，共為一體卻又彼此疏離的關係。他表示，這種疏離感與自己的身份混亂不謀而合，「別人問你是哪裡人時，有時是在問你爸爸是哪裡人，但我不覺得自己算是一個澎湖人。」
+  </p>
+  <p class="page-text">　「這首詩目前還是聚焦得不夠明確，想講的東西太多，導致敘事有點混亂。」對於這首第一
+    次在社會組文學獎得獎的詩作，高于棋承認本詩還不盡完美，在結構安排上還有可改進之處。國立政治大學長廊詩社副社長陳安文便點出，詩中羅列出的各個意象並未經適當串連，導致他難以體會到作者欲傳達的鄉土關懷精神。讀者謝美娟也認為，詩中有許多用詞不易理解，但他仍能感受到作者身為遊子的流離心境。高于棋表示，儘管作品仍有些許破綻，不過他依然感謝評審的肯定。
+  </p>
+  <p class="page-text">
+    　高于棋說明，上大學以前的他並不熟悉澎湖的在地文化，但在台文系就讀期間，他有機會接觸更多與澎湖相關的文史資料，因此得以在創作〈記北辰市場〉時，重新反思自己的身份定位，「也許哪一天我放下一切，回澎湖種田看海，那時它對我來說就是真真實實的故鄉。」他說。
+  </p>
+
+  <!-- 手機版 -->
+  <!-- 文章首圖 -->
+  <img class="m-page-img" src="resources/imgs/藝文/北辰.png" alt="新聞標題">
+
+  <!-- 文章大標 -->
+  <div class="m-page-title">澎湖是故鄉還是異地？ 〈記北辰市場〉寫盡身份混亂</div>
+
+  <!-- 文章內文 -->
+  <p class="m-page-text">
+    　【記者江昇綜合報導】「土魠魚游進歸返的早晨／遲滯於花火和漁火／父親倒入酸澀的懷念／衝破羹麵膠著，提醒／我們還是海的孩子」國立成功大學台灣文學系學生高于棋以〈記北辰市場〉一詩，獲得第25屆菊島文學獎社會組現代詩佳作，為32名得獎者中唯一的大學生。
+  </p>
+  <p class="m-page-text">
+    　〈記北辰市場〉詩中，高于棋以花火節、風茹茶、肪片龜等澎湖人文特色，描寫自身對於「故鄉」澎湖的印象。對於在台中生長的高于棋而言，父親的家鄉——澎湖北辰市場，始終帶給他介於故鄉與異地之間的複雜感受，正如他本人之於澎湖的關係，也在澎湖的孩子、觀光客兩種身份間搖擺，「菜市場擺攤的阿嬤對我有種疏離感，覺得我一看就是台灣本島來的。」因此在作品中，他並不想單以外來者的視角描寫北辰市場的光景，也想重新思索自己在澎湖的定位。
+  </p>
+  <p class="m-page-text">
+    　「神明以叫賣聲宣誓／海口腔將信仰加密／語言吐出虔誠的交易」高于棋認為，北辰市場的熙攘叫賣聲含有一種「童叟無欺的信任」，因此他用虔誠來形容小販，還原市場居民真誠的互動方式。而小販使用的海口腔和其他閩南語腔調的差異較大，這令他聯想到澎湖與台灣本島之間，共為一體卻又彼此疏離的關係。他表示，這種疏離感與自己的身份混亂不謀而合，「別人問你是哪裡人時，有時是在問你爸爸是哪裡人，但我不覺得自己算是一個澎湖人。」
+  </p>
+  <p class="m-page-text">　「這首詩目前還是聚焦得不夠明確，想講的東西太多，導致敘事有點混亂。」對於這首第一
+    次在社會組文學獎得獎的詩作，高于棋承認本詩還不盡完美，在結構安排上還有可改進之處。國立政治大學長廊詩社副社長陳安文便點出，詩中羅列出的各個意象並未經適當串連，導致他難以體會到作者欲傳達的鄉土關懷精神。讀者謝美娟也認為，詩中有許多用詞不易理解，但他仍能感受到作者身為遊子的流離心境。高于棋表示，儘管作品仍有些許破綻，不過他依然感謝評審的肯定。
+  </p>
+  <p class="m-page-text">
+    　高于棋說明，上大學以前的他並不熟悉澎湖的在地文化，但在台文系就讀期間，他有機會接觸更多與澎湖相關的文史資料，因此得以在創作〈記北辰市場〉時，重新反思自己的身份定位，「也許哪一天我放下一切，回澎湖種田看海，那時它對我來說就是真真實實的故鄉。」他說。
+  </p>
+
+
+  <!-- 推薦新聞 -->
+  <br>
+  <hr>
+  <br>
+  <div class="related-news-title">推薦新聞</div>
+  <div style="display:flex;
                     flex-direction: row;
                     justify-content: center;
                     margin-top: 30px;
                     margin-bottom:30px;">
-      <div>
-        <a href="page_A2.html">
-          <div class="related-news-board">
-            <img class="related-news-img" src="resources/imgs/藝文/引光入室.png">
-            <div class="related-news-cardtitle">茶湯融入空間設計 引光入室「濾」出茶道精神</div>
-          </div>
-        </a>
-      </div>
-      <div>
-        <a href="page_A3.html">
-          <div class="related-news-board">
-            <img class="related-news-img" src="resources/imgs/藝文/無眠.jpg">
-            <div class="related-news-cardtitle">《無眠》映生死徬徨心境 北藝大戲劇探自殺意義</div>
-          </div>
-        </a>
-      </div>
-      <div>
-        <a href="page_A4.html">
-          <div class="related-news-board">
-            <img class="related-news-img" src="resources/imgs/藝文/大崎六六.jpg">
-            <div class="related-news-cardtitle">跳脫陶藝無暇印象 《大崎六六》玩轉土材新可能</div>
-          </div>
-        </a>
-      </div>
+    <div>
+      <a href="page_A2.html">
+        <div class="related-news-board">
+          <img class="related-news-img" src="resources/imgs/藝文/引光入室.png">
+          <div class="related-news-cardtitle">茶湯融入空間設計 引光入室「濾」出茶道精神</div>
+        </div>
+      </a>
     </div>
-    <br>
+    <div>
+      <a href="page_A3.html">
+        <div class="related-news-board">
+          <img class="related-news-img" src="resources/imgs/藝文/無眠.jpg">
+          <div class="related-news-cardtitle">《無眠》映生死徬徨心境 北藝大戲劇探自殺意義</div>
+        </div>
+      </a>
+    </div>
+    <div>
+      <a href="page_A4.html">
+        <div class="related-news-board">
+          <img class="related-news-img" src="resources/imgs/藝文/大崎六六.jpg">
+          <div class="related-news-cardtitle">跳脫陶藝無暇印象 《大崎六六》玩轉土材新可能</div>
+        </div>
+      </a>
+    </div>
+  </div>
+  <br>
 
-    <!--footer-->
-    <div class="footer">
-      <img src="resources/icon/svg/NS Logo_工作區域 1.svg" style="margin-left:48px;
+  <!-- 手機板推薦新聞 -->
+  <div class="m-related-news-title">推薦新聞</div>
+  <div style="display:flex;
+                        flex-direction: column;
+                        align-items: center;
+                        margin-top: 30px;
+                        margin-bottom:30px;">
+    <div>
+      <a href="page_A2.html">
+        <div class="m-related-news-board">
+          <img class="m-related-news-img" src="resources/imgs/藝文/引光入室.png">
+          <div class="m-related-news-cardtitle">茶湯融入空間設計 引光入室「濾」出茶道精神</div>
+        </div>
+      </a>
+    </div>
+    <div>
+      <a href="page_A3.html">
+        <div class="m-related-news-board">
+          <img class="m-related-news-img" src="resources/imgs/藝文/無眠.jpg">
+          <div class="m-related-news-cardtitle">《無眠》映生死徬徨心境 北藝大戲劇探自殺意義</div>
+        </div>
+      </a>
+    </div>
+    <div>
+      <a href="page_A4.html">
+        <div class="m-related-news-board">
+          <img class="m-related-news-img" src="resources/imgs/藝文/大崎六六.jpg">
+          <div class="m-related-news-cardtitle">跳脫陶藝無暇印象 《大崎六六》玩轉土材新可能</div>
+        </div>
+      </a>
+    </div>
+  </div>
+  <br>
+
+  <!--footer-->
+  <div class="footer">
+    <img src="resources/icon/svg/NS Logo_工作區域 1.svg" style="margin-left:48px;
       margin-bottom:20px;
       width:275px;
       height:170px;">
 
-      <div class="footer_font" style="margin-left:50px;color: white;">HUNTER｜江昇　方琮翔　鄧芯怡　陳孟樺
-        BIG BOSS｜李法賢
-        SHOOT｜donnot.bother.us@gmail.com
+    <div class="footer_font" style="margin-left:50px;color: white;">HUNTER｜江昇　方琮翔　鄧芯怡　陳孟樺
+      BIG BOSS｜李法賢
+      SHOOT｜donnot.bother.us@gmail.com
+    </div>
+
+    <div class="footer_font" style="left: 861px;margin-top:67px;color:#EBC151;;">copyright©2023 NEWS SAFARI
+    </div>
+
+    <!--footermobile-->
+    <div class="mobilefooter">
+
+      <img src="resources/icon/svg/NS Logo_工作區域 1.svg" style="
+      margin-left:90px;
+      margin-top:auto;
+      margin-bottom:auto;
+      width:275px;
+      height:170px;
+      display:flex;
+      justify-content: right;">
+
+      <div class="container"></div>
+      <div class="mobilefooterfont" style="color: white;width:max-content;margin-bottom:0px;">HUNTER｜
+        江昇　方琮翔　鄧芯怡　陳孟樺
+        BIG BOSS｜
+        李法賢
+        SHOOT｜
+        donnot.bother.us@gmail.com
+        <div class="mobilefooterfont" style="color:#EBC151;margin-top:0px;">copyright©
+          2023 NEWS SAFARI
+        </div>
       </div>
 
-      <div class="footer_font" style="left: 861px;margin-top:67px;color:#EBC151;;">copyright©2023 NEWS SAFARI
-      </div>
 
     </div>
-    </div>
+  </div>
 </body>
