@@ -15,6 +15,8 @@
       white-space: nowrap;
       display: inline-block;
       vertical-align: middle;
+      background-color: #f8f8ff;
+      width: 100%;
     }
 
     .line {
@@ -42,10 +44,12 @@
     }
 
     .rectangle {
-      width: 207px;
-      height: 103px;
+      width: 180px;
+      height: 102px;
       background-color: #937D54F2;
-      display: inline-block;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
       z-index: 2;
     }
 
@@ -54,7 +58,7 @@
       white-space: nowrap;
       display: inline-block;
       vertical-align: middle;
-      width:100%;
+      width: 100%;
       height: 206px;
       background-color: #937D54;
       margin-bottom: 0px;
@@ -74,6 +78,33 @@
       position: absolute;
     }
 
+    .link-container {
+      display: inline-block
+    }
+
+    .rectangle-hover {
+      position: relative;
+      color: black;
+    }
+
+    .rectangle-hover:hover {
+      color: white;
+    }
+
+    .rectangle-hover:hover::before {
+      content: '';
+      position: absolute;
+      text-align: center;
+      left: -35.5px;
+      top: -27px;
+      width: 180px;
+      height: 102px;
+      background-color: #937D54F2;
+      z-index: -1;
+      border-radius: 4px;
+    }
+
+
     .mobileheader {
       display: none;
     }
@@ -91,6 +122,7 @@
       .mobileheader {
         display: flex;
         justify-content: center;
+        background-color: #f8f8ff;
       }
 
       .line {
@@ -128,8 +160,11 @@
         white-space: pre-line;
         line-height: 10px;
         height: fit-content;
-        margin-top: 80px;
+        margin-top: 20px;
         border: none;
+        justify-content: flex-end;
+        margin-right: 10%;
+        background-color: #f8f8ff;
       }
 
       .dropdown-menu>a {
@@ -146,7 +181,7 @@
         left: 0;
         display: none;
         text-decoration: none;
-        background-color: #f9f9f9;
+        background-color: #f8f8ff;
         padding: 10px;
         margin: 0;
         list-style-type: none;
@@ -160,7 +195,7 @@
       .dropdown-menu:hover ul {
         display: block;
         text-decoration: none;
-        color: white;
+        color: #f8f8ff;
       }
 
       .mobilefont {
@@ -197,7 +232,7 @@
         text-align: left;
         white-space: pre-line;
         margin-top: auto;
-        margin-bottom: auto;
+        margin-bottom:auto;
         margin-right: 0px;
         position: relative;
         color: white
@@ -210,10 +245,12 @@
 <body>
   <!--header_life-->
   <div class="header">
-    <img src="resources/icon/svg/NS Logo_白_工作區域 1.svg" style="margin-left:90px;
-            margin-top:0px;
-            width:275px;
-            height:170px;">
+    <a href="main.html" style="color:#f8f8ff">
+      <img src="resources/icon/svg/NS Logo_白_工作區域 1.svg" style="margin-left:90px;
+              margin-top:0px;
+              width:275px;
+              height:170px;">
+    </a>
 
     <img src="resources/icon/svg/NS banner_工作區域 1-02.svg" style="position:relative;
             margin-left:132px;
@@ -222,19 +259,71 @@
             height:130px;">
 
 
-    <div class="header_font" style="left:392px;margin-top:40px;">
-      <a href="international.pages.html" style="text-decoration: none;color:black;">國際</a>
-    </div>
-    <div class="header_font"
-      style="left:550px;background-color: #937D54F2;padding-left:50px;padding-right:50px;padding-top:25px;padding-bottom:25px;border-radius:8px;">
-      <a href="life.pages-2.html" style="text-decoration: none;color:white;">生活</a>
-    </div>
-    <div class="header_font" style="left:834px;margin-top:40px;">
-      <a href="art.pages.html" style="text-decoration: none;color:black;">藝文</a>
-    </div>
-    <div class="header_font" style="left: 1056px;margin-top:40px;">
-      <a href="knowledge.pages.html" style="text-decoration: none;color:black;">新知</a>
-    </div>
+    <a href="international.pages.html" class="rectangle-hover" style="display:inline-block;
+            font-family: Noto Serif SC;
+            font-size: 37px;
+            font-weight: 400;
+            text-decoration: none;
+            line-height: 53px;
+            width:109px;
+            height:49px;
+            letter-spacing: 0.06em;
+            text-align: center;
+            margin-top:42px;
+            z-index:1;
+            position:absolute;
+            left:389px">國際</a>
+
+    <a href="life.pages-2.html" class="rectangle" style="display:inline-block;
+            font-family: Noto Serif SC;
+            font-size: 37px;
+            font-weight: 400;
+            text-decoration: none;
+            line-height: 53px;
+            width:180px;
+            height:102px;
+            padding-top:26px;
+            letter-spacing: 0.06em;
+            text-align: center;
+            vertical-align: middle;
+            margin-top:15px;
+            z-index:1;
+            position:absolute;
+            color:white;
+            border-radius: 4px;
+            left:570px">生活</a>
+
+
+    <a href="art.pages.html" class="rectangle-hover" style="display:inline-block;
+          font-family: Noto Serif SC;
+          font-size: 37px;
+          font-weight: 400;
+          text-decoration: none;
+          line-height: 53px;
+          width:109px;
+          height:49px;
+          letter-spacing: 0.06em;
+          text-align: center;
+          margin-top:42px;
+          z-index:1;
+          position:absolute;
+          left:834px">藝文</a>
+
+    <a href="knowledge.pages.html" class="rectangle-hover" style="display:inline-block;
+          font-family: Noto Serif SC;
+          font-size: 37px;
+          font-weight: 400;
+          text-decoration: none;
+          line-height: 53px;
+          width:109px;
+          height:49px;
+          letter-spacing: 0.06em;
+          text-align: center;
+          margin-top:42px;
+          z-index:1;
+          position:absolute;
+          left:1056px">新知</a>
+
   </div>
   <div class="line"></div>
 
@@ -243,9 +332,10 @@
 
     <img src="resources/icon/svg/NS Logo_白_工作區域 1.svg" style="margin-left:90px;
           margin-top:0px;
-          width:275px;
-          height:170px;
-          justify-content: right;">
+          width:180px;
+          height:120px;
+          justify-content:flex-start;
+        margin-left:5%">
     <div class="container"></div>
     <div class="dropdown-menu" style:="margin-right:0px;">
       <a href="#">____
@@ -287,24 +377,17 @@
   <div class="mobilefooter">
 
     <img src="resources/icon/svg/NS Logo_工作區域 1.svg" style="
-        margin-left:90px;
-        margin-top:auto;
+         margin-top:auto;
         margin-bottom:auto;
-        width:275px;
-        height:170px;
+        width:180px;
+        height:120px;
         display:flex;
-        justify-content: right;">
+        justify-content:flex-start;">
 
-    <div class="mobilefooterfont" style="color: white;width:max-content;margin-bottom:0px;">HUNTER｜
-      江昇　方琮翔　鄧芯怡　陳孟樺
-      BIG BOSS｜
-      李法賢
-      SHOOT｜
-      donnot.bother.us@gmail.com
-      <div class="mobilefooterfont" style="color:#EBC151;margin-top:0px;">copyright©
-        2023 NEWS SAFARI
-      </div>
-    </div>
+    <div class="mobilefooterfont" style="color: white;width:max-content;justify-content: flex-end;">HUNTER｜江昇　方琮翔　鄧芯怡　陳孟樺
+      BIG BOSS｜李法賢
+      SHOOT｜donnot.bother.us@gmail.com
+      <div style="color:#EBC151;">copyright©2023 NEWS SAFARI</div></div>
 
 
 
