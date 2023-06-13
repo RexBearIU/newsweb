@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
 
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>北藝大學生尋自製電影曝光機會 辦《放映自治》謀未來發展</title>
-    <link rel="stylesheet" href="css/page.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>北藝大學生尋自製電影曝光機會 辦《放映自治》謀未來發展</title>
+  <link rel="stylesheet" href="css/page.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 
   <style>
@@ -16,15 +16,17 @@
       white-space: nowrap;
       display: inline-block;
       vertical-align: middle;
+      background-color: #f8f8ff;
+      width: 100%;
     }
 
     .line {
-      display: inline-block;
+      display: block;
       border-top: 1px solid black;
-      width: 1050px;
+      width: 90%;
       height: 1.51px;
-      padding-top: 192px;
-      margin-left: 103px;
+      margin-left: auto;
+      margin-right: auto;
     }
 
     .header_font {
@@ -33,19 +35,22 @@
       font-size: 37px;
       font-weight: 400;
       line-height: 53px;
-
+      color: black;
+      text-decoration: none;
       letter-spacing: 0.06em;
       text-align: center;
-      margin-top: 42px;
+      margin-top: 10px;
       z-index: 1;
       position: absolute;
     }
 
     .rectangle {
-      width: 207px;
-      height: 103px;
+      width: 180px;
+      height: 102px;
       background-color: #937D54F2;
-      display: inline-block;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
       z-index: 2;
     }
 
@@ -54,7 +59,7 @@
       white-space: nowrap;
       display: inline-block;
       vertical-align: middle;
-      width: 1280px;
+      width: 100%;
       height: 206px;
       background-color: #937D54;
       margin-bottom: 0px;
@@ -73,59 +78,337 @@
       z-index: 1;
       position: absolute;
     }
+
+    .link-container {
+      display: inline-block
+    }
+
+    .rectangle-hover {
+      position: relative;
+      color: black;
+    }
+
+    .rectangle-hover:hover {
+      color: white;
+    }
+
+    .rectangle-hover:hover::before {
+      content: '';
+      position: absolute;
+      text-align: center;
+      left: -35.5px;
+      top: -27px;
+      width: 180px;
+      height: 102px;
+      background-color: #937D54F2;
+      z-index: -1;
+      border-radius: 4px;
+    }
+
+
+    .mobileheader {
+      display: none;
+    }
+
+    .mobilefooter {
+      display: none;
+    }
+
+    @media(max-width:760px) {
+
+      .header {
+        display: none;
+      }
+
+      .mobileheader {
+        display: flex;
+        justify-content: center;
+        background-color: #f8f8ff;
+      }
+
+      .line {
+        display: none;
+      }
+
+
+
+      .container {
+        width: fit-content;
+        /* Set the width of the container */
+        margin: 0 auto;
+        /* Center the container horizontally */
+        display: flex;
+        justify-content: right;
+        height: fit-content;
+        top: 90px;
+      }
+
+      .mobileline {
+        position: relative;
+        display: block;
+        justify-content: center;
+        border-top: 1px solid black;
+        width: 90%;
+        height: 1.51px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      /* CSS for dropdown menu */
+      .dropdown-menu {
+        position: relative;
+        display: flex;
+        white-space: pre-line;
+        line-height: 10px;
+        height: fit-content;
+        margin-top: 20px;
+        border: none;
+        justify-content: flex-end;
+        margin-right: 10%;
+        background-color: #f8f8ff;
+      }
+
+      .dropdown-menu>a {
+        display: flex;
+        justify-content: right;
+        padding: 10px;
+        color: #333;
+        text-decoration: none;
+      }
+
+      .dropdown-menu ul {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        display: none;
+        text-decoration: none;
+        background-color: #f8f8ff;
+        padding: 10px;
+        margin: 0;
+        list-style-type: none;
+      }
+
+      .dropdown-menu ul li {
+        margin-bottom: 5px;
+        text-decoration: none;
+      }
+
+      .dropdown-menu:hover ul {
+        display: block;
+        text-decoration: none;
+        color: #f8f8ff;
+      }
+
+      .mobilefont {
+        text-decoration: none;
+        font-family: Noto Serif SC;
+        font-size: 37px;
+        font-weight: 400;
+        line-height: 53px;
+        letter-spacing: 0.06em;
+        text-align: center;
+        margin-top: 42px;
+        color: black;
+      }
+
+      .footer {
+        display: none;
+      }
+
+      .mobilefooter {
+        display: flex;
+        justify-content: center;
+        height: 206px;
+        background-color: #937D54;
+        margin-bottom: 0px;
+      }
+
+      .mobilefooterfont {
+        display: block;
+        font-family: Noto Serif SC;
+        font-size: 15px;
+        font-weight: 400;
+        line-height: 20px;
+        letter-spacing: 0.06em;
+        text-align: left;
+        white-space: pre-line;
+        margin-top: auto;
+        margin-bottom: auto;
+        margin-right: 0px;
+        position: relative;
+        color: white
+      }
+    }
   </style>
+
 </head>
 
 <body>
-  <div>
-       <!-- HEADER -->
-       <div class="header">
-        <img src="resources/icon/svg/NS Logo_白_工作區域 1.svg" style="margin-left:90px;
+  <!--header_life-->
+  <div class="header">
+    <a href="main.html" style="color:#f8f8ff">
+      <img src="resources/icon/svg/NS Logo_白_工作區域 1.svg" style="margin-left:90px;
             margin-top:0px;
             width:275px;
             height:170px;">
-  
-        <img src="resources/icon/svg/NS banner_工作區域 1-02.svg" style="position:relative;
-            margin-left:132px;
-            margin-top:40px;
-            width:637px;
-            height:130px;">
-  
-  
-        <div class="header_font" style="left:392px;margin-top:40px;">
-          <a href="https://example.com" style="text-decoration: none;color:black;">國際</a>
-        </div>
-        <div class="header_font"
-          style="left:550px;margin-top:21px;background-color: #937D54F2;padding-left:50px;padding-right:50px;padding-top:25px;padding-bottom:25px;border-radius:8px;">
-          <a href="https://example.com" style="text-decoration: none;color:white;">生活</a>
-        </div>
-        <div class="header_font" style="left:834px;margin-top:40px;">
-          <a href="https://example.com" style="text-decoration: none;color:black;">藝文</a>
-        </div>
-        <div class="header_font" style="left: 1056px;margin-top:40px;">
-          <a href="https://example.com" style="text-decoration: none;color:black;">新知</a>
-        </div>
-      </div>
-      <span class="line">
+    </a>
+
+    <img src="resources/icon/svg/NS banner_工作區域 1-02.svg" style="position:relative;
+          margin-left:132px;
+          margin-top:40px;
+          width:637px;
+          height:130px;">
+
+
+    <a href="international.pages.html" class="rectangle-hover" style="display:inline-block;
+          font-family: Noto Serif SC;
+          font-size: 37px;
+          font-weight: 400;
+          text-decoration: none;
+          line-height: 53px;
+          width:109px;
+          height:49px;
+          letter-spacing: 0.06em;
+          text-align: center;
+          margin-top:42px;
+          z-index:1;
+          position:absolute;
+          left:389px">國際</a>
+
+    <a href="life.pages-2.html" class="rectangle" style="display:inline-block;
+          font-family: Noto Serif SC;
+          font-size: 37px;
+          font-weight: 400;
+          text-decoration: none;
+          line-height: 53px;
+          width:180px;
+          height:102px;
+          padding-top:26px;
+          letter-spacing: 0.06em;
+          text-align: center;
+          vertical-align: middle;
+          margin-top:15px;
+          z-index:1;
+          position:absolute;
+          color:white;
+          border-radius: 4px;
+          left:570px">生活</a>
+
+
+    <a href="art.pages.html" class="rectangle-hover" style="display:inline-block;
+        font-family: Noto Serif SC;
+        font-size: 37px;
+        font-weight: 400;
+        text-decoration: none;
+        line-height: 53px;
+        width:109px;
+        height:49px;
+        letter-spacing: 0.06em;
+        text-align: center;
+        margin-top:42px;
+        z-index:1;
+        position:absolute;
+        left:834px">藝文</a>
+
+    <a href="knowledge.pages.html" class="rectangle-hover" style="display:inline-block;
+        font-family: Noto Serif SC;
+        font-size: 37px;
+        font-weight: 400;
+        text-decoration: none;
+        line-height: 53px;
+        width:109px;
+        height:49px;
+        letter-spacing: 0.06em;
+        text-align: center;
+        margin-top:42px;
+        z-index:1;
+        position:absolute;
+        left:1056px">新知</a>
+
+  </div>
+  <div class="line"></div>
+
+  <!--headermobile-->
+  <div class="mobileheader">
+
+    <img src="resources/icon/svg/NS Logo_白_工作區域 1.svg" style="margin-left:90px;
+        margin-top:0px;
+        width:180px;
+        height:120px;
+        justify-content:flex-start;
+      margin-left:5%">
+    <div class="container"></div>
+    <div class="dropdown-menu" style:="margin-right:0px;">
+      <a href="#">____
+        ____
+        ____</a>
+      <ul>
+        <li><a href="international.pages.html" class="mobilefont">國際</a></li>
+        <li><a href="life.pages-2.html" class="mobilefont">生活</a></li>
+        <li><a href="art.pages.html" class="mobilefont">藝文</a></li>
+        <li><a href="knowledge.pages.html" class="mobilefont">新知</a></li>
+      </ul>
     </div>
-        
-        <!-- 文章首圖 -->
-        <img class="page-img"
-            src="resources/imgs/生活/北藝大.jpg"
-            alt="新聞標題">
 
-        <!-- 文章大標 -->
-        <div class="page-title">北藝大學生尋自製電影曝光機會 辦《放映自治》謀未來發展</div>
 
-        <!-- 文章內文 -->
-        <p class="page-text">　【記者鄧芯怡台北報導】黑暗的電影院内，播放著一部部學生自製電影。國立臺北藝術大學學生於21日至29日，在北藝大藝文生態館K101電影院舉辦《放映自治第二季》。放映會分為四個場次，共播映六部來自不同學生導演的作品。</p>
-        <p class="page-text">　《放映自治第二季》的團隊成員皆為北藝大學生，因此他們將每一季放映會的首站地點設於北藝大，希望能先與最親近的人們分享他們的作品。放映會分為《著迷》與《沈醉》兩單元，團隊解釋說：「《著迷》單元的三部短片在現實環境下發揮創意，《沈醉》單元是三部較為奇幻，帶給觀眾幻想空間的短片。」</p>
-        <p class="page-text">　《著迷》單元包含北藝大學生導演彭以恩的《誰偷我鞋子？》和張健笙的《群居動物》。前者描述一個女孩被赤腳跳舞的女孩吸引，在一探究竟時不小心睡著，夢見自己的鞋子被偷走而開始尋鞋，天馬行空的劇情勾起觀眾的好奇心。在後者的電影中，主角和租屋處的室友們一起等待水電工，卻意外將陌生人帶入家中，但室友們不但沒將他趕走，反而一起玩樂，荒謬劇情和詼諧對白讓現場觀眾笑聲連連。</p>
-        <p class="page-text">　放映會播放的電影都是學生導演們獨立完成的作品，不在課程規劃內，因此無法放映於課堂上，他們決定另尋方式讓作品被看見。「如果沒有地方可以放映我們單純因為想拍片而產出的作品，我們將得不到回饋，而且會很匱乏。」導演張健笙分享。團隊們想藉放映會鼓勵觀眾關注學生自製電影，導演兼主持劉大為表示雖然每場放映會的觀眾都不多，但看到累積的觀眾人數都在增加，就已經很滿足了。</p>
-        <p class="page-text">　「這類型的獨立放映會可以給導演們更大的發揮空間，而且沒有傳統影展在選片和播映順序上的特別設計，我可以更自在地觀看電影。」對電影感興趣的輔仁大學學生侯郁安指出這場放映會不像一般影展設定特定主題，讓播映的影片內容更多元及自由。他非常喜歡這次放映會的電影，也表示更願意支持類似的獨立放映會。</p>
-        <p class="page-text">　「我們想要讓大家知道忠於自我，但跳脫傳統技術要求的電影也可以很好看。」導演張健笙補充，團隊希望放映會能讓大眾看到創新題材的電影，也希望能吸引到更多觀眾和電影工作者，提供獨立電影更多發展機會。</p>
+  </div>
 
-         <!-- 推薦新聞 -->
+  </div>
+
+  <div class="mobileline"></div>
+
+
+  <!-- 文章首圖 -->
+  <img class="page-img" src="resources/imgs/生活/北藝大.jpg" alt="新聞標題">
+
+  <!-- 文章大標 -->
+  <div class="page-title">北藝大學生尋自製電影曝光機會 辦《放映自治》謀未來發展</div>
+
+  <!-- 文章內文 -->
+  <p class="page-text">
+    　【記者鄧芯怡台北報導】黑暗的電影院内，播放著一部部學生自製電影。國立臺北藝術大學學生於21日至29日，在北藝大藝文生態館K101電影院舉辦《放映自治第二季》。放映會分為四個場次，共播映六部來自不同學生導演的作品。</p>
+  <p class="page-text">
+    　《放映自治第二季》的團隊成員皆為北藝大學生，因此他們將每一季放映會的首站地點設於北藝大，希望能先與最親近的人們分享他們的作品。放映會分為《著迷》與《沈醉》兩單元，團隊解釋說：「《著迷》單元的三部短片在現實環境下發揮創意，《沈醉》單元是三部較為奇幻，帶給觀眾幻想空間的短片。」
+  </p>
+  <p class="page-text">
+    　《著迷》單元包含北藝大學生導演彭以恩的《誰偷我鞋子？》和張健笙的《群居動物》。前者描述一個女孩被赤腳跳舞的女孩吸引，在一探究竟時不小心睡著，夢見自己的鞋子被偷走而開始尋鞋，天馬行空的劇情勾起觀眾的好奇心。在後者的電影中，主角和租屋處的室友們一起等待水電工，卻意外將陌生人帶入家中，但室友們不但沒將他趕走，反而一起玩樂，荒謬劇情和詼諧對白讓現場觀眾笑聲連連。
+  </p>
+  <p class="page-text">
+    　放映會播放的電影都是學生導演們獨立完成的作品，不在課程規劃內，因此無法放映於課堂上，他們決定另尋方式讓作品被看見。「如果沒有地方可以放映我們單純因為想拍片而產出的作品，我們將得不到回饋，而且會很匱乏。」導演張健笙分享。團隊們想藉放映會鼓勵觀眾關注學生自製電影，導演兼主持劉大為表示雖然每場放映會的觀眾都不多，但看到累積的觀眾人數都在增加，就已經很滿足了。
+  </p>
+  <p class="page-text">
+    　「這類型的獨立放映會可以給導演們更大的發揮空間，而且沒有傳統影展在選片和播映順序上的特別設計，我可以更自在地觀看電影。」對電影感興趣的輔仁大學學生侯郁安指出這場放映會不像一般影展設定特定主題，讓播映的影片內容更多元及自由。他非常喜歡這次放映會的電影，也表示更願意支持類似的獨立放映會。
+  </p>
+  <p class="page-text">　「我們想要讓大家知道忠於自我，但跳脫傳統技術要求的電影也可以很好看。」導演張健笙補充，團隊希望放映會能讓大眾看到創新題材的電影，也希望能吸引到更多觀眾和電影工作者，提供獨立電影更多發展機會。
+  </p>
+
+  <!--手機板-->
+  <!-- 文章首圖 -->
+  <img class="m-page-img" src="resources/imgs/生活/北藝大.jpg" alt="新聞標題">
+
+  <!-- 文章大標 -->
+  <div class="m-page-title">北藝大學生尋自製電影曝光機會 辦《放映自治》謀未來發展</div>
+
+  <!-- 文章內文 -->
+  <p class="m-page-text">
+    　【記者鄧芯怡台北報導】黑暗的電影院内，播放著一部部學生自製電影。國立臺北藝術大學學生於21日至29日，在北藝大藝文生態館K101電影院舉辦《放映自治第二季》。放映會分為四個場次，共播映六部來自不同學生導演的作品。</p>
+  <p class="m-page-text">
+    　《放映自治第二季》的團隊成員皆為北藝大學生，因此他們將每一季放映會的首站地點設於北藝大，希望能先與最親近的人們分享他們的作品。放映會分為《著迷》與《沈醉》兩單元，團隊解釋說：「《著迷》單元的三部短片在現實環境下發揮創意，《沈醉》單元是三部較為奇幻，帶給觀眾幻想空間的短片。」
+  </p>
+  <p class="m-page-text">
+    　《著迷》單元包含北藝大學生導演彭以恩的《誰偷我鞋子？》和張健笙的《群居動物》。前者描述一個女孩被赤腳跳舞的女孩吸引，在一探究竟時不小心睡著，夢見自己的鞋子被偷走而開始尋鞋，天馬行空的劇情勾起觀眾的好奇心。在後者的電影中，主角和租屋處的室友們一起等待水電工，卻意外將陌生人帶入家中，但室友們不但沒將他趕走，反而一起玩樂，荒謬劇情和詼諧對白讓現場觀眾笑聲連連。
+  </p>
+  <p class="m-page-text">
+    　放映會播放的電影都是學生導演們獨立完成的作品，不在課程規劃內，因此無法放映於課堂上，他們決定另尋方式讓作品被看見。「如果沒有地方可以放映我們單純因為想拍片而產出的作品，我們將得不到回饋，而且會很匱乏。」導演張健笙分享。團隊們想藉放映會鼓勵觀眾關注學生自製電影，導演兼主持劉大為表示雖然每場放映會的觀眾都不多，但看到累積的觀眾人數都在增加，就已經很滿足了。
+  </p>
+  <p class="m-page-text">
+    　「這類型的獨立放映會可以給導演們更大的發揮空間，而且沒有傳統影展在選片和播映順序上的特別設計，我可以更自在地觀看電影。」對電影感興趣的輔仁大學學生侯郁安指出這場放映會不像一般影展設定特定主題，讓播映的影片內容更多元及自由。他非常喜歡這次放映會的電影，也表示更願意支持類似的獨立放映會。
+  </p>
+  <p class="m-page-text">
+    　「我們想要讓大家知道忠於自我，但跳脫傳統技術要求的電影也可以很好看。」導演張健笙補充，團隊希望放映會能讓大眾看到創新題材的電影，也希望能吸引到更多觀眾和電影工作者，提供獨立電影更多發展機會。
+  </p>
+
+  <!-- 推薦新聞 -->
   <br>
   <hr>
   <br>
@@ -160,23 +443,74 @@
       </a>
     </div>
   </div>
+
+  <!--手機板-->
+  <div class="m-related-news-title">推薦新聞</div>
+  <div style="display:flex;
+                    flex-direction: column;
+                    align-items: center;
+                    margin-top: 30px;
+                    margin-bottom:30px;">
+    <div>
+      <a href="page_L1.html">
+        <div class="m-related-news-board">
+          <img class="m-related-news-img" src="resources/imgs/生活/南方影展.jpg">
+          <div class="m-related-news-cardtitle">南方影展凝聚台南電影人 首增學生獎鼓勵新銳創作</div>
+        </div>
+      </a>
+    </div>
+    <div>
+      <a href="page_L2.html">
+        <div class="m-related-news-board">
+          <img class="m-related-news-img" src="resources/imgs/生活/客+潮.jpg">
+          <div class="m-related-news-cardtitle">傳統精神接軌嘻哈潮流 「客+潮」發揚客家文化</div>
+        </div>
+      </a>
+    </div>
+    <div>
+      <a href="page_L3.html">
+        <div class="m-related-news-board">
+          <img class="m-related-news-img" src="resources/imgs/生活/虎獅.jpg">
+          <div class="m-related-news-cardtitle">全台唯一「舞虎」！ 虎獅派對促陣頭文化傳承</div>
+        </div>
+      </a>
+    </div>
+  </div>
+
   <br>
 
-        <!--footer-->
-    <div class="footer">
-      <img src="resources/icon/svg/NS Logo_工作區域 1.svg" style="margin-left:48px;
+  <!--footer-->
+  <div class="footer">
+    <img src="resources/icon/svg/NS Logo_工作區域 1.svg" style="margin-left:48px;
       margin-bottom:20px;
       width:275px;
       height:170px;">
 
-      <div class="footer_font" style="margin-left:50px;color: white;">HUNTER｜江昇　方琮翔　鄧芯怡　陳孟樺
-          BIG BOSS｜李法賢
-          SHOOT｜donnot.bother.us@gmail.com
-      </div>
+    <div class="footer_font" style="margin-left:50px;color: white;">HUNTER｜江昇　方琮翔　鄧芯怡　陳孟樺
+      BIG BOSS｜李法賢
+      SHOOT｜donnot.bother.us@gmail.com
+    </div>
 
-      <div class="footer_font" style="left: 861px;margin-top:67px;color:#EBC151;;">copyright©2023 NEWS SAFARI
-      </div>
-
+    <div class="footer_font" style="left: 861px;margin-top:67px;color:#EBC151;;">copyright©2023 NEWS SAFARI
+    </div>
   </div>
-    </div> 
-  </body>
+
+  <!--footermobile-->
+  <div class="mobilefooter">
+
+    <img src="resources/icon/svg/NS Logo_工作區域 1.svg" style="
+         margin-top:auto;
+          margin-bottom:auto;
+          width:180px;
+          height:120px;
+          display:flex;
+          justify-content:flex-start;">
+
+    <div class="mobilefooterfont" style="color: white;width:max-content;justify-content: flex-end;">
+      HUNTER｜江昇　方琮翔　鄧芯怡　陳孟樺
+      BIG BOSS｜李法賢
+      SHOOT｜donnot.bother.us@gmail.com
+      <div style="color:#EBC151;">copyright©2023 NEWS SAFARI</div>
+    </div>
+  </div>
+</body>

@@ -8,181 +8,502 @@
   <title>大同提高架林電共生方案 盼實現環境永續</title>
   <link rel="stylesheet" href="css/page.css">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 
-  <style>
+<style>
+  .header {
+    position: relative;
+    white-space: nowrap;
+    display: inline-block;
+    vertical-align: middle;
+    background-color: #f8f8ff;
+    width: 100%;
+  }
+
+
+
+  .line {
+    display: block;
+    border-top: 1px solid black;
+    width: 90%;
+    height: 1.51px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .header_font {
+    display: inline-block;
+    font-family: Noto Serif SC;
+    font-size: 37px;
+    font-weight: 400;
+    line-height: 53px;
+    letter-spacing: 0.06em;
+    text-align: center;
+    margin-top: 42px;
+    z-index: 1;
+    position: absolute;
+  }
+
+  .rectangle {
+    width: 180px;
+    height: 102px;
+    background-color: #937D54F2;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    z-index: 2;
+  }
+
+  .footer {
+    position: relative;
+    white-space: nowrap;
+    display: inline-block;
+    vertical-align: middle;
+    width: 100%;
+    height: 206px;
+    background-color: #937D54;
+    margin-bottom: 0px;
+  }
+
+  .footer_font {
+    display: inline-block;
+    font-family: Noto Serif SC;
+    font-size: 22px;
+    font-weight: 400;
+    line-height: 32px;
+    letter-spacing: 0.06em;
+    text-align: left;
+    white-space: pre-line;
+    margin-top: 41px;
+    z-index: 1;
+    position: absolute;
+  }
+
+  .link-container {
+    display: inline-block
+  }
+
+  .rectangle-hover {
+    position: relative;
+    color: black;
+  }
+
+  .rectangle-hover:hover {
+    color: white;
+  }
+
+  .rectangle-hover:hover::before {
+    content: '';
+    position: absolute;
+    text-align: center;
+    left: -35.5px;
+    top: -27px;
+    width: 180px;
+    height: 102px;
+    background-color: #937D54F2;
+    z-index: -1;
+    border-radius: 4px;
+  }
+
+
+  .mobileheader {
+    display: none;
+  }
+
+  .mobilefooter {
+    display: none;
+  }
+
+  @media(max-width:760px) {
+
     .header {
-      position: relative;
-      white-space: nowrap;
-      display: inline-block;
-      vertical-align: middle;
+      display: none;
+    }
+
+    .mobileheader {
+      display: flex;
+      justify-content: center;
+      background-color: #f8f8ff;
     }
 
     .line {
-      display: inline-block;
-      border-top: 1px solid black;
-      width: 1050px;
-      height: 1.51px;
-      padding-top: 192px;
-      margin-left: 103px;
+      display: none;
     }
 
-    .header_font {
-      display: inline-block;
+
+
+    .container {
+      width: fit-content;
+      /* Set the width of the container */
+      margin: 0 auto;
+      /* Center the container horizontally */
+      display: flex;
+      justify-content: right;
+      height: fit-content;
+      top: 90px;
+    }
+
+    .mobileline {
+      position: relative;
+      display: block;
+      justify-content: center;
+      border-top: 1px solid black;
+      width: 90%;
+      height: 1.51px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    /* CSS for dropdown menu */
+    .dropdown-menu {
+      position: relative;
+      display: flex;
+      white-space: pre-line;
+      line-height: 10px;
+      height: fit-content;
+      margin-top: 20px;
+      border: none;
+      justify-content: flex-end;
+      margin-right: 10%;
+      background-color: #f8f8ff;
+    }
+
+    .dropdown-menu>a {
+      display: flex;
+      justify-content: right;
+      padding: 10px;
+      color: #333;
+      text-decoration: none;
+    }
+
+    .dropdown-menu ul {
+      position: absolute;
+      top: 100%;
+      left: 0;
+      display: none;
+      text-decoration: none;
+      background-color: #f8f8ff;
+      padding: 10px;
+      margin: 0;
+      list-style-type: none;
+    }
+
+    .dropdown-menu ul li {
+      margin-bottom: 5px;
+      text-decoration: none;
+    }
+
+    .dropdown-menu:hover ul {
+      display: block;
+      text-decoration: none;
+      color: #f8f8ff;
+    }
+
+    .mobilefont {
+      text-decoration: none;
       font-family: Noto Serif SC;
       font-size: 37px;
       font-weight: 400;
       line-height: 53px;
-
       letter-spacing: 0.06em;
       text-align: center;
       margin-top: 42px;
-      z-index: 1;
-      position: absolute;
-    }
-
-    .rectangle {
-      width: 207px;
-      height: 103px;
-      background-color: #937D54F2;
-      display: inline-block;
-      z-index: 2;
+      color: black;
     }
 
     .footer {
-      position: relative;
-      white-space: nowrap;
-      display: inline-block;
-      vertical-align: middle;
-      width: 1280px;
+      display: none;
+    }
+
+    .mobilefooter {
+      display: flex;
+      justify-content: center;
       height: 206px;
       background-color: #937D54;
       margin-bottom: 0px;
     }
 
-    .footer_font {
-      display: inline-block;
+    .mobilefooterfont {
+      display: block;
       font-family: Noto Serif SC;
-      font-size: 22px;
+      font-size: 15px;
       font-weight: 400;
-      line-height: 32px;
+      line-height: 20px;
       letter-spacing: 0.06em;
       text-align: left;
       white-space: pre-line;
-      margin-top: 41px;
-      z-index: 1;
-      position: absolute;
+      margin-top: auto;
+      margin-bottom:auto;
+      margin-right: 0px;
+      position: relative;
+      color: white
     }
-  </style>
+  }
+</style>
 
 </head>
 
 <body>
-  <!--HEADER-->
-  <div class="header">
+<!--header_life-->
+<div class="header">
+  <a href="main.html" style="color:#f8f8ff">
     <img src="resources/icon/svg/NS Logo_白_工作區域 1.svg" style="margin-left:90px;
             margin-top:0px;
             width:275px;
             height:170px;">
+  </a>
 
-    <img src="resources/icon/svg/NS banner-04.svg" style="position:relative;
-            margin-left:132px;
-            margin-top:40px;
-            width:637px;
-            height:130px;">
-
-
-    <div class="header_font" style="left:392px;margin-top:40px;">
-      <a href="https://example.com" style="text-decoration: none;color:black;">國際</a>
-    </div>
-    <div class="header_font" style="left:600px;margin: top 40px;">
-      <a href="https://example.com" style="text-decoration: none;color:black;">生活</a>
-    </div>
-    <div class="header_font" style="left:834px;margin-top:40px;">
-      <a href="https://example.com" style="text-decoration: none;color:black;">藝文</a>
-    </div>
-    <div class="header_font"
-      style="left: 1056px;margin-top:21px;background-color:#937D54F2;padding-left:50px;padding-right:50px;padding-top:25px;padding-bottom:25px;border-radius:8px;">
-      <a href="https://example.com" style="text-decoration: none;color:white;">新知</a>
-    </div>
+  <img src="resources/icon/svg/NS banner-04.svg" style="position:relative;
+          margin-left:132px;
+          margin-top:40px;
+          width:637px;
+          height:130px;">
 
 
+  <a href="international.pages.html" class="rectangle-hover" style="display:inline-block;
+      font-family: Noto Serif SC;
+      font-size: 37px;
+      font-weight: 400;
+      text-decoration: none;
+      line-height: 53px;
+      width:109px;
+      height:49px;
+      letter-spacing: 0.06em;
+      text-align: center;
+      margin-top:42px;
+      z-index:1;
+      position:absolute;
+      left:389px">國際</a>
+
+
+  <a href="life.pages-2.html" class="rectangle-hover" style="display:inline-block;
+      font-family: Noto Serif SC;
+      font-size: 37px;
+      font-weight: 400;
+      text-decoration: none;
+      line-height: 53px;
+      width:109px;
+      height:49px;
+      letter-spacing: 0.06em;
+      text-align: center;
+      margin-top:42px;
+      z-index:1;
+      position:absolute;
+      left:611px">生活</a>
+
+  <a href="art.pages.html" class="rectangle-hover" style="display:inline-block;
+      font-family: Noto Serif SC;
+      font-size: 37px;
+      font-weight: 400;
+      text-decoration: none;
+      line-height: 53px;
+      width:109px;
+      height:49px;
+      letter-spacing: 0.06em;
+      text-align: center;
+      margin-top:42px;
+      z-index:1;
+      position:absolute;
+      left:834px">藝文</a>
+
+  <a href="knowledge.pages.html" class="rectangle" style="display:inline-block;
+      font-family: Noto Serif SC;
+      font-size: 37px;
+      font-weight: 400;
+      text-decoration: none;
+      line-height: 53px;
+      width:180px;
+      height:102px;
+      padding-top:26px;
+      letter-spacing: 0.06em;
+      text-align: center;
+      vertical-align: middle;
+      margin-top:15px;
+      z-index:1;
+      position:absolute;
+      color:white;
+      border-radius: 4px;
+      left:1056px">新知</a>
+
+
+</div>
+<div class="line"></div>
+
+<!--headermobile-->
+<div class="mobileheader">
+
+  <img src="resources/icon/svg/NS Logo_白_工作區域 1.svg" style="margin-left:90px;
+        margin-top:0px;
+        width:180px;
+        height:120px;
+        justify-content:flex-start;
+      margin-left:5%">
+  <div class="container"></div>
+  <div class="dropdown-menu" style:="margin-right:0px;">
+    <a href="#">____
+      ____
+      ____</a>
+    <ul>
+      <li><a href="international.pages.html" class="mobilefont">國際</a></li>
+      <li><a href="life.pages-2.html" class="mobilefont">生活</a></li>
+      <li><a href="art.pages.html" class="mobilefont">藝文</a></li>
+      <li><a href="knowledge.pages.html" class="mobilefont">新知</a></li>
+    </ul>
   </div>
-  <span class="line"></div>
 
-    <!-- 文章首圖 -->
-    <img class="page-img" src="resources/imgs/新知/高架林電.png" <!-- 文章大標 -->
-    <div class="page-title">大同提高架林電共生方案 盼實現環境永續</div>
 
-    <!-- 文章內文 -->
-    <p class="page-text">
-      　【記者何予綜合報導】太陽能電廠若要達成足夠發電量，需要相應的佔地面積，對山多平原少的台灣來說相對困難。大同大學工業設計學系學生洪博翔、鍾鎰鴻提出「高架林電共生平台」概念，設想利用山腳林地架設太陽能板，盼能克服地理條件。此提案在2022太陽光電創新應用產品設計競賽中，榮獲最佳特別獎。
-    </p>
-    <p class="page-text">
-      　團隊指導老師林銘松提及，國內利用漁溫、水壩、水庫，或是屋頂等都市型態的太陽能板架設空間趨近飽和，因此市面上開始出現更多型態的種電方式。不過，洪博翔觀察到，現正推行的林地種電，預計砍樹興建太陽能板，他認為此舉有違環境永續共存的核心目標，「那個作法是有很多改善空間的。」
-    </p>
-    <p class="page-text">
-      　洪博翔說明，高架林電共生平台透過類似高壓電塔的設計，減少裝置所需用地面積，更不需大量砍伐林地，「在100公頃的地，只需要4到5平方公尺的面積，拿來灌漿做地基。這個空間架設好，也不太會再有二次傷害。」此外，台灣低海拔植物的最高生長高度約為16公尺，因此團隊將太陽能板設置在25公尺以上，並採用間隔式設置，使覆蓋面積約佔總面積25%到40%，降低對林木日照需求的影響，減輕生態耗損。
-    </p>
-    <p class="page-text">
-      　該高架平台保留水土保持的作用，包含吸水性、透水性等機能，「我不能說它完全沒有傷害生態，就看哪個作法可以做到影響更小。」洪博翔表示，林電共生系統解決台灣平原地區難為太陽能光電所用的困境，但同時也可能影響候鳥遷徙路徑。他認為實際應用時，裝置必須因地制宜，並經過環境評估後才決定是否裝設。地球公民基金會也表示，雖然樂見各種複合利用的再生能源嘗試，然而天然林的植被組成非常複雜，人工造林要疏伐管理的難度也高，「這個設計構想，以經驗來看，太跳躍了！」
-    </p>
-    <p class="page-text">
-      　因應台灣多颱的氣候環境，團隊加入滑軌、電纜繩和滑輪組成的災害防護措施，在天候不佳時，滑輪會帶動太陽能板四側的滑軌，順著纜繩往兩側折疊、收納。不過，台灣再生能源推動聯盟秘書長高茹萍點出，裝置架設在山坡地，不只要顧及面板，更需考量土石流對結構的影響，以及台灣地震頻繁的地質條件。洪博翔坦言：「就目前作品呈現上來看，依舊是還蠻天馬行空的。」團隊認為，即便此構想在技術上可行，但距離實現仍需10至20年，並與環保團體以及在地取得共識，才有辦法建設。
-    </p>
+</div>
 
-    <!-- 推薦新聞 -->
-    <br>
-    <hr>
-    <br>
-    <div class="related-news-title">推薦新聞</div>
-    <div style="display:flex;
+</div>
+
+<div class="mobileline"></div>
+
+  <!-- 文章首圖 -->
+  <img class="page-img" src="resources/imgs/新知/高架林電.png" <!-- 文章大標 -->
+  <div class="page-title">大同提高架林電共生方案 盼實現環境永續</div>
+
+  <!-- 文章內文 -->
+  <p class="page-text">
+    　【記者何予綜合報導】太陽能電廠若要達成足夠發電量，需要相應的佔地面積，對山多平原少的台灣來說相對困難。大同大學工業設計學系學生洪博翔、鍾鎰鴻提出「高架林電共生平台」概念，設想利用山腳林地架設太陽能板，盼能克服地理條件。此提案在2022太陽光電創新應用產品設計競賽中，榮獲最佳特別獎。
+  </p>
+  <p class="page-text">
+    　團隊指導老師林銘松提及，國內利用漁溫、水壩、水庫，或是屋頂等都市型態的太陽能板架設空間趨近飽和，因此市面上開始出現更多型態的種電方式。不過，洪博翔觀察到，現正推行的林地種電，預計砍樹興建太陽能板，他認為此舉有違環境永續共存的核心目標，「那個作法是有很多改善空間的。」
+  </p>
+  <p class="page-text">
+    　洪博翔說明，高架林電共生平台透過類似高壓電塔的設計，減少裝置所需用地面積，更不需大量砍伐林地，「在100公頃的地，只需要4到5平方公尺的面積，拿來灌漿做地基。這個空間架設好，也不太會再有二次傷害。」此外，台灣低海拔植物的最高生長高度約為16公尺，因此團隊將太陽能板設置在25公尺以上，並採用間隔式設置，使覆蓋面積約佔總面積25%到40%，降低對林木日照需求的影響，減輕生態耗損。
+  </p>
+  <p class="page-text">
+    　該高架平台保留水土保持的作用，包含吸水性、透水性等機能，「我不能說它完全沒有傷害生態，就看哪個作法可以做到影響更小。」洪博翔表示，林電共生系統解決台灣平原地區難為太陽能光電所用的困境，但同時也可能影響候鳥遷徙路徑。他認為實際應用時，裝置必須因地制宜，並經過環境評估後才決定是否裝設。地球公民基金會也表示，雖然樂見各種複合利用的再生能源嘗試，然而天然林的植被組成非常複雜，人工造林要疏伐管理的難度也高，「這個設計構想，以經驗來看，太跳躍了！」
+  </p>
+  <p class="page-text">
+    　因應台灣多颱的氣候環境，團隊加入滑軌、電纜繩和滑輪組成的災害防護措施，在天候不佳時，滑輪會帶動太陽能板四側的滑軌，順著纜繩往兩側折疊、收納。不過，台灣再生能源推動聯盟秘書長高茹萍點出，裝置架設在山坡地，不只要顧及面板，更需考量土石流對結構的影響，以及台灣地震頻繁的地質條件。洪博翔坦言：「就目前作品呈現上來看，依舊是還蠻天馬行空的。」團隊認為，即便此構想在技術上可行，但距離實現仍需10至20年，並與環保團體以及在地取得共識，才有辦法建設。
+  </p>
+
+  <!--手機板-->
+  <!-- 文章首圖 -->
+  <img class="m-page-img" src="resources/imgs/新知/高架林電.png">
+  <!-- 文章大標 -->
+  <div class="m-page-title">大同提高架林電共生方案 盼實現環境永續</div>
+
+  <!-- 文章內文 -->
+  <p class="m-page-text">
+    　【記者何予綜合報導】太陽能電廠若要達成足夠發電量，需要相應的佔地面積，對山多平原少的台灣來說相對困難。大同大學工業設計學系學生洪博翔、鍾鎰鴻提出「高架林電共生平台」概念，設想利用山腳林地架設太陽能板，盼能克服地理條件。此提案在2022太陽光電創新應用產品設計競賽中，榮獲最佳特別獎。
+  </p>
+  <p class="m-page-text">
+    　團隊指導老師林銘松提及，國內利用漁溫、水壩、水庫，或是屋頂等都市型態的太陽能板架設空間趨近飽和，因此市面上開始出現更多型態的種電方式。不過，洪博翔觀察到，現正推行的林地種電，預計砍樹興建太陽能板，他認為此舉有違環境永續共存的核心目標，「那個作法是有很多改善空間的。」
+  </p>
+  <p class="m-page-text">
+    　洪博翔說明，高架林電共生平台透過類似高壓電塔的設計，減少裝置所需用地面積，更不需大量砍伐林地，「在100公頃的地，只需要4到5平方公尺的面積，拿來灌漿做地基。這個空間架設好，也不太會再有二次傷害。」此外，台灣低海拔植物的最高生長高度約為16公尺，因此團隊將太陽能板設置在25公尺以上，並採用間隔式設置，使覆蓋面積約佔總面積25%到40%，降低對林木日照需求的影響，減輕生態耗損。
+  </p>
+  <p class="m-page-text">
+    　該高架平台保留水土保持的作用，包含吸水性、透水性等機能，「我不能說它完全沒有傷害生態，就看哪個作法可以做到影響更小。」洪博翔表示，林電共生系統解決台灣平原地區難為太陽能光電所用的困境，但同時也可能影響候鳥遷徙路徑。他認為實際應用時，裝置必須因地制宜，並經過環境評估後才決定是否裝設。地球公民基金會也表示，雖然樂見各種複合利用的再生能源嘗試，然而天然林的植被組成非常複雜，人工造林要疏伐管理的難度也高，「這個設計構想，以經驗來看，太跳躍了！」
+  </p>
+  <p class="m-page-text">
+    　因應台灣多颱的氣候環境，團隊加入滑軌、電纜繩和滑輪組成的災害防護措施，在天候不佳時，滑輪會帶動太陽能板四側的滑軌，順著纜繩往兩側折疊、收納。不過，台灣再生能源推動聯盟秘書長高茹萍點出，裝置架設在山坡地，不只要顧及面板，更需考量土石流對結構的影響，以及台灣地震頻繁的地質條件。洪博翔坦言：「就目前作品呈現上來看，依舊是還蠻天馬行空的。」團隊認為，即便此構想在技術上可行，但距離實現仍需10至20年，並與環保團體以及在地取得共識，才有辦法建設。
+  </p>
+
+  <!-- 推薦新聞 -->
+  <br>
+  <hr>
+  <br>
+  <div class="related-news-title">推薦新聞</div>
+  <div style="display:flex;
                     flex-direction: row;
                     justify-content: center;
                     margin-top: 30px;
                     margin-bottom:30px;">
-      <div>
-        <a href="page_S1.html">
-          <div class="related-news-board">
-            <img class="related-news-img" src="resources/imgs/新知/龍華科大.jpg">
-            <div class="related-news-cardtitle">龍華科大改造通風球 以室內外溫差轉出電力</div>
-          </div>
-        </a>
-      </div>
-      <div>
-        <a href="page_S2.html">
-          <div class="related-news-board">
-            <img class="related-news-img" src="resources/imgs/新知/測心壓.png">
-            <div class="related-news-cardtitle">無線電量測即察心律異常 把握就醫黃金時間</div>
-          </div>
-        </a>
-      </div>
-      <div>
-        <a href="page_S3.html">
-          <div class="related-news-board">
-            <img class="related-news-img" src="resources/imgs/新知/興大.jpg">
-            <div class="related-news-cardtitle">興大創傷口敷藥新配方 加速糖尿病患傷口癒合</div>
-          </div>
-        </a>
-      </div>
+    <div>
+      <a href="page_S1.html">
+        <div class="related-news-board">
+          <img class="related-news-img" src="resources/imgs/新知/龍華科大.jpg">
+          <div class="related-news-cardtitle">龍華科大改造通風球 以室內外溫差轉出電力</div>
+        </div>
+      </a>
     </div>
-    <br>
+    <div>
+      <a href="page_S2.html">
+        <div class="related-news-board">
+          <img class="related-news-img" src="resources/imgs/新知/測心壓.png">
+          <div class="related-news-cardtitle">無線電量測即察心律異常 把握就醫黃金時間</div>
+        </div>
+      </a>
+    </div>
+    <div>
+      <a href="page_S3.html">
+        <div class="related-news-board">
+          <img class="related-news-img" src="resources/imgs/新知/興大.jpg">
+          <div class="related-news-cardtitle">興大創傷口敷藥新配方 加速糖尿病患傷口癒合</div>
+        </div>
+      </a>
+    </div>
+  </div>
 
-    <!--footer-->
-    <div class="footer">
-      <img src="resources/icon/svg/NS Logo_工作區域 1.svg" style="margin-left:48px;
+  <!--手機板-->
+  <div class="m-related-news-title">推薦新聞</div>
+  <div style="display:flex;
+                flex-direction: column;
+                align-items: center;
+                margin-top: 30px;
+                margin-bottom:30px;">
+    <div>
+      <a href="page_S1.html">
+        <div class="m-related-news-board">
+          <img class="m-related-news-img" src="resources/imgs/新知/龍華科大.jpg">
+          <div class="m-related-news-cardtitle">龍華科大改造通風球 以室內外溫差轉出電力</div>
+        </div>
+      </a>
+    </div>
+    <div>
+      <a href="page_S2.html">
+        <div class="m-related-news-board">
+          <img class="m-related-news-img" src="resources/imgs/新知/測心壓.png">
+          <div class="m-related-news-cardtitle">無線電量測即察心律異常 把握就醫黃金時間</div>
+        </div>
+      </a>
+    </div>
+    <div>
+      <a href="page_S3.html">
+        <div class="m-related-news-board">
+          <img class="m-related-news-img" src="resources/imgs/新知/興大.jpg">
+          <div class="m-related-news-cardtitle">興大創傷口敷藥新配方 加速糖尿病患傷口癒合</div>
+        </div>
+      </a>
+    </div>
+  </div>
+
+  <br>
+
+  <!--footer-->
+  <div class="footer">
+    <img src="resources/icon/svg/NS Logo_工作區域 1.svg" style="margin-left:48px;
       margin-bottom:20px;
       width:275px;
       height:170px;">
 
-      <div class="footer_font" style="margin-left:50px;color: white;">HUNTER｜江昇　方琮翔　鄧芯怡　陳孟樺
+    <div class="footer_font" style="margin-left:50px;color: white;">HUNTER｜江昇　方琮翔　鄧芯怡　陳孟樺
+      BIG BOSS｜李法賢
+      SHOOT｜donnot.bother.us@gmail.com
+    </div>
+
+    <div class="footer_font" style="left: 861px;margin-top:67px;color:#EBC151;;">copyright©2023 NEWS SAFARI
+    </div>
+  </div>
+
+    <!--footermobile-->
+    <div class="mobilefooter">
+    
+      <img src="resources/icon/svg/NS Logo_工作區域 1.svg" style="
+         margin-top:auto;
+          margin-bottom:auto;
+          width:180px;
+          height:120px;
+          display:flex;
+          justify-content:flex-start;">
+  
+      <div class="mobilefooterfont" style="color: white;width:max-content;justify-content: flex-end;">HUNTER｜江昇　方琮翔　鄧芯怡　陳孟樺
         BIG BOSS｜李法賢
         SHOOT｜donnot.bother.us@gmail.com
+        <div style="color:#EBC151;">copyright©2023 NEWS SAFARI</div>
       </div>
-
-      <div class="footer_font" style="left: 861px;margin-top:67px;color:#EBC151;;">copyright©2023 NEWS SAFARI
-      </div>
-
-    </div>
     </div>
 </body>

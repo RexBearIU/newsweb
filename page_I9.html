@@ -16,15 +16,19 @@
       white-space: nowrap;
       display: inline-block;
       vertical-align: middle;
+      background-color: #f8f8ff;
+      width: 100%;
     }
 
+
+
     .line {
-      display: inline-block;
+      display: block;
       border-top: 1px solid black;
-      width: 1050px;
+      width: 90%;
       height: 1.51px;
-      padding-top: 192px;
-      margin-left: 103px;
+      margin-left: auto;
+      margin-right: auto;
     }
 
     .header_font {
@@ -43,19 +47,22 @@
     }
 
     .rectangle {
-      width: 207px;
-      height: 103px;
+      width: 180px;
+      height: 102px;
       background-color: #937D54F2;
-      display: inline-block;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
       z-index: 2;
     }
+
 
     .footer {
       position: relative;
       white-space: nowrap;
       display: inline-block;
       vertical-align: middle;
-      width: 1280px;
+      width: 100%;
       height: 206px;
       background-color: #937D54;
       margin-bottom: 0px;
@@ -74,112 +81,439 @@
       z-index: 1;
       position: absolute;
     }
+
+    .link-container {
+      display: inline-block
+    }
+
+    .rectangle-hover {
+      position: relative;
+      color: black;
+    }
+
+    .rectangle-hover:hover {
+      color: white;
+    }
+
+    .rectangle-hover:hover::before {
+      content: '';
+      position: absolute;
+      text-align: center;
+      left: -35.5px;
+      top: -27px;
+      width: 180px;
+      height: 102px;
+      background-color: #937D54F2;
+      z-index: -1;
+      border-radius: 4px;
+    }
+
+    .mobileheader {
+      display: none;
+    }
+
+    .mobilefooter {
+      display: none;
+    }
+
+    @media(max-width:760px) {
+
+      .header {
+        display: none;
+      }
+
+      .mobileheader {
+        display: flex;
+        justify-content: center;
+        background-color: #f8f8ff;
+      }
+
+      .line {
+        display: none;
+      }
+
+
+
+      .container {
+        width: fit-content;
+        /* Set the width of the container */
+        margin: 0 auto;
+        /* Center the container horizontally */
+        display: flex;
+        justify-content: right;
+        height: fit-content;
+        top: 90px;
+      }
+
+      .mobileline {
+        position: relative;
+        display: block;
+        justify-content: center;
+        border-top: 1px solid black;
+        width: 90%;
+        height: 1.51px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      /* CSS for dropdown menu */
+      .dropdown-menu {
+        position: relative;
+        display: flex;
+        white-space: pre-line;
+        line-height: 10px;
+        height: fit-content;
+        margin-top: 20px;
+        border: none;
+        justify-content: flex-end;
+        margin-right: 10%;
+        background-color: #f8f8ff;
+      }
+
+      .dropdown-menu>a {
+        display: flex;
+        justify-content: right;
+        padding: 10px;
+        color: #333;
+        text-decoration: none;
+      }
+
+      .dropdown-menu ul {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        display: none;
+        text-decoration: none;
+        background-color: #f8f8ff;
+        padding: 10px;
+        margin: 0;
+        list-style-type: none;
+      }
+
+      .dropdown-menu ul li {
+        margin-bottom: 5px;
+        text-decoration: none;
+      }
+
+      .dropdown-menu:hover ul {
+        display: block;
+        text-decoration: none;
+        color: #f8f8ff;
+      }
+
+      .mobilefont {
+        text-decoration: none;
+        font-family: Noto Serif SC;
+        font-size: 37px;
+        font-weight: 400;
+        line-height: 53px;
+        letter-spacing: 0.06em;
+        text-align: center;
+        margin-top: 42px;
+        color: black;
+      }
+
+      .footer {
+        display: none;
+      }
+
+      .mobilefooter {
+        display: flex;
+        justify-content: center;
+        height: 206px;
+        background-color: #937D54;
+        margin-bottom: 0px;
+      }
+
+      .mobilefooterfont {
+        display: block;
+        font-family: Noto Serif SC;
+        font-size: 15px;
+        font-weight: 400;
+        line-height: 20px;
+        letter-spacing: 0.06em;
+        text-align: left;
+        white-space: pre-line;
+        margin-top: auto;
+        margin-bottom: auto;
+        margin-right: 0px;
+        position: relative;
+        color: white
+      }
+    }
   </style>
+
 </head>
 
 <body>
-  <div>
-    <!-- HEADER -->
-
+  <!--header_life-->
+  <div class="none">
     <div class="header">
-      <img src="resources/icon/svg/NS Logo_白_工作區域 1.svg" style="margin-left:90px;
-          margin-top:0px;
-          width:275px;
-          height:170px;">
+      <a href="main.html" style="color:#f8f8ff">
+        <img src="resources/icon/svg/NS Logo_白_工作區域 1.svg" style="margin-left:90px;
+              margin-top:0px;
+              width:275px;
+              height:170px;">
+      </a>
 
-      <img src="resources/icon/svg/NS banner_工作區域 1-01.svg" style="position:relative;
-          margin-left:132px;
-          margin-top:40px;
-          width:637px;
-          height:130px;">
+      <img src="resources/icon/svg/主頁banner_工作區域 1-01.svg" style="position:relative;
+  margin-left:132px;
+  margin-top:40px;
+  width:637px;
+  height:130px;
+  z-index:1;">
 
 
-      <div class="header_font"
-        style="left:392px;background-color: #937D54F2;padding-left:50px;padding-right:50px;padding-top:25px;padding-bottom:25px;border-radius:8px;">
-        <a href="https://example.com" style="text-decoration: none;color:white;">國際</a>
-      </div>
-      <div class="header_font" style="left:660px;margin-top:40px;">
-        <a href="https://example.com" style="text-decoration: none;color:black;">生活</a>
-      </div>
-      <div class="header_font" style="left:834px;margin-top:40px;">
-        <a href="https://example.com" style="text-decoration: none;color:black;">藝文</a>
-      </div>
-      <div class="header_font" style="left: 1056px;margin-top:40px;">
-        <a href="https://example.com" style="text-decoration: none;color:black;">新知</a>
-      </div>
+      <a href="international.pages.html" class="rectangle" style="display:inline-block;
+      font-family: Noto Serif SC;
+      font-size: 37px;
+      font-weight: 400;
+      text-decoration: none;
+      line-height: 53px;
+      width:180px;
+      height:102px;
+      padding-top:26px;
+      letter-spacing: 0.06em;
+      text-align: center;
+      vertical-align: middle;
+      margin-top:15px;
+      z-index:1;
+      position:absolute;
+      color:white;
+      border-radius: 4px;
+      left:389px">國際</a>
+
+
+      <a href="life.pages-2.html" class="rectangle-hover" style="display:inline-block;
+      font-family: Noto Serif SC;
+      font-size: 37px;
+      font-weight: 400;
+      text-decoration: none;
+      line-height: 53px;
+      width:109px;
+      height:49px;
+      letter-spacing: 0.06em;
+      text-align: center;
+      margin-top:42px;
+      z-index:1;
+      position:absolute;
+      left:611px">生活</a>
+
+      <a href="art.pages.html" class="rectangle-hover" style="display:inline-block;
+      font-family: Noto Serif SC;
+      font-size: 37px;
+      font-weight: 400;
+      text-decoration: none;
+      line-height: 53px;
+      width:109px;
+      height:49px;
+      letter-spacing: 0.06em;
+      text-align: center;
+      margin-top:42px;
+      z-index:1;
+      position:absolute;
+      left:834px">藝文</a>
+
+      <a href="knowledge.pages.html" class="rectangle-hover" style="display:inline-block;
+      font-family: Noto Serif SC;
+      font-size: 37px;
+      font-weight: 400;
+      text-decoration: none;
+      line-height: 53px;
+      width:109px;
+      height:49px;
+      letter-spacing: 0.06em;
+      text-align: center;
+      margin-top:42px;
+      z-index:1;
+      position:absolute;
+      left:1056px">新知</a>
 
     </div>
-    <span class="line"></span>
 
-    <!-- 文章首圖 -->
-    <img class="page-img" src="resources/imgs/國際/入境.png" alt="新聞標題">
+    <div class="line"></div>
 
-    <!-- 文章大標 -->
-    <div class="page-title">各校入境許可標準不一 外籍醫學生盼重回中國校園</div>
+  </div>
 
-    <!-- 文章內文 -->
-    <p class="page-text">
-      　【記者鄧芯怡綜合報導】中國2020年初因疫情關閉邊境，至今仍對出入境實行嚴格管控，但於10月底宣佈有條件允許外籍學生回到中國繼續學業。然而，允許入境的條例標準不一，引發學生不滿。醫學系學生（Bachelor in
-      Medicine and Bachelor in Surgery, MBBS）因此在Twitter上發起「#takeUsBackToChina」活動，要求中國外交部給予回應。</p>
-    <p class="page-text">　巴基斯坦外籍醫學生聯盟（Foreign Medical Students Union Pakistan,
-      FMSUP）表示，他們從兩年前就申請回到中國就學，目前粗估仍有超過4000名醫學生等待許可證發放。雖然中國已開放外籍學生入境，但最關鍵的無異議證書（No Objection Certificate,
-      NOC）是否發放還是取決於各個大學。此外，入境中國的程序相當繁瑣，天津大學博士生亞西爾・伊克巴爾（Yasir Iqbal）說明，取得無異議證書入境後，仍必須輾轉各地，隔離至少21天才可入校。</p>
-    <p class="page-text">
-      　「醫學系學生應該更被重視。我們沒有實作經驗，難道我們未來看診時要用Google搜尋嗎？」目前就讀於醫學系三年級的學生Abigail（化名）無奈說道。他相當擔心未來就業會遇到困難，除了患者不願意信任他們，巴基斯坦醫學委員會（Pakistan
-      Medical Commission, PMC）也不承認他們通過線上授課得到的學位，因此失去當初選擇至中國學習的意義。</p>
-    <p class="page-text">
-      　「我的心情很低落，我的朋友甚至都快崩潰了。」另一名仍在等待回到中國就學的印度學生Caroline（化名）說道。他也解釋，長期待在家中上課必須面對親戚朋友的質疑，讓他備感壓力。Caroline也控訴，線上上課都是觀看預錄的教學影片，學校除了不認真檢查出席，更不會監督學生的學習進度。他的家長因此認為孩子受到的教育品質不值得他們繳納高昂的學費，感到相當不滿。
-    </p>
-    <p class="page-text">
-      　巴基斯坦外籍醫學生聯盟表示，目前有超過20所大學尚未發放許可證，而這些大學都是處於疫情高風險的地區。他們也補充，部分學生雖然也想為自己發聲，但擔心校方針對他們，因此不敢採取行動。「當初政府不允許我們入境，現在開放了，校方卻一直拖延，最後遭殃的還是學生。」Abigail表明他們目前處於兩難的狀態，每天都在希望和絕望中徘徊。他憤慨地說：「我們不能再等了！」
-    </p>
 
-    <!-- 推薦新聞 -->
-    <br>
-    <hr>
-    <br>
-    
-    <div class="related-news-title">推薦新聞</div>
-    <div style="display:flex;
-                        flex-direction: row;
-                        justify-content: center;
-                        margin-top: 30px;
-                        margin-bottom:30px;">
-      <div>
+  <!--headermobile-->
+  <div class="mobileheader">
+
+    <img src="resources/icon/svg/NS Logo_白_工作區域 1.svg" style="margin-left:90px;
+    margin-top:0px;
+    width:180px;
+    height:120px;
+    justify-content:flex-start;
+      margin-left:5%">
+    <div class="container"></div>
+    <div class="dropdown-menu" style:="margin-right:0px;">
+      <a href="#">____
+        ____
+        ____</a>
+      <ul>
+        <li><a href="international.pages.html" class="mobilefont">國際</a></li>
+        <li><a href="life.pages-2.html" class="mobilefont">生活</a></li>
+        <li><a href="art.pages.html" class="mobilefont">藝文</a></li>
+        <li><a href="knowledge.pages.html" class="mobilefont">新知</a></li>
+      </ul>
+    </div>
+
+
+  </div>
+
+  </div>
+
+  <div class="mobileline"></div>
+
+  <!-- 文章首圖 -->
+  <img class="page-img" src="resources/imgs/國際/入境.png" alt="新聞標題">
+
+  <!-- 文章大標 -->
+  <div class="page-title">各校入境許可標準不一 外籍醫學生盼重回中國校園</div>
+
+  <!-- 文章內文 -->
+  <p class="page-text">
+    　【記者鄧芯怡綜合報導】中國2020年初因疫情關閉邊境，至今仍對出入境實行嚴格管控，但於10月底宣佈有條件允許外籍學生回到中國繼續學業。然而，允許入境的條例標準不一，引發學生不滿。醫學系學生（Bachelor in
+    Medicine and Bachelor in Surgery, MBBS）因此在Twitter上發起「#takeUsBackToChina」活動，要求中國外交部給予回應。</p>
+  <p class="page-text">　巴基斯坦外籍醫學生聯盟（Foreign Medical Students Union Pakistan,
+    FMSUP）表示，他們從兩年前就申請回到中國就學，目前粗估仍有超過4000名醫學生等待許可證發放。雖然中國已開放外籍學生入境，但最關鍵的無異議證書（No Objection Certificate,
+    NOC）是否發放還是取決於各個大學。此外，入境中國的程序相當繁瑣，天津大學博士生亞西爾・伊克巴爾（Yasir Iqbal）說明，取得無異議證書入境後，仍必須輾轉各地，隔離至少21天才可入校。</p>
+  <p class="page-text">
+    　「醫學系學生應該更被重視。我們沒有實作經驗，難道我們未來看診時要用Google搜尋嗎？」目前就讀於醫學系三年級的學生Abigail（化名）無奈說道。他相當擔心未來就業會遇到困難，除了患者不願意信任他們，巴基斯坦醫學委員會（Pakistan
+    Medical Commission, PMC）也不承認他們通過線上授課得到的學位，因此失去當初選擇至中國學習的意義。</p>
+  <p class="page-text">
+    　「我的心情很低落，我的朋友甚至都快崩潰了。」另一名仍在等待回到中國就學的印度學生Caroline（化名）說道。他也解釋，長期待在家中上課必須面對親戚朋友的質疑，讓他備感壓力。Caroline也控訴，線上上課都是觀看預錄的教學影片，學校除了不認真檢查出席，更不會監督學生的學習進度。他的家長因此認為孩子受到的教育品質不值得他們繳納高昂的學費，感到相當不滿。
+  </p>
+  <p class="page-text">
+    　巴基斯坦外籍醫學生聯盟表示，目前有超過20所大學尚未發放許可證，而這些大學都是處於疫情高風險的地區。他們也補充，部分學生雖然也想為自己發聲，但擔心校方針對他們，因此不敢採取行動。「當初政府不允許我們入境，現在開放了，校方卻一直拖延，最後遭殃的還是學生。」Abigail表明他們目前處於兩難的狀態，每天都在希望和絕望中徘徊。他憤慨地說：「我們不能再等了！」
+  </p>
+
+  <!--手機板-->
+  <!-- 文章首圖 -->
+  <img class="m-page-img" src="resources/imgs/國際/入境.png" alt="新聞標題">
+
+  <!-- 文章大標 -->
+  <div class="m-page-title">各校入境許可標準不一 外籍醫學生盼重回中國校園</div>
+
+  <!-- 文章內文 -->
+  <p class="m-page-text">
+    　【記者鄧芯怡綜合報導】中國2020年初因疫情關閉邊境，至今仍對出入境實行嚴格管控，但於10月底宣佈有條件允許外籍學生回到中國繼續學業。然而，允許入境的條例標準不一，引發學生不滿。醫學系學生（Bachelor in
+    Medicine and Bachelor in Surgery, MBBS）因此在Twitter上發起「#takeUsBackToChina」活動，要求中國外交部給予回應。</p>
+  <p class="m-page-text">　巴基斯坦外籍醫學生聯盟（Foreign Medical Students Union Pakistan,
+    FMSUP）表示，他們從兩年前就申請回到中國就學，目前粗估仍有超過4000名醫學生等待許可證發放。雖然中國已開放外籍學生入境，但最關鍵的無異議證書（No Objection Certificate,
+    NOC）是否發放還是取決於各個大學。此外，入境中國的程序相當繁瑣，天津大學博士生亞西爾・伊克巴爾（Yasir Iqbal）說明，取得無異議證書入境後，仍必須輾轉各地，隔離至少21天才可入校。</p>
+  <p class="m-page-text">
+    　「醫學系學生應該更被重視。我們沒有實作經驗，難道我們未來看診時要用Google搜尋嗎？」目前就讀於醫學系三年級的學生Abigail（化名）無奈說道。他相當擔心未來就業會遇到困難，除了患者不願意信任他們，巴基斯坦醫學委員會（Pakistan
+    Medical Commission, PMC）也不承認他們通過線上授課得到的學位，因此失去當初選擇至中國學習的意義。</p>
+  <p class="m-page-text">
+    　「我的心情很低落，我的朋友甚至都快崩潰了。」另一名仍在等待回到中國就學的印度學生Caroline（化名）說道。他也解釋，長期待在家中上課必須面對親戚朋友的質疑，讓他備感壓力。Caroline也控訴，線上上課都是觀看預錄的教學影片，學校除了不認真檢查出席，更不會監督學生的學習進度。他的家長因此認為孩子受到的教育品質不值得他們繳納高昂的學費，感到相當不滿。
+  </p>
+  <p class="m-page-text">
+    　巴基斯坦外籍醫學生聯盟表示，目前有超過20所大學尚未發放許可證，而這些大學都是處於疫情高風險的地區。他們也補充，部分學生雖然也想為自己發聲，但擔心校方針對他們，因此不敢採取行動。「當初政府不允許我們入境，現在開放了，校方卻一直拖延，最後遭殃的還是學生。」Abigail表明他們目前處於兩難的狀態，每天都在希望和絕望中徘徊。他憤慨地說：「我們不能再等了！」
+  </p>
+
+  <!-- 推薦新聞 -->
+  <br>
+  <hr>
+  <br>
+  <div class="related-news-title">推薦新聞</div>
+  <div style="display:flex;
+                    flex-direction: row;
+                    justify-content: center;
+                    margin-top: 30px;
+                    margin-bottom:30px;">
+    <div>
+      <a href="page_I2.html">
         <div class="related-news-board">
           <img class="related-news-img" src="resources/imgs/國際/oxford.png">
           <div class="related-news-cardtitle">牛津大學發起道路安全活動 盼交通事故零死亡</div>
         </div>
-      </div>
-      <div>
+      </a>
+    </div>
+    <div>
+      <a href="page_I3.html">
         <div class="related-news-board">
           <img class="related-news-img" src="resources/imgs/國際/中國.jpg">
           <div class="related-news-cardtitle">我們不再沉默 中國校內掀反封控抗議熱潮</div>
         </div>
-      </div>
-      <div>
+      </a>
+    </div>
+    <div>
+      <a href="page_I4.html">
         <div class="related-news-board">
           <img class="related-news-img" src="resources/imgs/國際/香港.jpg">
           <div class="related-news-cardtitle">香港青年住屋問題嚴峻 李家超施政報告提政策建議</div>
         </div>
-      </div>
+      </a>
     </div>
-    <br>
-    <!--footer-->
-    <div class="footer">
-      <img src="resources/icon/svg/NS Logo_工作區域 1.svg" style="margin-left:48px;
+  </div>
+
+  <!--手機板-->
+  <div class="m-related-news-title">推薦新聞</div>
+  <div style="display:flex;
+                  flex-direction: column;
+                  align-items: center;
+                  margin-top: 30px;
+                  margin-bottom:30px;">
+    <div>
+      <a href="page_I2.html">
+        <div class="m-related-news-board">
+          <img class="m-related-news-img" src="resources/imgs/國際/oxford.png">
+          <div class="m-related-news-cardtitle">牛津大學發起道路安全活動 盼交通事故零死亡</div>
+        </div>
+      </a>
+    </div>
+    <div>
+      <a href="page_I3.html">
+        <div class="m-related-news-board">
+          <img class="m-related-news-img" src="resources/imgs/國際/中國.jpg">
+          <div class="m-related-news-cardtitle">我們不再沉默 中國校內掀反封控抗議熱潮</div>
+        </div>
+      </a>
+    </div>
+    <div>
+      <a href="page_I4.html">
+        <div class="m-related-news-board">
+          <img class="m-related-news-img" src="resources/imgs/國際/香港.jpg">
+          <div class="m-related-news-cardtitle">香港青年住屋問題嚴峻 李家超施政報告提政策建議</div>
+        </div>
+      </a>
+    </div>
+  </div>
+
+  <br>
+  <!--footer-->
+  <div class="footer">
+    <img src="resources/icon/svg/NS Logo_工作區域 1.svg" style="margin-left:48px;
         margin-bottom:20px;
         width:275px;
         height:170px;">
 
-      <div class="footer_font" style="margin-left:50px;color: white;">HUNTER｜江昇　方琮翔　鄧芯怡　陳孟樺
-        BIG BOSS｜李法賢
-        SHOOT｜donnot.bother.us@gmail.com
-      </div>
+    <div class="footer_font" style="margin-left:50px;color: white;">HUNTER｜江昇　方琮翔　鄧芯怡　陳孟樺
+      BIG BOSS｜李法賢
+      SHOOT｜donnot.bother.us@gmail.com
+    </div>
 
-      <div class="footer_font" style="left: 861px;margin-top:67px;color:#EBC151;;">copyright©2023 NEWS SAFARI
-      </div>
+    <div class="footer_font" style="left: 861px;margin-top:67px;color:#EBC151;;">copyright©2023 NEWS SAFARI
+    </div>
+  </div>
 
+  <!--footermobile-->
+  <div class="mobilefooter">
+
+    <img src="resources/icon/svg/NS Logo_工作區域 1.svg" style="
+         margin-top:auto;
+          margin-bottom:auto;
+          width:180px;
+          height:120px;
+          display:flex;
+          justify-content:flex-start;">
+
+    <div class="mobilefooterfont" style="color: white;width:max-content;justify-content: flex-end;">
+      HUNTER｜江昇　方琮翔　鄧芯怡　陳孟樺
+      BIG BOSS｜李法賢
+      SHOOT｜donnot.bother.us@gmail.com
+      <div style="color:#EBC151;">copyright©2023 NEWS SAFARI</div>
     </div>
   </div>
 </body>

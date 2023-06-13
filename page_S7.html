@@ -1,179 +1,515 @@
 <!DOCTYPE html>
 <html lang="en">
 
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>AI辨識手寫軌跡 生成獨有書法字體</title>
-    <link rel="stylesheet" href="css/page.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AI辨識手寫軌跡 生成獨有書法字體</title>
+  <link rel="stylesheet" href="css/page.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+  integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 
-  <style>
+<style>
+  .header {
+    position: relative;
+    white-space: nowrap;
+    display: inline-block;
+    vertical-align: middle;
+    background-color: #f8f8ff;
+    width: 100%;
+  }
+
+
+
+  .line {
+    display: block;
+    border-top: 1px solid black;
+    width: 90%;
+    height: 1.51px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .header_font {
+    display: inline-block;
+    font-family: Noto Serif SC;
+    font-size: 37px;
+    font-weight: 400;
+    line-height: 53px;
+    letter-spacing: 0.06em;
+    text-align: center;
+    margin-top: 42px;
+    z-index: 1;
+    position: absolute;
+  }
+
+  .rectangle {
+    width: 180px;
+    height: 102px;
+    background-color: #937D54F2;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    z-index: 2;
+  }
+
+  .footer {
+    position: relative;
+    white-space: nowrap;
+    display: inline-block;
+    vertical-align: middle;
+    width: 100%;
+    height: 206px;
+    background-color: #937D54;
+    margin-bottom: 0px;
+  }
+
+  .footer_font {
+    display: inline-block;
+    font-family: Noto Serif SC;
+    font-size: 22px;
+    font-weight: 400;
+    line-height: 32px;
+    letter-spacing: 0.06em;
+    text-align: left;
+    white-space: pre-line;
+    margin-top: 41px;
+    z-index: 1;
+    position: absolute;
+  }
+
+  .link-container {
+    display: inline-block
+  }
+
+  .rectangle-hover {
+    position: relative;
+    color: black;
+  }
+
+  .rectangle-hover:hover {
+    color: white;
+  }
+
+  .rectangle-hover:hover::before {
+    content: '';
+    position: absolute;
+    text-align: center;
+    left: -35.5px;
+    top: -27px;
+    width: 180px;
+    height: 102px;
+    background-color: #937D54F2;
+    z-index: -1;
+    border-radius: 4px;
+  }
+
+
+  .mobileheader {
+    display: none;
+  }
+
+  .mobilefooter {
+    display: none;
+  }
+
+  @media(max-width:760px) {
+
     .header {
-      position: relative;
-      white-space: nowrap;
-      display: inline-block;
-      vertical-align: middle;
+      display: none;
+    }
+
+    .mobileheader {
+      display: flex;
+      justify-content: center;
+      background-color: #f8f8ff;
     }
 
     .line {
-      display: inline-block;
-      border-top: 1px solid black;
-      width: 1050px;
-      height: 1.51px;
-      padding-top: 192px;
-      margin-left: 103px;
+      display: none;
     }
 
-    .header_font {
-      display: inline-block;
+
+
+    .container {
+      width: fit-content;
+      /* Set the width of the container */
+      margin: 0 auto;
+      /* Center the container horizontally */
+      display: flex;
+      justify-content: right;
+      height: fit-content;
+      top: 90px;
+    }
+
+    .mobileline {
+      position: relative;
+      display: block;
+      justify-content: center;
+      border-top: 1px solid black;
+      width: 90%;
+      height: 1.51px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    /* CSS for dropdown menu */
+    .dropdown-menu {
+      position: relative;
+      display: flex;
+      white-space: pre-line;
+      line-height: 10px;
+      height: fit-content;
+      margin-top: 20px;
+      border: none;
+      justify-content: flex-end;
+      margin-right: 10%;
+      background-color: #f8f8ff;
+    }
+
+    .dropdown-menu>a {
+      display: flex;
+      justify-content: right;
+      padding: 10px;
+      color: #333;
+      text-decoration: none;
+    }
+
+    .dropdown-menu ul {
+      position: absolute;
+      top: 100%;
+      left: 0;
+      display: none;
+      text-decoration: none;
+      background-color: #f8f8ff;
+      padding: 10px;
+      margin: 0;
+      list-style-type: none;
+    }
+
+    .dropdown-menu ul li {
+      margin-bottom: 5px;
+      text-decoration: none;
+    }
+
+    .dropdown-menu:hover ul {
+      display: block;
+      text-decoration: none;
+      color: #f8f8ff;
+    }
+
+    .mobilefont {
+      text-decoration: none;
       font-family: Noto Serif SC;
       font-size: 37px;
       font-weight: 400;
       line-height: 53px;
-
       letter-spacing: 0.06em;
       text-align: center;
       margin-top: 42px;
-      z-index: 1;
-      position: absolute;
-    }
-
-    .rectangle {
-      width: 207px;
-      height: 103px;
-      background-color: #937D54F2;
-      display: inline-block;
-      z-index: 2;
+      color: black;
     }
 
     .footer {
-      position: relative;
-      white-space: nowrap;
-      display: inline-block;
-      vertical-align: middle;
-      width: 1280px;
+      display: none;
+    }
+
+    .mobilefooter {
+      display: flex;
+      justify-content: center;
       height: 206px;
       background-color: #937D54;
       margin-bottom: 0px;
     }
 
-    .footer_font {
-      display: inline-block;
+    .mobilefooterfont {
+      display: block;
       font-family: Noto Serif SC;
-      font-size: 22px;
+      font-size: 15px;
       font-weight: 400;
-      line-height: 32px;
+      line-height: 20px;
       letter-spacing: 0.06em;
       text-align: left;
       white-space: pre-line;
-      margin-top: 41px;
-      z-index: 1;
-      position: absolute;
+      margin-top: auto;
+      margin-bottom:auto;
+      margin-right: 0px;
+      position: relative;
+      color: white
     }
-  </style>
+  }
+</style>
 
 </head>
 
 <body>
-  <!--HEADER-->
-  <div class="header">
+<!--header_life-->
+<div class="header">
+  <a href="main.html" style="color:#f8f8ff">
     <img src="resources/icon/svg/NS Logo_白_工作區域 1.svg" style="margin-left:90px;
             margin-top:0px;
             width:275px;
             height:170px;">
+  </a>
 
-    <img src="resources/icon/svg/NS banner-04.svg" style="position:relative;
-            margin-left:132px;
-            margin-top:40px;
-            width:637px;
-            height:130px;">
-
-
-    <div class="header_font" style="left:392px;margin-top:40px;">
-      <a href="https://example.com" style="text-decoration: none;color:black;">國際</a>
-    </div>
-    <div class="header_font" style="left:600px;margin: top 40px;">
-      <a href="https://example.com" style="text-decoration: none;color:black;">生活</a>
-    </div>
-    <div class="header_font" style="left:834px;margin-top:40px;">
-      <a href="https://example.com" style="text-decoration: none;color:black;">藝文</a>
-    </div>
-    <div class="header_font"
-      style="left: 1056px;margin-top:21px;background-color:#937D54F2;padding-left:50px;padding-right:50px;padding-top:25px;padding-bottom:25px;border-radius:8px;">
-      <a href="https://example.com" style="text-decoration: none;color:white;">新知</a>
-    </div>
+  <img src="resources/icon/svg/NS banner-04.svg" style="position:relative;
+          margin-left:132px;
+          margin-top:40px;
+          width:637px;
+          height:130px;">
 
 
+  <a href="international.pages.html" class="rectangle-hover" style="display:inline-block;
+      font-family: Noto Serif SC;
+      font-size: 37px;
+      font-weight: 400;
+      text-decoration: none;
+      line-height: 53px;
+      width:109px;
+      height:49px;
+      letter-spacing: 0.06em;
+      text-align: center;
+      margin-top:42px;
+      z-index:1;
+      position:absolute;
+      left:389px">國際</a>
+
+
+  <a href="life.pages-2.html" class="rectangle-hover" style="display:inline-block;
+      font-family: Noto Serif SC;
+      font-size: 37px;
+      font-weight: 400;
+      text-decoration: none;
+      line-height: 53px;
+      width:109px;
+      height:49px;
+      letter-spacing: 0.06em;
+      text-align: center;
+      margin-top:42px;
+      z-index:1;
+      position:absolute;
+      left:611px">生活</a>
+
+  <a href="art.pages.html" class="rectangle-hover" style="display:inline-block;
+      font-family: Noto Serif SC;
+      font-size: 37px;
+      font-weight: 400;
+      text-decoration: none;
+      line-height: 53px;
+      width:109px;
+      height:49px;
+      letter-spacing: 0.06em;
+      text-align: center;
+      margin-top:42px;
+      z-index:1;
+      position:absolute;
+      left:834px">藝文</a>
+
+  <a href="knowledge.pages.html" class="rectangle" style="display:inline-block;
+      font-family: Noto Serif SC;
+      font-size: 37px;
+      font-weight: 400;
+      text-decoration: none;
+      line-height: 53px;
+      width:180px;
+      height:102px;
+      padding-top:26px;
+      letter-spacing: 0.06em;
+      text-align: center;
+      vertical-align: middle;
+      margin-top:15px;
+      z-index:1;
+      position:absolute;
+      color:white;
+      border-radius: 4px;
+      left:1056px">新知</a>
+
+
+</div>
+<div class="line"></div>
+
+<!--headermobile-->
+<div class="mobileheader">
+
+  <img src="resources/icon/svg/NS Logo_白_工作區域 1.svg" style="margin-left:90px;
+        margin-top:0px;
+        width:180px;
+        height:120px;
+        justify-content:flex-start;
+      margin-left:5%">
+  <div class="container"></div>
+  <div class="dropdown-menu" style:="margin-right:0px;">
+    <a href="#">____
+      ____
+      ____</a>
+    <ul>
+      <li><a href="international.pages.html" class="mobilefont">國際</a></li>
+      <li><a href="life.pages-2.html" class="mobilefont">生活</a></li>
+      <li><a href="art.pages.html" class="mobilefont">藝文</a></li>
+      <li><a href="knowledge.pages.html" class="mobilefont">新知</a></li>
+    </ul>
   </div>
-  <span class="line"></div>        
-        <!-- 文章首圖 -->
-        <img class="page-img"
-            src="resources/imgs/新知/書法.jpg"
 
-        <!-- 文章大標 -->
-        <div class="page-title">AI辨識手寫軌跡 生成獨有書法字體</div>
 
-        <!-- 文章內文 -->
-        <p class="page-text">　【記者何予綜合報導】「現在的年輕人很少寫字，都是透過電腦打字。」為推廣漢字之美並帶動書寫，勤益科技大學資訊工程系「書法大師」師生團隊，開發「空中揮毫書法生成系統」，透過模擬真實手寫狀態生成獨一無二的字，同時解決商用字體的版權問題。此系統在第四屆大手攜小手智慧創新應用競賽獲得冠軍。</p>
-        <p class="page-text">　空中揮毫書法生成系統由「空中手寫辨識」和「漢字書法生成」兩部分組成。首先空中手寫辨識會利用MediaPipe手部追蹤模型，建立手部21個關節點，藉捕捉節點位置的改變，追蹤畫面中手部在空中揮動的軌跡圖形。接著，再由書法生成系統，將描繪出的圖形生成出具有書法風格的字型，「不用準備毛筆、宣紙、墨汁，透過電腦運算就能寫出書法字。」團隊成員楊奕炫補充。</p>
-        <p class="page-text">　團隊透過生成對抗網路（Generative Adversarial Network，GAN）訓練「漢字書法生成」系統。楊奕炫以仿冒者和鑑別者作為比喻說明，團隊將書畫字帖作為資料給機器學習後，仿冒者會仿冒出類似的圖像，鑑別者則會鑑別仿冒圖和真實字帖的差異，「所以兩個網路一直對抗，就會讓模型成長得越好。」</p>
-        <p class="page-text">　使用者只需對鏡頭書寫後選擇想要的字體，系統便會依手寫軌跡生成該風格字型。楊奕炫解釋，系統不會辨識手寫軌跡是什麼字，而是直接將圖轉換成圖，手寫字經過圖像編碼器後，會慢慢提取圖像特徵，經過圖像解碼器，一步步生成出書法風格的字型。</p>
-        <p class="page-text">　「我們比較想解決的是商用字型，很多字型都要花高額的版權費。」指導老師張傳旺表示，將來此系統開放大眾免費使用，能提供設計師做出具有個人風格的字。因海報設計等製圖需求，而曾經購買商用字型的洪振嘉表示，在設計時為達到清晰傳遞資訊的考量，較少使用手寫風格的字體，即使使用也會為統一整體視覺，選擇每個字型樣式都經過精準設計的字體。「它固然是一個很好的嘗試、創新，但它不會改變字體製作、字體販賣的大環境。」洪振嘉說。</p>
-        <p class="page-text">　張傳旺坦言：「觀眾對著鏡頭比劃，螢幕上就會出現，當然是娛樂效果比較大。」但他也表示，目前技術可以結合其他輸入方式，例如使用手寫板，或者直接將文字拍照上傳系統，便能有效率地生成字串，應用在製作春聯等用途。系統目前已可產出七種不同的書法字型，團隊未來將持續訓練系統，擴展應用範圍。</p>
+</div>
 
-    <!-- 推薦新聞 -->
-    <br>
-    <hr>
-    <br>
-    <div class="related-news-title">推薦新聞</div>
-    <div style="display:flex;
+</div>
+
+<div class="mobileline"></div>
+  <!-- 文章首圖 -->
+  <img class="page-img" src="resources/imgs/新知/書法.jpg">
+  <!-- 文章大標 -->
+  <div class="page-title">AI辨識手寫軌跡 生成獨有書法字體</div>
+
+  <!-- 文章內文 -->
+  <p class="page-text">
+    　【記者何予綜合報導】「現在的年輕人很少寫字，都是透過電腦打字。」為推廣漢字之美並帶動書寫，勤益科技大學資訊工程系「書法大師」師生團隊，開發「空中揮毫書法生成系統」，透過模擬真實手寫狀態生成獨一無二的字，同時解決商用字體的版權問題。此系統在第四屆大手攜小手智慧創新應用競賽獲得冠軍。
+  </p>
+  <p class="page-text">
+    　空中揮毫書法生成系統由「空中手寫辨識」和「漢字書法生成」兩部分組成。首先空中手寫辨識會利用MediaPipe手部追蹤模型，建立手部21個關節點，藉捕捉節點位置的改變，追蹤畫面中手部在空中揮動的軌跡圖形。接著，再由書法生成系統，將描繪出的圖形生成出具有書法風格的字型，「不用準備毛筆、宣紙、墨汁，透過電腦運算就能寫出書法字。」團隊成員楊奕炫補充。
+  </p>
+  <p class="page-text">　團隊透過生成對抗網路（Generative Adversarial
+    Network，GAN）訓練「漢字書法生成」系統。楊奕炫以仿冒者和鑑別者作為比喻說明，團隊將書畫字帖作為資料給機器學習後，仿冒者會仿冒出類似的圖像，鑑別者則會鑑別仿冒圖和真實字帖的差異，「所以兩個網路一直對抗，就會讓模型成長得越好。」
+  </p>
+  <p class="page-text">
+    　使用者只需對鏡頭書寫後選擇想要的字體，系統便會依手寫軌跡生成該風格字型。楊奕炫解釋，系統不會辨識手寫軌跡是什麼字，而是直接將圖轉換成圖，手寫字經過圖像編碼器後，會慢慢提取圖像特徵，經過圖像解碼器，一步步生成出書法風格的字型。
+  </p>
+  <p class="page-text">
+    　「我們比較想解決的是商用字型，很多字型都要花高額的版權費。」指導老師張傳旺表示，將來此系統開放大眾免費使用，能提供設計師做出具有個人風格的字。因海報設計等製圖需求，而曾經購買商用字型的洪振嘉表示，在設計時為達到清晰傳遞資訊的考量，較少使用手寫風格的字體，即使使用也會為統一整體視覺，選擇每個字型樣式都經過精準設計的字體。「它固然是一個很好的嘗試、創新，但它不會改變字體製作、字體販賣的大環境。」洪振嘉說。
+  </p>
+  <p class="page-text">
+    　張傳旺坦言：「觀眾對著鏡頭比劃，螢幕上就會出現，當然是娛樂效果比較大。」但他也表示，目前技術可以結合其他輸入方式，例如使用手寫板，或者直接將文字拍照上傳系統，便能有效率地生成字串，應用在製作春聯等用途。系統目前已可產出七種不同的書法字型，團隊未來將持續訓練系統，擴展應用範圍。
+  </p>
+
+  <!--手機板-->
+  <!-- 文章首圖 -->
+  <img class="m-page-img" src="resources/imgs/新知/書法.jpg">
+  <!-- 文章大標 -->
+  <div class="m-page-title">AI辨識手寫軌跡 生成獨有書法字體</div>
+
+  <!-- 文章內文 -->
+  <p class="m-page-text">
+    　【記者何予綜合報導】「現在的年輕人很少寫字，都是透過電腦打字。」為推廣漢字之美並帶動書寫，勤益科技大學資訊工程系「書法大師」師生團隊，開發「空中揮毫書法生成系統」，透過模擬真實手寫狀態生成獨一無二的字，同時解決商用字體的版權問題。此系統在第四屆大手攜小手智慧創新應用競賽獲得冠軍。
+  </p>
+  <p class="m-page-text">
+    　空中揮毫書法生成系統由「空中手寫辨識」和「漢字書法生成」兩部分組成。首先空中手寫辨識會利用MediaPipe手部追蹤模型，建立手部21個關節點，藉捕捉節點位置的改變，追蹤畫面中手部在空中揮動的軌跡圖形。接著，再由書法生成系統，將描繪出的圖形生成出具有書法風格的字型，「不用準備毛筆、宣紙、墨汁，透過電腦運算就能寫出書法字。」團隊成員楊奕炫補充。
+  </p>
+  <p class="m-page-text">　團隊透過生成對抗網路（Generative Adversarial
+    Network，GAN）訓練「漢字書法生成」系統。楊奕炫以仿冒者和鑑別者作為比喻說明，團隊將書畫字帖作為資料給機器學習後，仿冒者會仿冒出類似的圖像，鑑別者則會鑑別仿冒圖和真實字帖的差異，「所以兩個網路一直對抗，就會讓模型成長得越好。」
+  </p>
+  <p class="m-page-text">
+    　使用者只需對鏡頭書寫後選擇想要的字體，系統便會依手寫軌跡生成該風格字型。楊奕炫解釋，系統不會辨識手寫軌跡是什麼字，而是直接將圖轉換成圖，手寫字經過圖像編碼器後，會慢慢提取圖像特徵，經過圖像解碼器，一步步生成出書法風格的字型。
+  </p>
+  <p class="m-page-text">
+    　「我們比較想解決的是商用字型，很多字型都要花高額的版權費。」指導老師張傳旺表示，將來此系統開放大眾免費使用，能提供設計師做出具有個人風格的字。因海報設計等製圖需求，而曾經購買商用字型的洪振嘉表示，在設計時為達到清晰傳遞資訊的考量，較少使用手寫風格的字體，即使使用也會為統一整體視覺，選擇每個字型樣式都經過精準設計的字體。「它固然是一個很好的嘗試、創新，但它不會改變字體製作、字體販賣的大環境。」洪振嘉說。
+  </p>
+  <p class="m-page-text">
+    　張傳旺坦言：「觀眾對著鏡頭比劃，螢幕上就會出現，當然是娛樂效果比較大。」但他也表示，目前技術可以結合其他輸入方式，例如使用手寫板，或者直接將文字拍照上傳系統，便能有效率地生成字串，應用在製作春聯等用途。系統目前已可產出七種不同的書法字型，團隊未來將持續訓練系統，擴展應用範圍。
+  </p>
+
+  <!-- 推薦新聞 -->
+  <br>
+  <hr>
+  <br>
+  <div class="related-news-title">推薦新聞</div>
+  <div style="display:flex;
                     flex-direction: row;
                     justify-content: center;
                     margin-top: 30px;
                     margin-bottom:30px;">
-      <div>
-        <a href="page_S1.html">
-          <div class="related-news-board">
-            <img class="related-news-img" src="resources/imgs/新知/龍華科大.jpg">
-            <div class="related-news-cardtitle">龍華科大改造通風球 以室內外溫差轉出電力</div>
-          </div>
-        </a>
-      </div>
-      <div>
-        <a href="page_S2.html">
-          <div class="related-news-board">
-            <img class="related-news-img" src="resources/imgs/新知/測心壓.png">
-            <div class="related-news-cardtitle">無線電量測即察心律異常 把握就醫黃金時間</div>
-          </div>
-        </a>
-      </div>
-      <div>
-        <a href="page_S3.html">
-          <div class="related-news-board">
-            <img class="related-news-img" src="resources/imgs/新知/興大.jpg">
-            <div class="related-news-cardtitle">興大創傷口敷藥新配方 加速糖尿病患傷口癒合</div>
-          </div>
-        </a>
-      </div>
+    <div>
+      <a href="page_S1.html">
+        <div class="related-news-board">
+          <img class="related-news-img" src="resources/imgs/新知/龍華科大.jpg">
+          <div class="related-news-cardtitle">龍華科大改造通風球 以室內外溫差轉出電力</div>
+        </div>
+      </a>
     </div>
-    <br> 
+    <div>
+      <a href="page_S2.html">
+        <div class="related-news-board">
+          <img class="related-news-img" src="resources/imgs/新知/測心壓.png">
+          <div class="related-news-cardtitle">無線電量測即察心律異常 把握就醫黃金時間</div>
+        </div>
+      </a>
+    </div>
+    <div>
+      <a href="page_S3.html">
+        <div class="related-news-board">
+          <img class="related-news-img" src="resources/imgs/新知/興大.jpg">
+          <div class="related-news-cardtitle">興大創傷口敷藥新配方 加速糖尿病患傷口癒合</div>
+        </div>
+      </a>
+    </div>
+  </div>
 
-    <!--footer-->
-    <div class="footer">
-      <img src="resources/icon/svg/NS Logo_工作區域 1.svg" style="margin-left:48px;
+  <!--手機板-->
+  <div class="m-related-news-title">推薦新聞</div>
+  <div style="display:flex;
+                  flex-direction: column;
+                  align-items: center;
+                  margin-top: 30px;
+                  margin-bottom:30px;">
+    <div>
+      <a href="page_S1.html">
+        <div class="m-related-news-board">
+          <img class="m-related-news-img" src="resources/imgs/新知/龍華科大.jpg">
+          <div class="m-related-news-cardtitle">龍華科大改造通風球 以室內外溫差轉出電力</div>
+        </div>
+      </a>
+    </div>
+    <div>
+      <a href="page_S2.html">
+        <div class="m-related-news-board">
+          <img class="m-related-news-img" src="resources/imgs/新知/測心壓.png">
+          <div class="m-related-news-cardtitle">無線電量測即察心律異常 把握就醫黃金時間</div>
+        </div>
+      </a>
+    </div>
+    <div>
+      <a href="page_S3.html">
+        <div class="m-related-news-board">
+          <img class="m-related-news-img" src="resources/imgs/新知/興大.jpg">
+          <div class="m-related-news-cardtitle">興大創傷口敷藥新配方 加速糖尿病患傷口癒合</div>
+        </div>
+      </a>
+    </div>
+  </div>
+
+  <br>
+
+  <!--footer-->
+  <div class="footer">
+    <img src="resources/icon/svg/NS Logo_工作區域 1.svg" style="margin-left:48px;
       margin-bottom:20px;
       width:275px;
       height:170px;">
 
-      <div class="footer_font" style="margin-left:50px;color: white;">HUNTER｜江昇　方琮翔　鄧芯怡　陳孟樺
-          BIG BOSS｜李法賢
-          SHOOT｜donnot.bother.us@gmail.com
-      </div>
+    <div class="footer_font" style="margin-left:50px;color: white;">HUNTER｜江昇　方琮翔　鄧芯怡　陳孟樺
+      BIG BOSS｜李法賢
+      SHOOT｜donnot.bother.us@gmail.com
+    </div>
 
-      <div class="footer_font" style="left: 861px;margin-top:67px;color:#EBC151;;">copyright©2023 NEWS SAFARI
-      </div>
+    <div class="footer_font" style="left: 861px;margin-top:67px;color:#EBC151;;">copyright©2023 NEWS SAFARI
+    </div>
+  </div>
 
-  </body>
+  <!--footermobile-->
+  <div class="mobilefooter">
+    
+    <img src="resources/icon/svg/NS Logo_工作區域 1.svg" style="
+       margin-top:auto;
+        margin-bottom:auto;
+        width:180px;
+        height:120px;
+        display:flex;
+        justify-content:flex-start;">
+
+    <div class="mobilefooterfont" style="color: white;width:max-content;justify-content: flex-end;">HUNTER｜江昇　方琮翔　鄧芯怡　陳孟樺
+      BIG BOSS｜李法賢
+      SHOOT｜donnot.bother.us@gmail.com
+      <div style="color:#EBC151;">copyright©2023 NEWS SAFARI</div>
+    </div>
+  </div>
+</body>

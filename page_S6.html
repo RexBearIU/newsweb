@@ -1,181 +1,508 @@
 <!DOCTYPE html>
 <html lang="en">
 
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>SignLens翻譯手語 打造無障礙溝通環境</title>
-    <link rel="stylesheet" href="css/page.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SignLens翻譯手語 打造無障礙溝通環境</title>
+  <link rel="stylesheet" href="css/page.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+  integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 
-  <style>
+<style>
+  .header {
+    position: relative;
+    white-space: nowrap;
+    display: inline-block;
+    vertical-align: middle;
+    background-color: #f8f8ff;
+    width: 100%;
+  }
+
+
+
+  .line {
+    display: block;
+    border-top: 1px solid black;
+    width: 90%;
+    height: 1.51px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .header_font {
+    display: inline-block;
+    font-family: Noto Serif SC;
+    font-size: 37px;
+    font-weight: 400;
+    line-height: 53px;
+    letter-spacing: 0.06em;
+    text-align: center;
+    margin-top: 42px;
+    z-index: 1;
+    position: absolute;
+  }
+
+  .rectangle {
+    width: 180px;
+    height: 102px;
+    background-color: #937D54F2;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    z-index: 2;
+  }
+
+  .footer {
+    position: relative;
+    white-space: nowrap;
+    display: inline-block;
+    vertical-align: middle;
+    width: 100%;
+    height: 206px;
+    background-color: #937D54;
+    margin-bottom: 0px;
+  }
+
+  .footer_font {
+    display: inline-block;
+    font-family: Noto Serif SC;
+    font-size: 22px;
+    font-weight: 400;
+    line-height: 32px;
+    letter-spacing: 0.06em;
+    text-align: left;
+    white-space: pre-line;
+    margin-top: 41px;
+    z-index: 1;
+    position: absolute;
+  }
+
+  .link-container {
+    display: inline-block
+  }
+
+  .rectangle-hover {
+    position: relative;
+    color: black;
+  }
+
+  .rectangle-hover:hover {
+    color: white;
+  }
+
+  .rectangle-hover:hover::before {
+    content: '';
+    position: absolute;
+    text-align: center;
+    left: -35.5px;
+    top: -27px;
+    width: 180px;
+    height: 102px;
+    background-color: #937D54F2;
+    z-index: -1;
+    border-radius: 4px;
+  }
+
+
+  .mobileheader {
+    display: none;
+  }
+
+  .mobilefooter {
+    display: none;
+  }
+
+  @media(max-width:760px) {
+
     .header {
-      position: relative;
-      white-space: nowrap;
-      display: inline-block;
-      vertical-align: middle;
+      display: none;
+    }
+
+    .mobileheader {
+      display: flex;
+      justify-content: center;
+      background-color: #f8f8ff;
     }
 
     .line {
-      display: inline-block;
-      border-top: 1px solid black;
-      width: 1050px;
-      height: 1.51px;
-      padding-top: 192px;
-      margin-left: 103px;
+      display: none;
     }
 
-    .header_font {
-      display: inline-block;
+
+
+    .container {
+      width: fit-content;
+      /* Set the width of the container */
+      margin: 0 auto;
+      /* Center the container horizontally */
+      display: flex;
+      justify-content: right;
+      height: fit-content;
+      top: 90px;
+    }
+
+    .mobileline {
+      position: relative;
+      display: block;
+      justify-content: center;
+      border-top: 1px solid black;
+      width: 90%;
+      height: 1.51px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    /* CSS for dropdown menu */
+    .dropdown-menu {
+      position: relative;
+      display: flex;
+      white-space: pre-line;
+      line-height: 10px;
+      height: fit-content;
+      margin-top: 20px;
+      border: none;
+      justify-content: flex-end;
+      margin-right: 10%;
+      background-color: #f8f8ff;
+    }
+
+    .dropdown-menu>a {
+      display: flex;
+      justify-content: right;
+      padding: 10px;
+      color: #333;
+      text-decoration: none;
+    }
+
+    .dropdown-menu ul {
+      position: absolute;
+      top: 100%;
+      left: 0;
+      display: none;
+      text-decoration: none;
+      background-color: #f8f8ff;
+      padding: 10px;
+      margin: 0;
+      list-style-type: none;
+    }
+
+    .dropdown-menu ul li {
+      margin-bottom: 5px;
+      text-decoration: none;
+    }
+
+    .dropdown-menu:hover ul {
+      display: block;
+      text-decoration: none;
+      color: #f8f8ff;
+    }
+
+    .mobilefont {
+      text-decoration: none;
       font-family: Noto Serif SC;
       font-size: 37px;
       font-weight: 400;
       line-height: 53px;
-
       letter-spacing: 0.06em;
       text-align: center;
       margin-top: 42px;
-      z-index: 1;
-      position: absolute;
-    }
-
-    .rectangle {
-      width: 207px;
-      height: 103px;
-      background-color: #937D54F2;
-      display: inline-block;
-      z-index: 2;
+      color: black;
     }
 
     .footer {
-      position: relative;
-      white-space: nowrap;
-      display: inline-block;
-      vertical-align: middle;
-      width: 1280px;
+      display: none;
+    }
+
+    .mobilefooter {
+      display: flex;
+      justify-content: center;
       height: 206px;
       background-color: #937D54;
       margin-bottom: 0px;
     }
 
-    .footer_font {
-      display: inline-block;
+    .mobilefooterfont {
+      display: block;
       font-family: Noto Serif SC;
-      font-size: 22px;
+      font-size: 15px;
       font-weight: 400;
-      line-height: 32px;
+      line-height: 20px;
       letter-spacing: 0.06em;
       text-align: left;
       white-space: pre-line;
-      margin-top: 41px;
-      z-index: 1;
-      position: absolute;
+      margin-top: auto;
+      margin-bottom:auto;
+      margin-right: 0px;
+      position: relative;
+      color: white
     }
-  </style>
+  }
+</style>
 
 </head>
 
 <body>
-  <!--HEADER-->
-  <div class="header">
+<!--header_life-->
+<div class="header">
+  <a href="main.html" style="color:#f8f8ff">
     <img src="resources/icon/svg/NS Logo_白_工作區域 1.svg" style="margin-left:90px;
             margin-top:0px;
             width:275px;
             height:170px;">
+  </a>
 
-    <img src="resources/icon/svg/NS banner-04.svg" style="position:relative;
-            margin-left:132px;
-            margin-top:40px;
-            width:637px;
-            height:130px;">
-
-
-    <div class="header_font" style="left:392px;margin-top:40px;">
-      <a href="https://example.com" style="text-decoration: none;color:black;">國際</a>
-    </div>
-    <div class="header_font" style="left:600px;margin: top 40px;">
-      <a href="https://example.com" style="text-decoration: none;color:black;">生活</a>
-    </div>
-    <div class="header_font" style="left:834px;margin-top:40px;">
-      <a href="https://example.com" style="text-decoration: none;color:black;">藝文</a>
-    </div>
-    <div class="header_font"
-      style="left: 1056px;margin-top:21px;background-color:#937D54F2;padding-left:50px;padding-right:50px;padding-top:25px;padding-bottom:25px;border-radius:8px;">
-      <a href="https://example.com" style="text-decoration: none;color:white;">新知</a>
-    </div>
+  <img src="resources/icon/svg/NS banner-04.svg" style="position:relative;
+          margin-left:132px;
+          margin-top:40px;
+          width:637px;
+          height:130px;">
 
 
+  <a href="international.pages.html" class="rectangle-hover" style="display:inline-block;
+      font-family: Noto Serif SC;
+      font-size: 37px;
+      font-weight: 400;
+      text-decoration: none;
+      line-height: 53px;
+      width:109px;
+      height:49px;
+      letter-spacing: 0.06em;
+      text-align: center;
+      margin-top:42px;
+      z-index:1;
+      position:absolute;
+      left:389px">國際</a>
+
+
+  <a href="life.pages-2.html" class="rectangle-hover" style="display:inline-block;
+      font-family: Noto Serif SC;
+      font-size: 37px;
+      font-weight: 400;
+      text-decoration: none;
+      line-height: 53px;
+      width:109px;
+      height:49px;
+      letter-spacing: 0.06em;
+      text-align: center;
+      margin-top:42px;
+      z-index:1;
+      position:absolute;
+      left:611px">生活</a>
+
+  <a href="art.pages.html" class="rectangle-hover" style="display:inline-block;
+      font-family: Noto Serif SC;
+      font-size: 37px;
+      font-weight: 400;
+      text-decoration: none;
+      line-height: 53px;
+      width:109px;
+      height:49px;
+      letter-spacing: 0.06em;
+      text-align: center;
+      margin-top:42px;
+      z-index:1;
+      position:absolute;
+      left:834px">藝文</a>
+
+  <a href="knowledge.pages.html" class="rectangle" style="display:inline-block;
+      font-family: Noto Serif SC;
+      font-size: 37px;
+      font-weight: 400;
+      text-decoration: none;
+      line-height: 53px;
+      width:180px;
+      height:102px;
+      padding-top:26px;
+      letter-spacing: 0.06em;
+      text-align: center;
+      vertical-align: middle;
+      margin-top:15px;
+      z-index:1;
+      position:absolute;
+      color:white;
+      border-radius: 4px;
+      left:1056px">新知</a>
+
+
+</div>
+<div class="line"></div>
+
+<!--headermobile-->
+<div class="mobileheader">
+
+  <img src="resources/icon/svg/NS Logo_白_工作區域 1.svg" style="margin-left:90px;
+        margin-top:0px;
+        width:180px;
+        height:120px;
+        justify-content:flex-start;
+      margin-left:5%">
+  <div class="container"></div>
+  <div class="dropdown-menu" style:="margin-right:0px;">
+    <a href="#">____
+      ____
+      ____</a>
+    <ul>
+      <li><a href="international.pages.html" class="mobilefont">國際</a></li>
+      <li><a href="life.pages-2.html" class="mobilefont">生活</a></li>
+      <li><a href="art.pages.html" class="mobilefont">藝文</a></li>
+      <li><a href="knowledge.pages.html" class="mobilefont">新知</a></li>
+    </ul>
   </div>
-  <span class="line"></div>
-        
-        <!-- 文章首圖 -->
-        <img class="page-img"
-            src="resources/imgs/新知/signlens.jpg"
 
-        <!-- 文章大標 -->
-        <div class="page-title">SignLens翻譯手語 打造無障礙溝通環境</div>
 
-        <!-- 文章內文 -->
-        <p class="page-text">　【記者何予綜合報導】現今手語辨識模型多以學習手語為目的，尚無法成為聽人與聽障間的溝通工具。國立政治大學資訊管理學系學生團隊開發「SignLens——手語語音辨識於混合實境應用」，透過智慧型眼鏡進行雙向辨識，提升溝通效率。此發明獲得第27屆大專校院資訊應用服務創新競賽資訊應用組第一名。</p>
-        <p class="page-text">　SignLens軟體包含語音辨識系統和手語辨識系統，能夠即時地將語音和手語轉換成文字，出現在混合實境（Mixed Reality，MR）裝置的螢幕上。團隊透過MediaPipe建立手語辨識的學習模型，經由大量動態影像資料訓練過後，模型可以學習手部運動，辨識出手語動作對應的語意。</p>
-        <p class="page-text">　團隊成員宋志謙說明，目前市面上正在開發的手語辨識模型，多以資源和使用人口較多的美國手語（American Sign Language，ASL）為主，而台灣尚未有具統一規格的手語資料庫和辨識系統。「資料集一直都是模型訓練最重要的、最核心的部分。」指導老師簡士鎰說明，面對詞彙資料搜集的困難，團隊初期聘請手語老師提供專業意見和指導，學習手語後自行錄製影片，更開發出「手語辨識資料集收錄平台」，讓使用者能自行錄製、上傳手語影片，補充給模型學習。</p>
-        <p class="page-text">　此外，團隊成員曹子涵補充道，美國手語翻譯系統大多以網頁為主，需要依賴桌電或筆電的攝影機，而團隊結合MR技術，透過眼鏡內建的攝影機進行拍攝、辨識，使SignLens更具機動性和即時性。台灣手語翻譯協會理事長魏如君樂見其成地說：「只要是能夠幫忙溝通的工具都是好的。」然而，他也建議，手語解讀速度和詞彙量應再提升，才能夠實際發揮作用。</p>
-        <p class="page-text">　台灣手語翻譯量能缺乏，政府不提供金融開戶等私人場合公費申請翻譯服務，因此團隊開發產品時以金融服務場景為出發。團隊成員朱芷伶說明，「我們傾向以訂閱制的方式，將軟硬體整套一包租借給銀行。如果是有哪些專業詞語的手語資料想要增加，或者是系統需要改進，就可以馬上反饋給他們。」團隊也希望能夠利用平台蒐集到更多手語資料，擴展使用情境。</p>
+</div>
 
-    <!-- 推薦新聞 -->
-    <br>
-    <hr>
-    <br>
-    <div class="related-news-title">推薦新聞</div>
-    <div style="display:flex;
+</div>
+
+<div class="mobileline"></div>
+
+  <!-- 文章首圖 -->
+  <img class="page-img" src="resources/imgs/新知/signlens.jpg">
+  <!-- 文章大標 -->
+  <div class="page-title">SignLens翻譯手語 打造無障礙溝通環境</div>
+
+  <!-- 文章內文 -->
+  <p class="page-text">
+    　【記者何予綜合報導】現今手語辨識模型多以學習手語為目的，尚無法成為聽人與聽障間的溝通工具。國立政治大學資訊管理學系學生團隊開發「SignLens——手語語音辨識於混合實境應用」，透過智慧型眼鏡進行雙向辨識，提升溝通效率。此發明獲得第27屆大專校院資訊應用服務創新競賽資訊應用組第一名。
+  </p>
+  <p class="page-text">　SignLens軟體包含語音辨識系統和手語辨識系統，能夠即時地將語音和手語轉換成文字，出現在混合實境（Mixed
+    Reality，MR）裝置的螢幕上。團隊透過MediaPipe建立手語辨識的學習模型，經由大量動態影像資料訓練過後，模型可以學習手部運動，辨識出手語動作對應的語意。</p>
+  <p class="page-text">　團隊成員宋志謙說明，目前市面上正在開發的手語辨識模型，多以資源和使用人口較多的美國手語（American Sign
+    Language，ASL）為主，而台灣尚未有具統一規格的手語資料庫和辨識系統。「資料集一直都是模型訓練最重要的、最核心的部分。」指導老師簡士鎰說明，面對詞彙資料搜集的困難，團隊初期聘請手語老師提供專業意見和指導，學習手語後自行錄製影片，更開發出「手語辨識資料集收錄平台」，讓使用者能自行錄製、上傳手語影片，補充給模型學習。
+  </p>
+  <p class="page-text">
+    　此外，團隊成員曹子涵補充道，美國手語翻譯系統大多以網頁為主，需要依賴桌電或筆電的攝影機，而團隊結合MR技術，透過眼鏡內建的攝影機進行拍攝、辨識，使SignLens更具機動性和即時性。台灣手語翻譯協會理事長魏如君樂見其成地說：「只要是能夠幫忙溝通的工具都是好的。」然而，他也建議，手語解讀速度和詞彙量應再提升，才能夠實際發揮作用。
+  </p>
+  <p class="page-text">
+    　台灣手語翻譯量能缺乏，政府不提供金融開戶等私人場合公費申請翻譯服務，因此團隊開發產品時以金融服務場景為出發。團隊成員朱芷伶說明，「我們傾向以訂閱制的方式，將軟硬體整套一包租借給銀行。如果是有哪些專業詞語的手語資料想要增加，或者是系統需要改進，就可以馬上反饋給他們。」團隊也希望能夠利用平台蒐集到更多手語資料，擴展使用情境。
+  </p>
+
+  <!--手機板-->
+  <!-- 文章首圖 -->
+  <img class="m-page-img" src="resources/imgs/新知/signlens.jpg">
+  <!-- 文章大標 -->
+  <div class="m-page-title">SignLens翻譯手語 打造無障礙溝通環境</div>
+
+  <!-- 文章內文 -->
+  <p class="m-page-text">
+    　【記者何予綜合報導】現今手語辨識模型多以學習手語為目的，尚無法成為聽人與聽障間的溝通工具。國立政治大學資訊管理學系學生團隊開發「SignLens——手語語音辨識於混合實境應用」，透過智慧型眼鏡進行雙向辨識，提升溝通效率。此發明獲得第27屆大專校院資訊應用服務創新競賽資訊應用組第一名。
+  </p>
+  <p class="m-page-text">　SignLens軟體包含語音辨識系統和手語辨識系統，能夠即時地將語音和手語轉換成文字，出現在混合實境（Mixed
+    Reality，MR）裝置的螢幕上。團隊透過MediaPipe建立手語辨識的學習模型，經由大量動態影像資料訓練過後，模型可以學習手部運動，辨識出手語動作對應的語意。</p>
+  <p class="m-page-text">　團隊成員宋志謙說明，目前市面上正在開發的手語辨識模型，多以資源和使用人口較多的美國手語（American Sign
+    Language，ASL）為主，而台灣尚未有具統一規格的手語資料庫和辨識系統。「資料集一直都是模型訓練最重要的、最核心的部分。」指導老師簡士鎰說明，面對詞彙資料搜集的困難，團隊初期聘請手語老師提供專業意見和指導，學習手語後自行錄製影片，更開發出「手語辨識資料集收錄平台」，讓使用者能自行錄製、上傳手語影片，補充給模型學習。
+  </p>
+  <p class="m-page-text">
+    　此外，團隊成員曹子涵補充道，美國手語翻譯系統大多以網頁為主，需要依賴桌電或筆電的攝影機，而團隊結合MR技術，透過眼鏡內建的攝影機進行拍攝、辨識，使SignLens更具機動性和即時性。台灣手語翻譯協會理事長魏如君樂見其成地說：「只要是能夠幫忙溝通的工具都是好的。」然而，他也建議，手語解讀速度和詞彙量應再提升，才能夠實際發揮作用。
+  </p>
+  <p class="m-page-text">
+    　台灣手語翻譯量能缺乏，政府不提供金融開戶等私人場合公費申請翻譯服務，因此團隊開發產品時以金融服務場景為出發。團隊成員朱芷伶說明，「我們傾向以訂閱制的方式，將軟硬體整套一包租借給銀行。如果是有哪些專業詞語的手語資料想要增加，或者是系統需要改進，就可以馬上反饋給他們。」團隊也希望能夠利用平台蒐集到更多手語資料，擴展使用情境。
+  </p>
+
+  <!-- 推薦新聞 -->
+  <br>
+  <hr>
+  <br>
+  <div class="related-news-title">推薦新聞</div>
+  <div style="display:flex;
                     flex-direction: row;
                     justify-content: center;
                     margin-top: 30px;
                     margin-bottom:30px;">
-      <div>
-        <a href="page_S1.html">
-          <div class="related-news-board">
-            <img class="related-news-img" src="resources/imgs/新知/龍華科大.jpg">
-            <div class="related-news-cardtitle">龍華科大改造通風球 以室內外溫差轉出電力</div>
-          </div>
-        </a>
-      </div>
-      <div>
-        <a href="page_S2.html">
-          <div class="related-news-board">
-            <img class="related-news-img" src="resources/imgs/新知/測心壓.png">
-            <div class="related-news-cardtitle">無線電量測即察心律異常 把握就醫黃金時間</div>
-          </div>
-        </a>
-      </div>
-      <div>
-        <a href="page_S3.html">
-          <div class="related-news-board">
-            <img class="related-news-img" src="resources/imgs/新知/興大.jpg">
-            <div class="related-news-cardtitle">興大創傷口敷藥新配方 加速糖尿病患傷口癒合</div>
-          </div>
-        </a>
-      </div>
+    <div>
+      <a href="page_S1.html">
+        <div class="related-news-board">
+          <img class="related-news-img" src="resources/imgs/新知/龍華科大.jpg">
+          <div class="related-news-cardtitle">龍華科大改造通風球 以室內外溫差轉出電力</div>
+        </div>
+      </a>
     </div>
-    <br>
+    <div>
+      <a href="page_S2.html">
+        <div class="related-news-board">
+          <img class="related-news-img" src="resources/imgs/新知/測心壓.png">
+          <div class="related-news-cardtitle">無線電量測即察心律異常 把握就醫黃金時間</div>
+        </div>
+      </a>
+    </div>
+    <div>
+      <a href="page_S3.html">
+        <div class="related-news-board">
+          <img class="related-news-img" src="resources/imgs/新知/興大.jpg">
+          <div class="related-news-cardtitle">興大創傷口敷藥新配方 加速糖尿病患傷口癒合</div>
+        </div>
+      </a>
+    </div>
+  </div>
 
-         <!--footer-->
-    <div class="footer">
-      <img src="resources/icon/svg/NS Logo_工作區域 1.svg" style="margin-left:48px;
+  <!--手機板-->
+  <div class="m-related-news-title">推薦新聞</div>
+  <div style="display:flex;
+                flex-direction: column;
+                align-items: center;
+                margin-top: 30px;
+                margin-bottom:30px;">
+    <div>
+      <a href="page_S1.html">
+        <div class="m-related-news-board">
+          <img class="m-related-news-img" src="resources/imgs/新知/龍華科大.jpg">
+          <div class="m-related-news-cardtitle">龍華科大改造通風球 以室內外溫差轉出電力</div>
+        </div>
+      </a>
+    </div>
+    <div>
+      <a href="page_S2.html">
+        <div class="m-related-news-board">
+          <img class="m-related-news-img" src="resources/imgs/新知/測心壓.png">
+          <div class="m-related-news-cardtitle">無線電量測即察心律異常 把握就醫黃金時間</div>
+        </div>
+      </a>
+    </div>
+    <div>
+      <a href="page_S3.html">
+        <div class="m-related-news-board">
+          <img class="m-related-news-img" src="resources/imgs/新知/興大.jpg">
+          <div class="m-related-news-cardtitle">興大創傷口敷藥新配方 加速糖尿病患傷口癒合</div>
+        </div>
+      </a>
+    </div>
+  </div>
+
+  <br>
+
+  <!--footer-->
+  <div class="footer">
+    <img src="resources/icon/svg/NS Logo_工作區域 1.svg" style="margin-left:48px;
       margin-bottom:20px;
       width:275px;
       height:170px;">
 
-      <div class="footer_font" style="margin-left:50px;color: white;">HUNTER｜江昇　方琮翔　鄧芯怡　陳孟樺
-          BIG BOSS｜李法賢
-          SHOOT｜donnot.bother.us@gmail.com
-      </div>
+    <div class="footer_font" style="margin-left:50px;color: white;">HUNTER｜江昇　方琮翔　鄧芯怡　陳孟樺
+      BIG BOSS｜李法賢
+      SHOOT｜donnot.bother.us@gmail.com
+    </div>
 
-      <div class="footer_font" style="left: 861px;margin-top:67px;color:#EBC151;;">copyright©2023 NEWS SAFARI
-      </div>
-
+    <div class="footer_font" style="left: 861px;margin-top:67px;color:#EBC151;;">copyright©2023 NEWS SAFARI
+    </div>
   </div>
-    </div> 
-  </body>
+
+    <!--footermobile-->
+    <div class="mobilefooter">
+    
+      <img src="resources/icon/svg/NS Logo_工作區域 1.svg" style="
+         margin-top:auto;
+          margin-bottom:auto;
+          width:180px;
+          height:120px;
+          display:flex;
+          justify-content:flex-start;">
+  
+      <div class="mobilefooterfont" style="color: white;width:max-content;justify-content: flex-end;">HUNTER｜江昇　方琮翔　鄧芯怡　陳孟樺
+        BIG BOSS｜李法賢
+        SHOOT｜donnot.bother.us@gmail.com
+        <div style="color:#EBC151;">copyright©2023 NEWS SAFARI</div>
+      </div>
+    </div>
+</body>

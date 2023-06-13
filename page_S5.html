@@ -1,182 +1,511 @@
 <!DOCTYPE html>
 <html lang="en">
 
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    
-    <title>「聊癒療鬱」學習用戶用字習慣 打造專屬聊天機器人</title>
-    <link rel="stylesheet" href="css/page.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <style>
+  <title>「聊癒療鬱」學習用戶用字習慣 打造專屬聊天機器人</title>
+  <link rel="stylesheet" href="css/page.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+  integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+<style>
+  .header {
+    position: relative;
+    white-space: nowrap;
+    display: inline-block;
+    vertical-align: middle;
+    background-color: #f8f8ff;
+    width: 100%;
+  }
+
+
+
+  .line {
+    display: block;
+    border-top: 1px solid black;
+    width: 90%;
+    height: 1.51px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .header_font {
+    display: inline-block;
+    font-family: Noto Serif SC;
+    font-size: 37px;
+    font-weight: 400;
+    line-height: 53px;
+    letter-spacing: 0.06em;
+    text-align: center;
+    margin-top: 42px;
+    z-index: 1;
+    position: absolute;
+  }
+
+  .rectangle {
+    width: 180px;
+    height: 102px;
+    background-color: #937D54F2;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    z-index: 2;
+  }
+
+  .footer {
+    position: relative;
+    white-space: nowrap;
+    display: inline-block;
+    vertical-align: middle;
+    width: 100%;
+    height: 206px;
+    background-color: #937D54;
+    margin-bottom: 0px;
+  }
+
+  .footer_font {
+    display: inline-block;
+    font-family: Noto Serif SC;
+    font-size: 22px;
+    font-weight: 400;
+    line-height: 32px;
+    letter-spacing: 0.06em;
+    text-align: left;
+    white-space: pre-line;
+    margin-top: 41px;
+    z-index: 1;
+    position: absolute;
+  }
+
+  .link-container {
+    display: inline-block
+  }
+
+  .rectangle-hover {
+    position: relative;
+    color: black;
+  }
+
+  .rectangle-hover:hover {
+    color: white;
+  }
+
+  .rectangle-hover:hover::before {
+    content: '';
+    position: absolute;
+    text-align: center;
+    left: -35.5px;
+    top: -27px;
+    width: 180px;
+    height: 102px;
+    background-color: #937D54F2;
+    z-index: -1;
+    border-radius: 4px;
+  }
+
+
+  .mobileheader {
+    display: none;
+  }
+
+  .mobilefooter {
+    display: none;
+  }
+
+  @media(max-width:760px) {
+
     .header {
-      position: relative;
-      white-space: nowrap;
-      display: inline-block;
-      vertical-align: middle;
+      display: none;
+    }
+
+    .mobileheader {
+      display: flex;
+      justify-content: center;
+      background-color: #f8f8ff;
     }
 
     .line {
-      display: inline-block;
-      border-top: 1px solid black;
-      width: 1050px;
-      height: 1.51px;
-      padding-top: 192px;
-      margin-left: 103px;
+      display: none;
     }
 
-    .header_font {
-      display: inline-block;
+
+
+    .container {
+      width: fit-content;
+      /* Set the width of the container */
+      margin: 0 auto;
+      /* Center the container horizontally */
+      display: flex;
+      justify-content: right;
+      height: fit-content;
+      top: 90px;
+    }
+
+    .mobileline {
+      position: relative;
+      display: block;
+      justify-content: center;
+      border-top: 1px solid black;
+      width: 90%;
+      height: 1.51px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    /* CSS for dropdown menu */
+    .dropdown-menu {
+      position: relative;
+      display: flex;
+      white-space: pre-line;
+      line-height: 10px;
+      height: fit-content;
+      margin-top: 20px;
+      border: none;
+      justify-content: flex-end;
+      margin-right: 10%;
+      background-color: #f8f8ff;
+    }
+
+    .dropdown-menu>a {
+      display: flex;
+      justify-content: right;
+      padding: 10px;
+      color: #333;
+      text-decoration: none;
+    }
+
+    .dropdown-menu ul {
+      position: absolute;
+      top: 100%;
+      left: 0;
+      display: none;
+      text-decoration: none;
+      background-color: #f8f8ff;
+      padding: 10px;
+      margin: 0;
+      list-style-type: none;
+    }
+
+    .dropdown-menu ul li {
+      margin-bottom: 5px;
+      text-decoration: none;
+    }
+
+    .dropdown-menu:hover ul {
+      display: block;
+      text-decoration: none;
+      color: #f8f8ff;
+    }
+
+    .mobilefont {
+      text-decoration: none;
       font-family: Noto Serif SC;
       font-size: 37px;
       font-weight: 400;
       line-height: 53px;
-
       letter-spacing: 0.06em;
       text-align: center;
       margin-top: 42px;
-      z-index: 1;
-      position: absolute;
-    }
-
-    .rectangle {
-      width: 207px;
-      height: 103px;
-      background-color: #937D54F2;
-      display: inline-block;
-      z-index: 2;
+      color: black;
     }
 
     .footer {
-      position: relative;
-      white-space: nowrap;
-      display: inline-block;
-      vertical-align: middle;
-      width: 1280px;
+      display: none;
+    }
+
+    .mobilefooter {
+      display: flex;
+      justify-content: center;
       height: 206px;
       background-color: #937D54;
       margin-bottom: 0px;
     }
 
-    .footer_font {
-      display: inline-block;
+    .mobilefooterfont {
+      display: block;
       font-family: Noto Serif SC;
-      font-size: 22px;
+      font-size: 15px;
       font-weight: 400;
-      line-height: 32px;
+      line-height: 20px;
       letter-spacing: 0.06em;
       text-align: left;
       white-space: pre-line;
-      margin-top: 41px;
-      z-index: 1;
-      position: absolute;
+      margin-top: auto;
+      margin-bottom:auto;
+      margin-right: 0px;
+      position: relative;
+      color: white
     }
-  </style>
+  }
+</style>
 
 </head>
 
 <body>
-  <!--HEADER-->
-  <div class="header">
+<!--header_life-->
+<div class="header">
+  <a href="main.html" style="color:#f8f8ff">
     <img src="resources/icon/svg/NS Logo_白_工作區域 1.svg" style="margin-left:90px;
             margin-top:0px;
             width:275px;
             height:170px;">
+  </a>
 
-    <img src="resources/icon/svg/NS banner-04.svg" style="position:relative;
-            margin-left:132px;
-            margin-top:40px;
-            width:637px;
-            height:130px;">
-
-
-    <div class="header_font" style="left:392px;margin-top:40px;">
-      <a href="https://example.com" style="text-decoration: none;color:black;">國際</a>
-    </div>
-    <div class="header_font" style="left:600px;margin: top 40px;">
-      <a href="https://example.com" style="text-decoration: none;color:black;">生活</a>
-    </div>
-    <div class="header_font" style="left:834px;margin-top:40px;">
-      <a href="https://example.com" style="text-decoration: none;color:black;">藝文</a>
-    </div>
-    <div class="header_font"
-      style="left: 1056px;margin-top:21px;background-color:#937D54F2;padding-left:50px;padding-right:50px;padding-top:25px;padding-bottom:25px;border-radius:8px;">
-      <a href="https://example.com" style="text-decoration: none;color:white;">新知</a>
-    </div>
+  <img src="resources/icon/svg/NS banner-04.svg" style="position:relative;
+          margin-left:132px;
+          margin-top:40px;
+          width:637px;
+          height:130px;">
 
 
+  <a href="international.pages.html" class="rectangle-hover" style="display:inline-block;
+      font-family: Noto Serif SC;
+      font-size: 37px;
+      font-weight: 400;
+      text-decoration: none;
+      line-height: 53px;
+      width:109px;
+      height:49px;
+      letter-spacing: 0.06em;
+      text-align: center;
+      margin-top:42px;
+      z-index:1;
+      position:absolute;
+      left:389px">國際</a>
+
+
+  <a href="life.pages-2.html" class="rectangle-hover" style="display:inline-block;
+      font-family: Noto Serif SC;
+      font-size: 37px;
+      font-weight: 400;
+      text-decoration: none;
+      line-height: 53px;
+      width:109px;
+      height:49px;
+      letter-spacing: 0.06em;
+      text-align: center;
+      margin-top:42px;
+      z-index:1;
+      position:absolute;
+      left:611px">生活</a>
+
+  <a href="art.pages.html" class="rectangle-hover" style="display:inline-block;
+      font-family: Noto Serif SC;
+      font-size: 37px;
+      font-weight: 400;
+      text-decoration: none;
+      line-height: 53px;
+      width:109px;
+      height:49px;
+      letter-spacing: 0.06em;
+      text-align: center;
+      margin-top:42px;
+      z-index:1;
+      position:absolute;
+      left:834px">藝文</a>
+
+  <a href="knowledge.pages.html" class="rectangle" style="display:inline-block;
+      font-family: Noto Serif SC;
+      font-size: 37px;
+      font-weight: 400;
+      text-decoration: none;
+      line-height: 53px;
+      width:180px;
+      height:102px;
+      padding-top:26px;
+      letter-spacing: 0.06em;
+      text-align: center;
+      vertical-align: middle;
+      margin-top:15px;
+      z-index:1;
+      position:absolute;
+      color:white;
+      border-radius: 4px;
+      left:1056px">新知</a>
+
+
+</div>
+<div class="line"></div>
+
+<!--headermobile-->
+<div class="mobileheader">
+
+  <img src="resources/icon/svg/NS Logo_白_工作區域 1.svg" style="margin-left:90px;
+        margin-top:0px;
+        width:180px;
+        height:120px;
+        justify-content:flex-start;
+      margin-left:5%">
+  <div class="container"></div>
+  <div class="dropdown-menu" style:="margin-right:0px;">
+    <a href="#">____
+      ____
+      ____</a>
+    <ul>
+      <li><a href="international.pages.html" class="mobilefont">國際</a></li>
+      <li><a href="life.pages-2.html" class="mobilefont">生活</a></li>
+      <li><a href="art.pages.html" class="mobilefont">藝文</a></li>
+      <li><a href="knowledge.pages.html" class="mobilefont">新知</a></li>
+    </ul>
   </div>
-  <span class="line"></div>
-        
-        <!-- 文章首圖 -->
-        <img class="page-img"
-            src="resources/imgs/新知/聊愈療愈.jpg"
 
-        <!-- 文章大標 -->
-        <div class="page-title">「聊癒療鬱」學習用戶用字習慣 打造專屬聊天機器人</div>
 
-        <!-- 文章內文 -->
-        <p class="page-text">　【記者何予綜合報導】「透過交友軟體要找到志同道合的人聊天十分耗時，甚至要擔心被詐騙。」為解決現代人的聊天需求，輔仁大學資訊統計學系學生團隊開發「聊癒療鬱」應用程式，針對使用者不同個性，打造量身定制的聊天機器人。該作品獲得第27屆大專校院資訊應用服務創新競賽資訊應用組第一名。</p>
-        <p class="page-text">　研發團隊表示，現有的聊天機器人答覆內容十分制式化，「用久了會覺得很無趣，使用者黏著度可能就會不高，我們想說：『可不可以讓機器人針對語言風格有不同的回覆？』」因此，團隊將語言風格和心理偏好納入模型中。在開始聊天前，該軟體會透過70道選擇題和三階段問卷將使用者進行分類，並分析出使用者所屬的MBTI，判斷使用者喜歡與性格互補還是相似的人聊天。</p>
-        <p class="page-text">　聊天過程中，機器人會先將使用者的回覆斷句成單詞，與資料集進行比對後，挑選出相應的答覆句子。此外，團隊開發「語言風格分析模型」，讓聊天機器人學習使用者的說話習慣，為同樣語意的回覆內容，抽換詞面或更改句子結構，產生更多樣且符合使用者偏好的組合。同時，如果負面詞彙的出現比例過高，機器人將會判斷使用者處於負面情緒，主動給予安慰。</p>
-        <p class="page-text">　指導老師杜逸寧坦言，聊天機器人目前還不夠聰明，回覆內容無法比擬真人，代替朋友的陪伴。他在分享自己身為導師經驗時表示，通常會有想不開想法的學生，都是處在社會支持比較少的時候，「如果這時有一個APP，即使它回答得很笨，但可以逗你開心，轉換你的想法。」</p>
-        <p class="page-text">　諮商心理師李清茵認為，若一個人在外獨居有陪伴需求，又沒有辦法立刻找到親友，機器人能夠提供即時的回應，是很好的資源。「就像我們沒有辦法有家人，可能會養寵物來陪伴我們。」他更進一步建議，聊天機器人可以與諮商室等相關社會資源連結，在發現危機時即時通報，成為社會安全網的一環。</p>
+</div>
 
-    <!-- 推薦新聞 -->
-    <br>
-    <hr>
-    <br>
-    <div class="related-news-title">推薦新聞</div>
-    <div style="display:flex;
+</div>
+
+<div class="mobileline"></div>
+
+  <!-- 文章首圖 -->
+  <img class="page-img" src="resources/imgs/新知/聊愈療愈.jpg">
+  <!-- 文章大標 -->
+  <div class="page-title">「聊癒療鬱」學習用戶用字習慣 打造專屬聊天機器人</div>
+
+  <!-- 文章內文 -->
+  <p class="page-text">
+    　【記者何予綜合報導】「透過交友軟體要找到志同道合的人聊天十分耗時，甚至要擔心被詐騙。」為解決現代人的聊天需求，輔仁大學資訊統計學系學生團隊開發「聊癒療鬱」應用程式，針對使用者不同個性，打造量身定制的聊天機器人。該作品獲得第27屆大專校院資訊應用服務創新競賽資訊應用組第一名。
+  </p>
+  <p class="page-text">
+    　研發團隊表示，現有的聊天機器人答覆內容十分制式化，「用久了會覺得很無趣，使用者黏著度可能就會不高，我們想說：『可不可以讓機器人針對語言風格有不同的回覆？』」因此，團隊將語言風格和心理偏好納入模型中。在開始聊天前，該軟體會透過70道選擇題和三階段問卷將使用者進行分類，並分析出使用者所屬的MBTI，判斷使用者喜歡與性格互補還是相似的人聊天。
+  </p>
+  <p class="page-text">
+    　聊天過程中，機器人會先將使用者的回覆斷句成單詞，與資料集進行比對後，挑選出相應的答覆句子。此外，團隊開發「語言風格分析模型」，讓聊天機器人學習使用者的說話習慣，為同樣語意的回覆內容，抽換詞面或更改句子結構，產生更多樣且符合使用者偏好的組合。同時，如果負面詞彙的出現比例過高，機器人將會判斷使用者處於負面情緒，主動給予安慰。
+  </p>
+  <p class="page-text">
+    　指導老師杜逸寧坦言，聊天機器人目前還不夠聰明，回覆內容無法比擬真人，代替朋友的陪伴。他在分享自己身為導師經驗時表示，通常會有想不開想法的學生，都是處在社會支持比較少的時候，「如果這時有一個APP，即使它回答得很笨，但可以逗你開心，轉換你的想法。」
+  </p>
+  <p class="page-text">
+    　諮商心理師李清茵認為，若一個人在外獨居有陪伴需求，又沒有辦法立刻找到親友，機器人能夠提供即時的回應，是很好的資源。「就像我們沒有辦法有家人，可能會養寵物來陪伴我們。」他更進一步建議，聊天機器人可以與諮商室等相關社會資源連結，在發現危機時即時通報，成為社會安全網的一環。
+  </p>
+
+  <!--手機板-->
+  <!-- 文章首圖 -->
+  <img class="m-page-img" src="resources/imgs/新知/聊愈療愈.jpg">
+  <!-- 文章大標 -->
+  <div class="m-page-title">「聊癒療鬱」學習用戶用字習慣 打造專屬聊天機器人</div>
+
+  <!-- 文章內文 -->
+  <p class="m-page-text">
+    　【記者何予綜合報導】「透過交友軟體要找到志同道合的人聊天十分耗時，甚至要擔心被詐騙。」為解決現代人的聊天需求，輔仁大學資訊統計學系學生團隊開發「聊癒療鬱」應用程式，針對使用者不同個性，打造量身定制的聊天機器人。該作品獲得第27屆大專校院資訊應用服務創新競賽資訊應用組第一名。
+  </p>
+  <p class="m-page-text">
+    　研發團隊表示，現有的聊天機器人答覆內容十分制式化，「用久了會覺得很無趣，使用者黏著度可能就會不高，我們想說：『可不可以讓機器人針對語言風格有不同的回覆？』」因此，團隊將語言風格和心理偏好納入模型中。在開始聊天前，該軟體會透過70道選擇題和三階段問卷將使用者進行分類，並分析出使用者所屬的MBTI，判斷使用者喜歡與性格互補還是相似的人聊天。
+  </p>
+  <p class="m-page-text">
+    　聊天過程中，機器人會先將使用者的回覆斷句成單詞，與資料集進行比對後，挑選出相應的答覆句子。此外，團隊開發「語言風格分析模型」，讓聊天機器人學習使用者的說話習慣，為同樣語意的回覆內容，抽換詞面或更改句子結構，產生更多樣且符合使用者偏好的組合。同時，如果負面詞彙的出現比例過高，機器人將會判斷使用者處於負面情緒，主動給予安慰。
+  </p>
+  <p class="m-page-text">
+    　指導老師杜逸寧坦言，聊天機器人目前還不夠聰明，回覆內容無法比擬真人，代替朋友的陪伴。他在分享自己身為導師經驗時表示，通常會有想不開想法的學生，都是處在社會支持比較少的時候，「如果這時有一個APP，即使它回答得很笨，但可以逗你開心，轉換你的想法。」
+  </p>
+  <p class="m-page-text">
+    　諮商心理師李清茵認為，若一個人在外獨居有陪伴需求，又沒有辦法立刻找到親友，機器人能夠提供即時的回應，是很好的資源。「就像我們沒有辦法有家人，可能會養寵物來陪伴我們。」他更進一步建議，聊天機器人可以與諮商室等相關社會資源連結，在發現危機時即時通報，成為社會安全網的一環。
+  </p>
+
+  <!-- 推薦新聞 -->
+  <br>
+  <hr>
+  <br>
+  <div class="related-news-title">推薦新聞</div>
+  <div style="display:flex;
                     flex-direction: row;
                     justify-content: center;
                     margin-top: 30px;
                     margin-bottom:30px;">
-      <div>
-        <a href="page_S1.html">
-          <div class="related-news-board">
-            <img class="related-news-img" src="resources/imgs/新知/龍華科大.jpg">
-            <div class="related-news-cardtitle">龍華科大改造通風球 以室內外溫差轉出電力</div>
-          </div>
-        </a>
-      </div>
-      <div>
-        <a href="page_S2.html">
-          <div class="related-news-board">
-            <img class="related-news-img" src="resources/imgs/新知/測心壓.png">
-            <div class="related-news-cardtitle">無線電量測即察心律異常 把握就醫黃金時間</div>
-          </div>
-        </a>
-      </div>
-      <div>
-        <a href="page_S3.html">
-          <div class="related-news-board">
-            <img class="related-news-img" src="resources/imgs/新知/興大.jpg">
-            <div class="related-news-cardtitle">興大創傷口敷藥新配方 加速糖尿病患傷口癒合</div>
-          </div>
-        </a>
-      </div>
+    <div>
+      <a href="page_S1.html">
+        <div class="related-news-board">
+          <img class="related-news-img" src="resources/imgs/新知/龍華科大.jpg">
+          <div class="related-news-cardtitle">龍華科大改造通風球 以室內外溫差轉出電力</div>
+        </div>
+      </a>
     </div>
-    <br>
+    <div>
+      <a href="page_S2.html">
+        <div class="related-news-board">
+          <img class="related-news-img" src="resources/imgs/新知/測心壓.png">
+          <div class="related-news-cardtitle">無線電量測即察心律異常 把握就醫黃金時間</div>
+        </div>
+      </a>
+    </div>
+    <div>
+      <a href="page_S3.html">
+        <div class="related-news-board">
+          <img class="related-news-img" src="resources/imgs/新知/興大.jpg">
+          <div class="related-news-cardtitle">興大創傷口敷藥新配方 加速糖尿病患傷口癒合</div>
+        </div>
+      </a>
+    </div>
+  </div>
 
-         <!--footer-->
-    <div class="footer">
-      <img src="resources/icon/svg/NS Logo_工作區域 1.svg" style="margin-left:48px;
+  <!--手機板-->
+  <div class="m-related-news-title">推薦新聞</div>
+  <div style="display:flex;
+                flex-direction: column;
+                align-items: center;
+                margin-top: 30px;
+                margin-bottom:30px;">
+    <div>
+      <a href="page_S1.html">
+        <div class="m-related-news-board">
+          <img class="m-related-news-img" src="resources/imgs/新知/龍華科大.jpg">
+          <div class="m-related-news-cardtitle">龍華科大改造通風球 以室內外溫差轉出電力</div>
+        </div>
+      </a>
+    </div>
+    <div>
+      <a href="page_S2.html">
+        <div class="m-related-news-board">
+          <img class="m-related-news-img" src="resources/imgs/新知/測心壓.png">
+          <div class="m-related-news-cardtitle">無線電量測即察心律異常 把握就醫黃金時間</div>
+        </div>
+      </a>
+    </div>
+    <div>
+      <a href="page_S3.html">
+        <div class="m-related-news-board">
+          <img class="m-related-news-img" src="resources/imgs/新知/興大.jpg">
+          <div class="m-related-news-cardtitle">興大創傷口敷藥新配方 加速糖尿病患傷口癒合</div>
+        </div>
+      </a>
+    </div>
+  </div>
+
+  <br>
+
+  <!--footer-->
+  <div class="footer">
+    <img src="resources/icon/svg/NS Logo_工作區域 1.svg" style="margin-left:48px;
       margin-bottom:20px;
       width:275px;
       height:170px;">
 
-      <div class="footer_font" style="margin-left:50px;color: white;">HUNTER｜江昇　方琮翔　鄧芯怡　陳孟樺
-          BIG BOSS｜李法賢
-          SHOOT｜donnot.bother.us@gmail.com
-      </div>
+    <div class="footer_font" style="margin-left:50px;color: white;">HUNTER｜江昇　方琮翔　鄧芯怡　陳孟樺
+      BIG BOSS｜李法賢
+      SHOOT｜donnot.bother.us@gmail.com
+    </div>
 
-      <div class="footer_font" style="left: 861px;margin-top:67px;color:#EBC151;;">copyright©2023 NEWS SAFARI
-      </div>
-
+    <div class="footer_font" style="left: 861px;margin-top:67px;color:#EBC151;;">copyright©2023 NEWS SAFARI
+    </div>
   </div>
-    </div> 
-  </body>
+
+    <!--footermobile-->
+    <div class="mobilefooter">
+    
+      <img src="resources/icon/svg/NS Logo_工作區域 1.svg" style="
+         margin-top:auto;
+          margin-bottom:auto;
+          width:180px;
+          height:120px;
+          display:flex;
+          justify-content:flex-start;">
+  
+      <div class="mobilefooterfont" style="color: white;width:max-content;justify-content: flex-end;">HUNTER｜江昇　方琮翔　鄧芯怡　陳孟樺
+        BIG BOSS｜李法賢
+        SHOOT｜donnot.bother.us@gmail.com
+        <div style="color:#EBC151;">copyright©2023 NEWS SAFARI</div>
+      </div>
+    </div>
+</body>

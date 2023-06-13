@@ -1,182 +1,502 @@
 <!DOCTYPE html>
 <html lang="en">
 
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>投影再現拆遷現場 《曠日廢時》映都更家屋記憶</title>
-    <link rel="stylesheet" href="css/page.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>投影再現拆遷現場 《曠日廢時》映都更家屋記憶</title>
+  <link rel="stylesheet" href="css/page.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 
-<style>
-  .header{
-    position:relative;
-    white-space: nowrap;
-    display: inline-block;
-    vertical-align: middle;
-  }  
+  <style>
+    .header {
+      position: relative;
+      white-space: nowrap;
+      display: inline-block;
+      vertical-align: middle;
+      background-color: #f8f8ff;
+      width: 100%;
+    }
 
-  .line{
-    display:inline-block;
-    border-top: 1px solid black;
-    width:1050px;
-    height:1.51px;
-    padding-top: 192px;
-    margin-left:103px;
-  }
+    .line {
+      display: block;
+      border-top: 1px solid black;
+      width: 90%;
+      height: 1.51px;
+      margin-left: auto;
+      margin-right: auto;
+    }
 
-  .header_font{
-    display:inline-block;
-    font-family: Noto Serif SC;
-    font-size: 37px;
-    font-weight: 400;
-    line-height: 53px;
- 
-    letter-spacing: 0.06em;
-    text-align: center;
-    margin-top:42px;
-    z-index:1;
-    position:absolute;
-  }
+    .header_font {
+      display: inline-block;
+      font-family: Noto Serif SC;
+      font-size: 37px;
+      font-weight: 400;
+      line-height: 53px;
 
-  .rectangle {
-    width: 207px;
-    height: 103px;
-    background-color: #937D54F2;
-    display:inline-block;
-    z-index: 2;
-  }
+      letter-spacing: 0.06em;
+      text-align: center;
+      margin-top: 42px;
+      z-index: 1;
+      position: absolute;
+    }
 
-  .footer{
-    position:relative;
-    white-space: nowrap;
-    display: inline-block;
-    vertical-align: middle;
-    width: 1280px;
-    height: 206px;
-    background-color:#937D54;
-    margin-bottom:0px;
-  }  
+    .rectangle {
+      width: 180px;
+      height: 102px;
+      background-color: #937D54F2;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      z-index: 2;
+    }
 
-  .footer_font{
-    display:inline-block;
-    font-family: Noto Serif SC;
-    font-size: 22px;
-    font-weight: 400;
-    line-height: 32px;
-    letter-spacing: 0.06em;
-    text-align: left;
-    white-space: pre-line;
-    margin-top:41px;
-    z-index:1;
-    position:absolute;
-  }
+    .footer {
+      position: relative;
+      white-space: nowrap;
+      display: inline-block;
+      vertical-align: middle;
+      width: 100%;
+      height: 206px;
+      background-color: #937D54;
+      margin-bottom: 0px;
+    }
 
-</style>
+    .footer_font {
+      display: inline-block;
+      font-family: Noto Serif SC;
+      font-size: 22px;
+      font-weight: 400;
+      line-height: 32px;
+      letter-spacing: 0.06em;
+      text-align: left;
+      white-space: pre-line;
+      margin-top: 41px;
+      z-index: 1;
+      position: absolute;
+    }
+
+    .link-container {
+      display: inline-block
+    }
+
+    .rectangle-hover {
+      position: relative;
+      color: black;
+    }
+
+    .rectangle-hover:hover {
+      color: white;
+    }
+
+    .rectangle-hover:hover::before {
+      content: '';
+      position: absolute;
+      text-align: center;
+      left: -35.5px;
+      top: -27px;
+      width: 180px;
+      height: 102px;
+      background-color: #937D54F2;
+      z-index: -1;
+      border-radius: 4px;
+    }
+
+    .mobileheader {
+      display: none;
+    }
+
+    .mobilefooter {
+      display: none;
+    }
+
+    @media(max-width:760px) {
+
+      .header {
+        display: none;
+      }
+
+      .mobileheader {
+        display: flex;
+        justify-content: center;
+        background-color: #f8f8ff;
+      }
+
+      .line {
+        display: none;
+      }
+
+
+
+      .container {
+        width: fit-content;
+        /* Set the width of the container */
+        margin: 0 auto;
+        /* Center the container horizontally */
+        display: flex;
+        justify-content: right;
+        height: fit-content;
+        top: 90px;
+      }
+
+      .mobileline {
+        position: relative;
+        display: block;
+        justify-content: center;
+        border-top: 1px solid black;
+        width: 90%;
+        height: 1.51px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      /* CSS for dropdown menu */
+      .dropdown-menu {
+        position: relative;
+        display: flex;
+        white-space: pre-line;
+        line-height: 10px;
+        height: fit-content;
+        margin-top: 20px;
+        border: none;
+        justify-content: flex-end;
+        margin-right: 10%;
+        background-color: #f8f8ff;
+      }
+
+      .dropdown-menu>a {
+        display: flex;
+        justify-content: right;
+        padding: 10px;
+        color: #333;
+        text-decoration: none;
+      }
+
+      .dropdown-menu ul {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        display: none;
+        text-decoration: none;
+        background-color: #f8f8ff;
+        padding: 10px;
+        margin: 0;
+        list-style-type: none;
+      }
+
+      .dropdown-menu ul li {
+        margin-bottom: 5px;
+        text-decoration: none;
+      }
+
+      .dropdown-menu:hover ul {
+        display: block;
+        text-decoration: none;
+        color: #f8f8ff;
+      }
+
+      .mobilefont {
+        text-decoration: none;
+        font-family: Noto Serif SC;
+        font-size: 37px;
+        font-weight: 400;
+        line-height: 53px;
+        letter-spacing: 0.06em;
+        text-align: center;
+        margin-top: 42px;
+        color: black;
+      }
+
+      .footer {
+        display: none;
+      }
+
+      .mobilefooter {
+        display: flex;
+        justify-content: center;
+        height: 206px;
+        background-color: #937D54;
+        margin-bottom: 0px;
+      }
+
+      .mobilefooterfont {
+        display: block;
+        font-family: Noto Serif SC;
+        font-size: 15px;
+        font-weight: 400;
+        line-height: 20px;
+        letter-spacing: 0.06em;
+        text-align: left;
+        white-space: pre-line;
+        margin-top: auto;
+        margin-bottom: auto;
+        margin-right: 0px;
+        position: relative;
+        color: white
+      }
+    }
+  </style>
 
 </head>
 
 <body>
-<!--HEADER-->
-<div class="header">
-    <img src="resources/icon/svg/NS Logo_白_工作區域 1.svg" 
-        style=
-        "margin-left:90px;
+  <!--header_life-->
+  <div class="header">
+    <a href="main.html" style="color:#f8f8ff">
+      <img src="resources/icon/svg/NS Logo_白_工作區域 1.svg" style="margin-left:90px;
+          margin-top:0px;
+          width:275px;
+          height:170px;">
+    </a>
+
+    <img src="resources/icon/svg/NS banner-03.svg" style="position:relative;
+          margin-left:132px;
+          margin-top:40px;
+          width:637px;
+          height:130px;">
+
+
+    <a href="international.pages.html" class="rectangle-hover" style="display:inline-block;
+      font-family: Noto Serif SC;
+      font-size: 37px;  
+      font-weight: 400;
+      text-decoration: none;
+      line-height: 53px;
+      width:109px;
+      height:49px;
+      letter-spacing: 0.06em;
+      text-align: center;
+      margin-top:42px;
+      z-index:1;
+      position:absolute;
+      left:389px">國際</a>
+
+    <a href="life.pages-2.html" class="rectangle-hover" style="display:inline-block;
+      font-family: Noto Serif SC;
+      font-size: 37px;
+      font-weight: 400;
+      text-decoration: none;
+      line-height: 53px;
+      width:109px;
+      height:49px;
+      letter-spacing: 0.06em;
+      text-align: center;
+      margin-top:42px;
+      z-index:1;
+      position:absolute;
+      left:611px">生活</a>
+
+
+    <a href="art.pages.html" class="rectangle" style="display:inline-block;
+      font-family: Noto Serif SC;
+      font-size: 37px;
+      font-weight: 400;
+      text-decoration: none;
+      line-height: 53px;
+      width:180px;
+      height:102px;
+      padding-top:26px;
+      letter-spacing: 0.06em;
+      text-align: center;
+      vertical-align: middle;
+      margin-top:15px;
+      z-index:1;
+      position:absolute;
+      color:white;
+      border-radius: 4px;
+      left:800px">藝文</a>
+
+    <a href="knowledge.pages.html" class="rectangle-hover" style="display:inline-block;
+      font-family: Noto Serif SC;
+      font-size: 37px;
+      font-weight: 400;
+      text-decoration: none;
+      line-height: 53px;
+      width:109px;
+      height:49px;
+      letter-spacing: 0.06em;
+      text-align: center;
+      margin-top:42px;
+      z-index:1;
+      position:absolute;
+      left:1056px">新知</a>
+
+  </div>
+  <div class="line"></div>
+
+  <!--headermobile-->
+  <div class="mobileheader">
+
+    <img src="resources/icon/svg/NS Logo_白_工作區域 1.svg" style="margin-left:90px;
         margin-top:0px;
-        width:275px;
-        height:170px;">
-     
-    <img src="resources/icon/svg/NS banner-03.svg" 
-        style=
-        "position:relative;
-        margin-left:132px;
-        margin-top:40px;
-        width:637px;
-        height:130px;">
-    
-    
-    <div class="header_font" style="left:392px;margin-top:40px;">
-      <a href ="https://example.com" style="text-decoration: none;color:black;">國際</a>
-    </div>
-    <div class="header_font" style="left:580px;margin: top 40px;">
-      <a href="https://example.com"style="text-decoration: none;color:black;">生活</a>
-    </div>
-    <div class="header_font" style="left:740px;margin-top:21px;background-color:#937D54F2;padding-left:50px;padding-right:50px;padding-top:25px;padding-bottom:25px;border-radius:8px;">
-      <a href="https://example.com"style="text-decoration: none;color:white;">藝文</a>
-    </div>
-    <div class="header_font" style="left: 1056px;margin-top:40px;">
-      <a href="https://example.com"style="text-decoration: none;color:black;">新知</a>
+        width:180px;
+        height:120px;
+        justify-content:flex-start;
+      margin-left:5%">
+    <div class="container"></div>
+    <div class="dropdown-menu" style:="margin-right:0px;">
+      <a href="#">____
+        ____
+        ____</a>
+      <ul>
+        <li><a href="international.pages.html" class="mobilefont">國際</a></li>
+        <li><a href="life.pages-2.html" class="mobilefont">生活</a></li>
+        <li><a href="art.pages.html" class="mobilefont">藝文</a></li>
+        <li><a href="knowledge.pages.html" class="mobilefont">新知</a></li>
+      </ul>
     </div>
 
-</div>
-<span class="line"></div>
-        <!-- 文章首圖 -->
-        <img class="page-img"
-            src="resources/imgs/藝文/曠日費時.jpg"
 
-        <!-- 文章大標 -->
-        <div class="page-title">投影再現拆遷現場 《曠日廢時》映都更家屋記憶</div>
+  </div>
 
-        <!-- 文章內文 -->
-        <p class="page-text">　【記者何予綜合報導】走進南海藝廊深處一塊連通室內、外的水泥地，播放中的影像和現場堆置的雜物重疊，難以辨認何者才是作品。「now playing… 鬧著玩 / 現正播放中 」是台新藝術獎20週年大展的衛星展。其中，臺北藝術大學藝術跨域研究所邱靖婷的系列作品《曠日廢時》以拆遷現場為主題，於11月29日至12月11日在南海藝廊的「後方水泥地」展出。</p>
-        <p class="page-text">　錄像投影在窗框和門板上，內容關於邱靖婷友人家在大園航空城被拆遷的屋子。作品〈曠日廢時〉中，邱靖婷不以紀實手法紀錄現場，而是將沉重的現場氣氛結合友人口述的記憶和田野調查進行編導拍攝。「沒有想要太貼近，希望讓我或是看到的人，都可以去想：如果一個空間發生這樣的事情，那我們還可以怎麼想？」邱靖婷將現場觀察到的破磚殘瓦結合過去農田的景觀，配上踩碎玻璃的聲響和吃西瓜畫面等意象，傳達家屋的記憶將不復存在，藉此呈現家屋面對拆遷時的脆弱。</p>
-        <p class="page-text">　展場上方，投影著循環播放的影像〈the day we meet〉，是關於桃園後寮一帶因興建體育園區被拆遷的巫家聚落。邱靖婷刻意在兩件作品的投影機前擺放半透明材質的抽屜櫃和窗框，使投影產生模糊的、間隔的效果，「我覺得人不可能真的看清楚一個東西，畫面中的時空現在不可能長這樣，可能是繼續拆或不見了。」邱靖婷認為，作品只能捕捉並呈現一個特定片段，但現實仍在持續發生中。</p>
-        <p class="page-text">　南海藝廊從2017年被國立臺北教育大學收回後維持著閒置狀態，直到這次展覽才重新整頓、開幕，但不久後又將面臨都更的命運。「場勘時這裡堆滿雜物，只有一個人可以通過的空間。」當時的邱靖婷看到展場與其作品中拆遷現場的共通點，明明仍是可用空間，卻被人為擱置，因此將這塊「後方水泥地」與作品連結，將整個空間佈置為一件作品，除了兩件影像作品外，展場角落還有印製在布料上的攝影圖像，邱靖婷說：「我選擇布料去做，是因為它會穿透，一定會看到這個環境裡的東西。」</p>
-        <p class="page-text">　「在白盒子裡不管放什麼東西，作品都會直接成立，但我關注的東西，放在那邊真的適合嗎？」邱靖婷在《曠日廢時》中實踐自己對於展場的反思，希望作品能和事件現場更靠近，並與展場本身產生連結。觀眾黃茂善認為，展場整體可以視作一件更大的作品，讓觀者得以進入藝術家重新建構的空間，對拆遷現場產生共鳴，「能跟場館現實進行一些因地制宜的對話，我覺得是蠻不錯的嘗試。」</p>
+  </div>
 
-        <!-- 推薦新聞 -->
-    <br>
-    <hr>
-    <br>
-    <div class="related-news-title">推薦新聞</div>
-    <div style="display:flex;
+  <div class="mobileline"></div>
+  <!-- 文章首圖 -->
+  <img class="page-img" src="resources/imgs/藝文/曠日費時.jpg" <!-- 文章大標 -->
+  <div class="page-title">投影再現拆遷現場 《曠日廢時》映都更家屋記憶</div>
+
+  <!-- 文章內文 -->
+  <p class="page-text">　【記者何予綜合報導】走進南海藝廊深處一塊連通室內、外的水泥地，播放中的影像和現場堆置的雜物重疊，難以辨認何者才是作品。「now playing… 鬧著玩 / 現正播放中
+    」是台新藝術獎20週年大展的衛星展。其中，臺北藝術大學藝術跨域研究所邱靖婷的系列作品《曠日廢時》以拆遷現場為主題，於11月29日至12月11日在南海藝廊的「後方水泥地」展出。</p>
+  <p class="page-text">
+    　錄像投影在窗框和門板上，內容關於邱靖婷友人家在大園航空城被拆遷的屋子。作品〈曠日廢時〉中，邱靖婷不以紀實手法紀錄現場，而是將沉重的現場氣氛結合友人口述的記憶和田野調查進行編導拍攝。「沒有想要太貼近，希望讓我或是看到的人，都可以去想：如果一個空間發生這樣的事情，那我們還可以怎麼想？」邱靖婷將現場觀察到的破磚殘瓦結合過去農田的景觀，配上踩碎玻璃的聲響和吃西瓜畫面等意象，傳達家屋的記憶將不復存在，藉此呈現家屋面對拆遷時的脆弱。
+  </p>
+  <p class="page-text">　展場上方，投影著循環播放的影像〈the day we
+    meet〉，是關於桃園後寮一帶因興建體育園區被拆遷的巫家聚落。邱靖婷刻意在兩件作品的投影機前擺放半透明材質的抽屜櫃和窗框，使投影產生模糊的、間隔的效果，「我覺得人不可能真的看清楚一個東西，畫面中的時空現在不可能長這樣，可能是繼續拆或不見了。」邱靖婷認為，作品只能捕捉並呈現一個特定片段，但現實仍在持續發生中。
+  </p>
+  <p class="page-text">
+    　南海藝廊從2017年被國立臺北教育大學收回後維持著閒置狀態，直到這次展覽才重新整頓、開幕，但不久後又將面臨都更的命運。「場勘時這裡堆滿雜物，只有一個人可以通過的空間。」當時的邱靖婷看到展場與其作品中拆遷現場的共通點，明明仍是可用空間，卻被人為擱置，因此將這塊「後方水泥地」與作品連結，將整個空間佈置為一件作品，除了兩件影像作品外，展場角落還有印製在布料上的攝影圖像，邱靖婷說：「我選擇布料去做，是因為它會穿透，一定會看到這個環境裡的東西。」
+  </p>
+  <p class="page-text">
+    　「在白盒子裡不管放什麼東西，作品都會直接成立，但我關注的東西，放在那邊真的適合嗎？」邱靖婷在《曠日廢時》中實踐自己對於展場的反思，希望作品能和事件現場更靠近，並與展場本身產生連結。觀眾黃茂善認為，展場整體可以視作一件更大的作品，讓觀者得以進入藝術家重新建構的空間，對拆遷現場產生共鳴，「能跟場館現實進行一些因地制宜的對話，我覺得是蠻不錯的嘗試。」
+  </p>
+
+  <!--手機板-->
+  <!-- 文章首圖 -->
+  <img class="m-page-img" src="resources/imgs/藝文/曠日費時.jpg" <!-- 文章大標 -->
+  <div class="m-page-title">投影再現拆遷現場 《曠日廢時》映都更家屋記憶</div>
+
+  <!-- 文章內文 -->
+  <p class="m-page-text">　【記者何予綜合報導】走進南海藝廊深處一塊連通室內、外的水泥地，播放中的影像和現場堆置的雜物重疊，難以辨認何者才是作品。「now playing… 鬧著玩 / 現正播放中
+    」是台新藝術獎20週年大展的衛星展。其中，臺北藝術大學藝術跨域研究所邱靖婷的系列作品《曠日廢時》以拆遷現場為主題，於11月29日至12月11日在南海藝廊的「後方水泥地」展出。</p>
+  <p class="m-page-text">
+    　錄像投影在窗框和門板上，內容關於邱靖婷友人家在大園航空城被拆遷的屋子。作品〈曠日廢時〉中，邱靖婷不以紀實手法紀錄現場，而是將沉重的現場氣氛結合友人口述的記憶和田野調查進行編導拍攝。「沒有想要太貼近，希望讓我或是看到的人，都可以去想：如果一個空間發生這樣的事情，那我們還可以怎麼想？」邱靖婷將現場觀察到的破磚殘瓦結合過去農田的景觀，配上踩碎玻璃的聲響和吃西瓜畫面等意象，傳達家屋的記憶將不復存在，藉此呈現家屋面對拆遷時的脆弱。
+  </p>
+  <p class="m-page-text">　展場上方，投影著循環播放的影像〈the day we
+    meet〉，是關於桃園後寮一帶因興建體育園區被拆遷的巫家聚落。邱靖婷刻意在兩件作品的投影機前擺放半透明材質的抽屜櫃和窗框，使投影產生模糊的、間隔的效果，「我覺得人不可能真的看清楚一個東西，畫面中的時空現在不可能長這樣，可能是繼續拆或不見了。」邱靖婷認為，作品只能捕捉並呈現一個特定片段，但現實仍在持續發生中。
+  </p>
+  <p class="m-page-text">
+    　南海藝廊從2017年被國立臺北教育大學收回後維持著閒置狀態，直到這次展覽才重新整頓、開幕，但不久後又將面臨都更的命運。「場勘時這裡堆滿雜物，只有一個人可以通過的空間。」當時的邱靖婷看到展場與其作品中拆遷現場的共通點，明明仍是可用空間，卻被人為擱置，因此將這塊「後方水泥地」與作品連結，將整個空間佈置為一件作品，除了兩件影像作品外，展場角落還有印製在布料上的攝影圖像，邱靖婷說：「我選擇布料去做，是因為它會穿透，一定會看到這個環境裡的東西。」
+  </p>
+  <p class="m-page-text">
+    　「在白盒子裡不管放什麼東西，作品都會直接成立，但我關注的東西，放在那邊真的適合嗎？」邱靖婷在《曠日廢時》中實踐自己對於展場的反思，希望作品能和事件現場更靠近，並與展場本身產生連結。觀眾黃茂善認為，展場整體可以視作一件更大的作品，讓觀者得以進入藝術家重新建構的空間，對拆遷現場產生共鳴，「能跟場館現實進行一些因地制宜的對話，我覺得是蠻不錯的嘗試。」
+  </p>
+
+  <!-- 推薦新聞 -->
+  <br>
+  <hr>
+  <br>
+  <div class="related-news-title">推薦新聞</div>
+  <div style="display:flex;
                     flex-direction: row;
                     justify-content: center;
                     margin-top: 30px;
                     margin-bottom:30px;">
-      <div>
-        <a href="page_A1.html">
-          <div class="related-news-board">
-            <img class="related-news-img" src="resources/imgs/藝文/北辰.png">
-            <div class="related-news-cardtitle">澎湖是故鄉還是異地？ 〈記北辰市場〉寫盡身份混亂</div>
-          </div>
-        </a>
-      </div>
-      <div>
-        <a href="page_A2.html">
-          <div class="related-news-board">
-            <img class="related-news-img" src="resources/imgs/藝文/引光入室.png">
-            <div class="related-news-cardtitle">茶湯融入空間設計 引光入室「濾」出茶道精神</div>
-          </div>
-        </a>
-      </div>
-      <div>
-        <a href="page_A3.html">
-          <div class="related-news-board">
-            <img class="related-news-img" src="resources/imgs/藝文/無眠.jpg">
-            <div class="related-news-cardtitle">《無眠》映生死徬徨心境 北藝大戲劇探自殺意義</div>
-          </div>
-        </a>
-      </div>
+    <div>
+      <a href="page_A1.html">
+        <div class="related-news-board">
+          <img class="related-news-img" src="resources/imgs/藝文/北辰.png">
+          <div class="related-news-cardtitle">澎湖是故鄉還是異地？ 〈記北辰市場〉寫盡身份混亂</div>
+        </div>
+      </a>
     </div>
-    <br>
-        <!--footer-->
-    <div class="footer">
-      <img src="resources/icon/svg/NS Logo_工作區域 1.svg" style="margin-left:48px;
+    <div>
+      <a href="page_A2.html">
+        <div class="related-news-board">
+          <img class="related-news-img" src="resources/imgs/藝文/引光入室.png">
+          <div class="related-news-cardtitle">茶湯融入空間設計 引光入室「濾」出茶道精神</div>
+        </div>
+      </a>
+    </div>
+    <div>
+      <a href="page_A3.html">
+        <div class="related-news-board">
+          <img class="related-news-img" src="resources/imgs/藝文/無眠.jpg">
+          <div class="related-news-cardtitle">《無眠》映生死徬徨心境 北藝大戲劇探自殺意義</div>
+        </div>
+      </a>
+    </div>
+  </div>
+
+  <!--手機板-->
+  <div class="m-related-news-title">推薦新聞</div>
+  <div style="display:flex;
+                    flex-direction: column;
+                    align-items: center;
+                    margin-top: 30px;
+                    margin-bottom:30px;">
+    <div>
+      <a href="page_A1.html">
+        <div class="m-related-news-board">
+          <img class="m-related-news-img" src="resources/imgs/藝文/北辰.png">
+          <div class="m-related-news-cardtitle">澎湖是故鄉還是異地？ 〈記北辰市場〉寫盡身份混亂</div>
+        </div>
+      </a>
+    </div>
+    <div>
+      <a href="page_A2.html">
+        <div class="m-related-news-board">
+          <img class="m-related-news-img" src="resources/imgs/藝文/引光入室.png">
+          <div class="m-related-news-cardtitle">茶湯融入空間設計 引光入室「濾」出茶道精神</div>
+        </div>
+      </a>
+    </div>
+    <div>
+      <a href="page_A3.html">
+        <div class="m-related-news-board">
+          <img class="m-related-news-img" src="resources/imgs/藝文/無眠.jpg">
+          <div class="m-related-news-cardtitle">《無眠》映生死徬徨心境 北藝大戲劇探自殺意義</div>
+        </div>
+      </a>
+    </div>
+  </div>
+
+  <br>
+  <!--footer-->
+  <div class="footer">
+    <img src="resources/icon/svg/NS Logo_工作區域 1.svg" style="margin-left:48px;
       margin-bottom:20px;
       width:275px;
       height:170px;">
 
-      <div class="footer_font" style="margin-left:50px;color: white;">HUNTER｜江昇　方琮翔　鄧芯怡　陳孟樺
-          BIG BOSS｜李法賢
-          SHOOT｜donnot.bother.us@gmail.com
-      </div>
+    <div class="footer_font" style="margin-left:50px;color: white;">HUNTER｜江昇　方琮翔　鄧芯怡　陳孟樺
+      BIG BOSS｜李法賢
+      SHOOT｜donnot.bother.us@gmail.com
+    </div>
 
-      <div class="footer_font" style="left: 861px;margin-top:67px;color:#EBC151;;">copyright©2023 NEWS SAFARI
-      </div>
-
+    <div class="footer_font" style="left: 861px;margin-top:67px;color:#EBC151;;">copyright©2023 NEWS SAFARI
+    </div>
   </div>
-    </div> 
-  </body>
+
+  <!--footermobile-->
+  <div class="mobilefooter">
+
+    <img src="resources/icon/svg/NS Logo_工作區域 1.svg" style="
+         margin-top:auto;
+          margin-bottom:auto;
+          width:180px;
+          height:120px;
+          display:flex;
+          justify-content:flex-start;">
+
+    <div class="mobilefooterfont" style="color: white;width:max-content;justify-content: flex-end;">
+      HUNTER｜江昇　方琮翔　鄧芯怡　陳孟樺
+      BIG BOSS｜李法賢
+      SHOOT｜donnot.bother.us@gmail.com
+      <div style="color:#EBC151;">copyright©2023 NEWS SAFARI</div>
+    </div>
+  </div>
+</body>
