@@ -1,16 +1,525 @@
-<!--footer-->
-      <div class="footer">
-        <img src="resources/icon/svg/NS Logo_工作區域 1.svg" style="margin-left:48px;
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>香港青年住屋問題嚴峻 李家超施政報告提政策建議</title>
+  <link rel="stylesheet" href="css/page.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+  <style>
+    .header {
+      position: relative;
+      white-space: nowrap;
+      display: inline-block;
+      vertical-align: middle;
+      background-color: #f8f8ff;
+      width: 100%;
+    }
+
+
+
+    .line {
+      display: block;
+      border-top: 1px solid black;
+      width: 90%;
+      height: 1.51px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .header_font {
+      display: inline-block;
+      font-family: Noto Serif SC;
+      font-size: 37px;
+      font-weight: 400;
+      line-height: 53px;
+      color: black;
+      text-decoration: none;
+      letter-spacing: 0.06em;
+      text-align: center;
+      margin-top: 10px;
+      z-index: 1;
+      position: absolute;
+    }
+
+    .rectangle {
+      width: 180px;
+      height: 102px;
+      background-color: #937D54F2;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      z-index: 2;
+    }
+
+
+    .footer {
+      position: relative;
+      white-space: nowrap;
+      display: inline-block;
+      vertical-align: middle;
+      width: 100%;
+      height: 206px;
+      background-color: #937D54;
+      margin-bottom: 0px;
+    }
+
+    .footer_font {
+      display: inline-block;
+      font-family: Noto Serif SC;
+      font-size: 22px;
+      font-weight: 400;
+      line-height: 32px;
+      letter-spacing: 0.06em;
+      text-align: left;
+      white-space: pre-line;
+      margin-top: 41px;
+      z-index: 1;
+      position: absolute;
+    }
+
+    .link-container {
+      display: inline-block
+    }
+
+    .rectangle-hover {
+      position: relative;
+      color: black;
+    }
+
+    .rectangle-hover:hover {
+      color: white;
+    }
+
+    .rectangle-hover:hover::before {
+      content: '';
+      position: absolute;
+      text-align: center;
+      left: -35.5px;
+      top: -27px;
+      width: 180px;
+      height: 102px;
+      background-color: #937D54F2;
+      z-index: -1;
+      border-radius: 4px;
+    }
+
+    .mobileheader {
+      display: none;
+    }
+
+    .mobilefooter {
+      display: none;
+    }
+
+    @media(max-width:760px) {
+
+      .header {
+        display: none;
+      }
+
+      .mobileheader {
+        display: flex;
+        justify-content: center;
+        background-color: #f8f8ff;
+      }
+
+      .line {
+        display: none;
+      }
+
+
+
+      .container {
+        width: fit-content;
+        /* Set the width of the container */
+        margin: 0 auto;
+        /* Center the container horizontally */
+        display: flex;
+        justify-content: right;
+        height: fit-content;
+        top: 90px;
+      }
+
+      .mobileline {
+        position: relative;
+        display: block;
+        justify-content: center;
+        border-top: 1px solid black;
+        width: 90%;
+        height: 1.51px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      /* CSS for dropdown menu */
+      .dropdown-menu {
+        position: relative;
+        display: flex;
+        white-space: pre-line;
+        line-height: 10px;
+        height: fit-content;
+        margin-top: 20px;
+        border: none;
+        justify-content: flex-end;
+        margin-right: 10%;
+        background-color: #f8f8ff;
+      }
+
+      .dropdown-menu>a {
+        display: flex;
+        justify-content: right;
+        padding: 10px;
+        color: #333;
+        text-decoration: none;
+      }
+
+      .dropdown-menu ul {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        display: none;
+        text-decoration: none;
+        background-color: #f8f8ff;
+        padding: 10px;
+        margin: 0;
+        list-style-type: none;
+      }
+
+      .dropdown-menu ul li {
+        margin-bottom: 5px;
+        text-decoration: none;
+      }
+
+      .dropdown-menu:hover ul {
+        display: block;
+        text-decoration: none;
+        color: #f8f8ff;
+      }
+
+      .mobilefont {
+        text-decoration: none;
+        font-family: Noto Serif SC;
+        font-size: 37px;
+        font-weight: 400;
+        line-height: 53px;
+        letter-spacing: 0.06em;
+        text-align: center;
+        margin-top: 42px;
+        color: black;
+      }
+
+      .footer {
+        display: none;
+      }
+
+      .mobilefooter {
+        display: flex;
+        justify-content: center;
+        height: 206px;
+        background-color: #937D54;
+        margin-bottom: 0px;
+      }
+
+      .mobilefooterfont {
+        display: block;
+        font-family: Noto Serif SC;
+        font-size: 15px;
+        font-weight: 400;
+        line-height: 20px;
+        letter-spacing: 0.06em;
+        text-align: left;
+        white-space: pre-line;
+        margin-top: auto;
+        margin-bottom: auto;
+        margin-right: 0px;
+        position: relative;
+        color: white
+      }
+    }
+  </style>
+
+</head>
+
+<body>
+  <!--header_life-->
+  <div class="none">
+    <div class="header">
+      <a href="main.html" style="color:#f8f8ff">
+        <img src="resources/icon/svg/NS Logo_白_工作區域 1.svg" style="margin-left:90px;
+              margin-top:0px;
+              width:275px;
+              height:170px;">
+      </a>
+
+      <img src="resources/icon/svg/主頁banner_工作區域 1-01.svg" style="position:relative;
+  margin-left:132px;
+  margin-top:40px;
+  width:637px;
+  height:130px;
+  z-index:1;">
+
+
+      <a href="international.pages.html" class="rectangle" style="display:inline-block;
+      font-family: Noto Serif SC;
+      font-size: 37px;
+      font-weight: 400;
+      text-decoration: none;
+      line-height: 53px;
+      width:180px;
+      height:102px;
+      padding-top:26px;
+      letter-spacing: 0.06em;
+      text-align: center;
+      vertical-align: middle;
+      margin-top:15px;
+      z-index:1;
+      position:absolute;
+      color:white;
+      border-radius: 4px;
+      left:389px">國際</a>
+
+
+      <a href="life.pages-2.html" class="rectangle-hover" style="display:inline-block;
+      font-family: Noto Serif SC;
+      font-size: 37px;
+      font-weight: 400;
+      text-decoration: none;
+      line-height: 53px;
+      width:109px;
+      height:49px;
+      letter-spacing: 0.06em;
+      text-align: center;
+      margin-top:42px;
+      z-index:1;
+      position:absolute;
+      left:611px">生活</a>
+
+      <a href="art.pages.html" class="rectangle-hover" style="display:inline-block;
+      font-family: Noto Serif SC;
+      font-size: 37px;
+      font-weight: 400;
+      text-decoration: none;
+      line-height: 53px;
+      width:109px;
+      height:49px;
+      letter-spacing: 0.06em;
+      text-align: center;
+      margin-top:42px;
+      z-index:1;
+      position:absolute;
+      left:834px">藝文</a>
+
+      <a href="knowledge.pages.html" class="rectangle-hover" style="display:inline-block;
+      font-family: Noto Serif SC;
+      font-size: 37px;
+      font-weight: 400;
+      text-decoration: none;
+      line-height: 53px;
+      width:109px;
+      height:49px;
+      letter-spacing: 0.06em;
+      text-align: center;
+      margin-top:42px;
+      z-index:1;
+      position:absolute;
+      left:1056px">新知</a>
+
+    </div>
+
+    <div class="line"></div>
+
+  </div>
+
+
+  <!--headermobile-->
+  <div class="mobileheader">
+
+    <img src="resources/icon/svg/NS Logo_白_工作區域 1.svg" style="margin-left:90px;
+    margin-top:0px;
+    width:180px;
+    height:120px;
+    justify-content:flex-start;
+      margin-left:5%">
+    <div class="container"></div>
+    <div class="dropdown-menu" style:="margin-right:0px;">
+      <a href="#">____
+        ____
+        ____</a>
+      <ul>
+        <li><a href="international.pages.html" class="mobilefont">國際</a></li>
+        <li><a href="life.pages-2.html" class="mobilefont">生活</a></li>
+        <li><a href="art.pages.html" class="mobilefont">藝文</a></li>
+        <li><a href="knowledge.pages.html" class="mobilefont">新知</a></li>
+      </ul>
+    </div>
+
+
+  </div>
+
+  </div>
+
+  <div class="mobileline"></div>
+
+  <!-- 文章首圖 -->
+  <img class="page-img" src="resources/imgs/國際/香港.jpg" alt="新聞標題">
+
+  <!-- 文章大標 -->
+  <div class="page-title">香港青年住屋問題嚴峻 李家超施政報告提政策建議</div>
+
+  <!-- 文章內文 -->
+  <p class="page-text">
+    　【記者陳孟樺綜合報導】「以前的年代會覺得買房是一個must-do，但我們現在根本不會想買房，太遙不可及了。」香港在職青年Sindy（化名）無奈嘆道。香港行政長官李家超19日發表上任首份施政報告，提出增加青年宿位、新建簡約公屋等措施，希望解決青年住屋問題。
+  </p>
+  <p class="page-text">
+    　在香港，青年如無殼蝸牛，Sindy說明：「最簡易的住屋形式『劏房』都幾乎佔去職場新鮮人一半的薪水。」青年渴望擁有自己的空間，不過現況卻將他們打入只能與家人同住，或是花光積蓄卻承租低品質房屋的境遇。根據香港房屋局2021年報告，全港約有22萬人居住在劏房，其中，有高達81.9％是50年以上的老屋。青年民建聯主席施永泰表示，過去以「青年宿舍計畫」為主要補救方式，不過興建緩慢導致供應量少，能受惠的青年不多。
+  </p>
+  <p class="page-text">
+    　面對香港嚴峻的租屋市場，李家超喊出五年內要新增3000個青年宿位，同時興建三萬間全新簡約公屋，試圖降低公屋綜合輪候時間。「政策讓香港青年看到置業安居的希望。」施永泰說明，青年支付的宿舍租金約為市值租金的六成，政府也會物色合適的賣地計劃項目，讓建商預留一定的數量支援青年宿舍。
+  </p>
+  <p class="page-text">
+    　提供暫時性的居所是青年宿位與簡約公屋的共同概念，其最長居住時間為五年，大學生Wong（化名）直批：「新政策不能即時解決房屋問題，只要供不應求，過渡性房屋終歸失效。」OURs都市改革組織研究員廖庭輝也提及，因為入住簡約公屋後，民眾在公屋綜合輪候時間中會被視為已入住，帳面上輪候時間減少了，實際上是否有公屋可以居住仍屬未知。
+  </p>
+  <p class="page-text">
+    　此外，香港青年還須克服申請公屋的優先順序問題，單身青年的等候時間最久，廖庭輝坦言：「輪侯時間可能需要30年。」黃思勇更提出另一觀點，香港的新移民數量持續增加中，他們大多以家庭為單位申請公屋，便會擠壓青年的順位，「情況就像不斷被人插隊一樣。」
+  </p>
+  <p class="page-text">
+    　香港青年住屋問題有如燙手山芋，廖庭輝與臉書粉專「全港關注劏房平台」同調，認為當務之急是取締有居住安全疑慮的劏房，提供居民安置單位，並確保未來新建單位符合移居標準。香港在公屋比例達30％，獨步全球的同時，卻出現普通人不吃不喝二十年也未必能買起一層樓的窘況，Wong與Sindy皆用「極為悲慘」來形容當前情勢，期盼政策能停止傷害香港居民，讓他們能獲得生活在獨立空間的一絲希望。
+  </p>
+
+  <!--手機板-->
+  <!-- 文章首圖 -->
+  <img class="m-page-img" src="resources/imgs/國際/香港.jpg" alt="新聞標題">
+
+  <!-- 文章大標 -->
+  <div class="m-page-title">香港青年住屋問題嚴峻 李家超施政報告提政策建議</div>
+
+  <!-- 文章內文 -->
+  <p class="m-page-text">
+    　【記者陳孟樺綜合報導】「以前的年代會覺得買房是一個must-do，但我們現在根本不會想買房，太遙不可及了。」香港在職青年Sindy（化名）無奈嘆道。香港行政長官李家超19日發表上任首份施政報告，提出增加青年宿位、新建簡約公屋等措施，希望解決青年住屋問題。
+  </p>
+  <p class="m-page-text">
+    　在香港，青年如無殼蝸牛，Sindy說明：「最簡易的住屋形式『劏房』都幾乎佔去職場新鮮人一半的薪水。」青年渴望擁有自己的空間，不過現況卻將他們打入只能與家人同住，或是花光積蓄卻承租低品質房屋的境遇。根據香港房屋局2021年報告，全港約有22萬人居住在劏房，其中，有高達81.9％是50年以上的老屋。青年民建聯主席施永泰表示，過去以「青年宿舍計畫」為主要補救方式，不過興建緩慢導致供應量少，能受惠的青年不多。
+  </p>
+  <p class="m-page-text">
+    　面對香港嚴峻的租屋市場，李家超喊出五年內要新增3000個青年宿位，同時興建三萬間全新簡約公屋，試圖降低公屋綜合輪候時間。「政策讓香港青年看到置業安居的希望。」施永泰說明，青年支付的宿舍租金約為市值租金的六成，政府也會物色合適的賣地計劃項目，讓建商預留一定的數量支援青年宿舍。
+  </p>
+  <p class="m-page-text">
+    　提供暫時性的居所是青年宿位與簡約公屋的共同概念，其最長居住時間為五年，大學生Wong（化名）直批：「新政策不能即時解決房屋問題，只要供不應求，過渡性房屋終歸失效。」OURs都市改革組織研究員廖庭輝也提及，因為入住簡約公屋後，民眾在公屋綜合輪候時間中會被視為已入住，帳面上輪候時間減少了，實際上是否有公屋可以居住仍屬未知。
+  </p>
+  <p class="m-page-text">
+    　此外，香港青年還須克服申請公屋的優先順序問題，單身青年的等候時間最久，廖庭輝坦言：「輪侯時間可能需要30年。」黃思勇更提出另一觀點，香港的新移民數量持續增加中，他們大多以家庭為單位申請公屋，便會擠壓青年的順位，「情況就像不斷被人插隊一樣。」
+  </p>
+  <p class="m-page-text">
+    　香港青年住屋問題有如燙手山芋，廖庭輝與臉書粉專「全港關注劏房平台」同調，認為當務之急是取締有居住安全疑慮的劏房，提供居民安置單位，並確保未來新建單位符合移居標準。香港在公屋比例達30％，獨步全球的同時，卻出現普通人不吃不喝二十年也未必能買起一層樓的窘況，Wong與Sindy皆用「極為悲慘」來形容當前情勢，期盼政策能停止傷害香港居民，讓他們能獲得生活在獨立空間的一絲希望。
+  </p>
+
+  <!-- 推薦新聞 -->
+  <br>
+  <hr>
+  <br>
+  <div class="related-news-title">推薦新聞</div>
+  <div style="display:flex;
+                    flex-direction: row;
+                    justify-content: center;
+                    margin-top: 30px;
+                    margin-bottom:30px;">
+    <div>
+      <a href="page_I2.html">
+        <div class="related-news-board">
+          <img class="related-news-img" src="resources/imgs/國際/oxford.png">
+          <div class="related-news-cardtitle">牛津大學發起道路安全活動 盼交通事故零死亡</div>
+        </div>
+      </a>
+    </div>
+    <div>
+      <a href="page_I8.html">
+        <div class="related-news-board">
+          <img class="related-news-img" src="resources/imgs/國際/中國.jpg">
+          <div class="related-news-cardtitle">我們不再沉默 中國校內掀反封控抗議熱潮</div>
+        </div>
+      </a>
+    </div>
+    <div>
+      <a href="page_I1.html">
+        <div class="related-news-board">
+          <img class="related-news-img" src="resources/imgs/國際/加州.jpg">
+          <div class="related-news-cardtitle">食物補助金走入校園 加州學生有望告別糧食危機</div>
+        </div>
+      </a>
+    </div>
+  </div>
+
+  <!--手機板-->
+  <div class="m-related-news-title">推薦新聞</div>
+  <div style="display:flex;
+                    flex-direction: column;
+                    align-items: center;
+                    margin-top: 30px;
+                    margin-bottom:30px;">
+    <div>
+      <a href="page_I2.html">
+        <div class="m-related-news-board">
+          <img class="m-related-news-img" src="resources/imgs/國際/oxford.png">
+          <div class="m-related-news-cardtitle">牛津大學發起道路安全活動 盼交通事故零死亡</div>
+        </div>
+      </a>
+    </div>
+    <div>
+      <a href="page_I8.html">
+        <div class="m-related-news-board">
+          <img class="m-related-news-img" src="resources/imgs/國際/中國.jpg">
+          <div class="m-related-news-cardtitle">我們不再沉默 中國校內掀反封控抗議熱潮</div>
+        </div>
+      </a>
+    </div>
+    <div>
+      <a href="page_I1.html">
+        <div class="m-related-news-board">
+          <img class="m-related-news-img" src="resources/imgs/國際/加州.jpg">
+          <div class="m-related-news-cardtitle">食物補助金走入校園 加州學生有望告別糧食危機</div>
+        </div>
+      </a>
+    </div>
+  </div>
+  <br>
+
+  <!--footer-->
+  <div class="footer">
+    <img src="resources/icon/svg/NS Logo_工作區域 1.svg" style="margin-left:48px;
     margin-bottom:20px;
     width:275px;
     height:170px;">
 
-        <div class="footer_font" style="margin-left:50px;color: white;">HUNTER｜江昇　方琮翔　鄧芯怡　陳孟樺
-          BIG BOSS｜李法賢
-          SHOOT｜donnot.bother.us@gmail.com
-        </div>
+    <div class="footer_font" style="margin-left:50px;color: white;">HUNTER｜江昇　方琮翔　鄧芯怡　陳孟樺
+      BIG BOSS｜李法賢
+      SHOOT｜donnot.bother.us@gmail.com
+    </div>
 
-        <div class="footer_font" style="left: 861px;margin-top:67px;color:#EBC151;;">copyright©2023 NEWS SAFARI
-        </div>
+    <div class="footer_font" style="left: 861px;margin-top:67px;color:#EBC151;;">copyright©2023 NEWS SAFARI
+    </div>
+  </div>
 
-      </div>
+  <!--footermobile-->
+  <div class="mobilefooter">
+
+    <img src="resources/icon/svg/NS Logo_工作區域 1.svg" style="
+         margin-top:auto;
+          margin-bottom:auto;
+          width:180px;
+          height:120px;
+          display:flex;
+          justify-content:flex-start;">
+
+    <div class="mobilefooterfont" style="color: white;width:max-content;justify-content: flex-end;">
+      HUNTER｜江昇　方琮翔　鄧芯怡　陳孟樺
+      BIG BOSS｜李法賢
+      SHOOT｜donnot.bother.us@gmail.com
+      <div style="color:#EBC151;">copyright©2023 NEWS SAFARI</div>
+    </div>
+  </div>
+</body>
