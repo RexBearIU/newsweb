@@ -38,7 +38,7 @@
       padding-top: 80px;
       padding-left: 10px;
       width: 700px;
-      font-family: Georgia, 'Times New Roman', Times, serif;
+      font-family: Noto Serif SC;
       font-weight: 350;
       font-size: 32px;
       line-height: 46px;
@@ -107,7 +107,7 @@
     }
 
     .page-newstitle {
-      font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+      font-family:Noto Serif SC;
       font-size: 28px;
       font-weight: 900;
       Line-height: 40px;
@@ -131,7 +131,7 @@
     }
 
     .page-newshint {
-      font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+      font-family: Noto Serif SC;
       font-size: 22px;
       font-weight: 330;
       Line-height: 30px;
@@ -235,14 +235,15 @@
 
 
     .footer {
-      position: relative;
-      white-space: nowrap;
-      display: inline-block;
+      /* position: relative;  */
+      /* white-space: nowrap;  */
+      display: flex;
       vertical-align: middle;
       width: 100%;
       height: 206px;
       background-color: #937D54;
       margin-bottom: 0px;
+      justify-content:space-between;
     }
 
     .footer_font {
@@ -255,8 +256,8 @@
       text-align: left;
       white-space: pre-line;
       margin-top: 41px;
-      z-index: 1;
-      position: absolute;
+      /* z-index: 1; */
+      /* position: absolute; */
     }
 
     .link-container {
@@ -425,14 +426,14 @@
 <body class="body">
   <div class="none">
     <div class="header">
-      <a href="main.html" style="color:#f8f8ff">
+      <a href="index.html" style="color:#f8f8ff">
         <img src="resources/icon/svg/NS Logo_白_工作區域 1.svg" style="margin-left:90px;
                 margin-top:0px;
                 width:275px;
                 height:170px;">
       </a>
 
-      <img src="resources/icon/svg/主頁banner_工作區域 1-01.svg" style="position:relative;
+      <img src="resources/icon/svg/NS banner_工作區域 1-01.svg" style="position:relative;
     margin-left:132px;
     margin-top:40px;
     width:637px;
@@ -514,13 +515,15 @@
 
   <!--headermobile-->
   <div class="mobileheader">
-
+    <a href="index.html" style="color:#f8f8ff">
     <img src="resources/icon/svg/NS Logo_白_工作區域 1.svg" style="margin-left:90px;
       margin-top:0px;
       width:180px;
       height:120px;
       justify-content:flex-start;
         margin-left:5%">
+    </a>
+    
     <div class="container"></div>
     <div class="dropdown-menu" style:="margin-right:0px;">
       <a href="#">____
@@ -675,20 +678,28 @@
       </div>
     </div>
   </a>
+  
+  <!--footerdesktop-->  
   <div class="footer">
-    <img src="resources/icon/svg/NS Logo_工作區域 1.svg" style="margin-left:255px;
-        margin-bottom:20px;
-        width:275px;
-        height:170px;">
+    
+    <div style="display:flex;width:870px;margin-left: auto;margin-right:auto;justify-content:center;">
+    <div>
+    <img src="resources/icon/svg/NS Logo_工作區域 1.svg" style="
+      margin-bottom:20px;
+      width:275px;
+      height:170px;">
+    </div>
 
     <div class="footer_font" style="color: white;">HUNTER｜江昇　方琮翔　鄧芯怡　陳孟樺
       BIG BOSS｜李法賢
       SHOOT｜donnot.bother.us@gmail.com
     </div>
 
-    <div class="footer_font" style="left: 910px;margin-top:67px;color:#EBC151;;">copyright©2023 NEWS SAFARI
+    <div class="footer_font" style="margin-top:67px;color:#EBC151;;">copyright©2023 NEWS SAFARI
     </div>
 
+    </div>
+  
   </div>
 
   <!--footermobile-->
