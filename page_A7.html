@@ -1,186 +1,516 @@
 <!DOCTYPE html>
 <html lang="en">
 
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>演出最後一場自己 《千秋場》探問劇場存續</title>
-    <link rel="stylesheet" href="css/page.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>演出最後一場自己 《千秋場》探問劇場存續</title>
+  <link rel="stylesheet" href="css/page.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 
-<style>
-  .header{
-    position:relative;
-    white-space: nowrap;
-    display: inline-block;
-    vertical-align: middle;
-  }  
+  <style>
+    .header {
+      position: relative;
+      white-space: nowrap;
+      display: inline-block;
+      vertical-align: middle;
+      background-color: #f8f8ff;
+      width: 100%;
+    }
 
-  .line{
-    display:inline-block;
-    border-top: 1px solid black;
-    width:1050px;
-    height:1.51px;
-    padding-top: 192px;
-    margin-left:103px;
-  }
+    .line {
+      display: block;
+      border-top: 1px solid black;
+      width: 90%;
+      height: 1.51px;
+      margin-left: auto;
+      margin-right: auto;
+    }
 
-  .header_font{
-    display:inline-block;
-    font-family: Noto Serif SC;
-    font-size: 37px;
-    font-weight: 400;
-    line-height: 53px;
- 
-    letter-spacing: 0.06em;
-    text-align: center;
-    margin-top:42px;
-    z-index:1;
-    position:absolute;
-  }
+    .header_font {
+      display: inline-block;
+      font-family: Noto Serif SC;
+      font-size: 37px;
+      font-weight: 400;
+      line-height: 53px;
 
-  .rectangle {
-    width: 207px;
-    height: 103px;
-    background-color: #937D54F2;
-    display:inline-block;
-    z-index: 2;
-  }
+      letter-spacing: 0.06em;
+      text-align: center;
+      margin-top: 42px;
+      z-index: 1;
+      position: absolute;
+    }
 
-  .footer{
-    position:relative;
-    white-space: nowrap;
-    display: inline-block;
-    vertical-align: middle;
-    width: 1280px;
-    height: 206px;
-    background-color:#937D54;
-    margin-bottom:0px;
-  }  
+    .rectangle {
+      width: 180px;
+      height: 102px;
+      background-color: #937D54F2;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      z-index: 2;
+    }
 
-  .footer_font{
-    display:inline-block;
-    font-family: Noto Serif SC;
-    font-size: 22px;
-    font-weight: 400;
-    line-height: 32px;
-    letter-spacing: 0.06em;
-    text-align: left;
-    white-space: pre-line;
-    margin-top:41px;
-    z-index:1;
-    position:absolute;
-  }
+    .footer {
+      position: relative;
+      white-space: nowrap;
+      display: inline-block;
+      vertical-align: middle;
+      width: 100%;
+      height: 206px;
+      background-color: #937D54;
+      margin-bottom: 0px;
+    }
 
-</style>
+    .footer_font {
+      display: inline-block;
+      font-family: Noto Serif SC;
+      font-size: 22px;
+      font-weight: 400;
+      line-height: 32px;
+      letter-spacing: 0.06em;
+      text-align: left;
+      white-space: pre-line;
+      margin-top: 41px;
+      z-index: 1;
+      position: absolute;
+    }
+
+    .link-container {
+      display: inline-block
+    }
+
+    .rectangle-hover {
+      position: relative;
+      color: black;
+    }
+
+    .rectangle-hover:hover {
+      color: white;
+    }
+
+    .rectangle-hover:hover::before {
+      content: '';
+      position: absolute;
+      text-align: center;
+      left: -35.5px;
+      top: -27px;
+      width: 180px;
+      height: 102px;
+      background-color: #937D54F2;
+      z-index: -1;
+      border-radius: 4px;
+    }
+
+    .mobileheader {
+      display: none;
+    }
+
+    .mobilefooter {
+      display: none;
+    }
+
+    @media(max-width:760px) {
+
+      .header {
+        display: none;
+      }
+
+      .mobileheader {
+        display: flex;
+        justify-content: center;
+        background-color: #f8f8ff;
+      }
+
+      .line {
+        display: none;
+      }
+
+
+
+      .container {
+        width: fit-content;
+        /* Set the width of the container */
+        margin: 0 auto;
+        /* Center the container horizontally */
+        display: flex;
+        justify-content: right;
+        height: fit-content;
+        top: 90px;
+      }
+
+      .mobileline {
+        position: relative;
+        display: block;
+        justify-content: center;
+        border-top: 1px solid black;
+        width: 90%;
+        height: 1.51px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      /* CSS for dropdown menu */
+      .dropdown-menu {
+        position: relative;
+        display: flex;
+        white-space: pre-line;
+        line-height: 10px;
+        height: fit-content;
+        margin-top: 20px;
+        border: none;
+        justify-content: flex-end;
+        margin-right: 10%;
+        background-color: #f8f8ff;
+      }
+
+      .dropdown-menu>a {
+        display: flex;
+        justify-content: right;
+        padding: 10px;
+        color: #333;
+        text-decoration: none;
+      }
+
+      .dropdown-menu ul {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        display: none;
+        text-decoration: none;
+        background-color: #f8f8ff;
+        padding: 10px;
+        margin: 0;
+        list-style-type: none;
+      }
+
+      .dropdown-menu ul li {
+        margin-bottom: 5px;
+        text-decoration: none;
+      }
+
+      .dropdown-menu:hover ul {
+        display: block;
+        text-decoration: none;
+        color: #f8f8ff;
+      }
+
+      .mobilefont {
+        text-decoration: none;
+        font-family: Noto Serif SC;
+        font-size: 37px;
+        font-weight: 400;
+        line-height: 53px;
+        letter-spacing: 0.06em;
+        text-align: center;
+        margin-top: 42px;
+        color: black;
+      }
+
+      .footer {
+        display: none;
+      }
+
+      .mobilefooter {
+        display: flex;
+        justify-content: center;
+        height: 206px;
+        background-color: #937D54;
+        margin-bottom: 0px;
+      }
+
+      .mobilefooterfont {
+        display: block;
+        font-family: Noto Serif SC;
+        font-size: 15px;
+        font-weight: 400;
+        line-height: 20px;
+        letter-spacing: 0.06em;
+        text-align: left;
+        white-space: pre-line;
+        margin-top: auto;
+        margin-bottom: auto;
+        margin-right: 0px;
+        position: relative;
+        color: white
+      }
+    }
+  </style>
 
 </head>
 
 <body>
-<!--HEADER-->
-<div class="header">
-    <img src="resources/icon/svg/NS Logo_白_工作區域 1.svg" 
-        style=
-        "margin-left:90px;
+  <!--header_life-->
+  <div class="header">
+    <a href="main.html" style="color:#f8f8ff">
+      <img src="resources/icon/svg/NS Logo_白_工作區域 1.svg" style="margin-left:90px;
+          margin-top:0px;
+          width:275px;
+          height:170px;">
+    </a>
+
+    <img src="resources/icon/svg/NS banner-03.svg" style="position:relative;
+          margin-left:132px;
+          margin-top:40px;
+          width:637px;
+          height:130px;">
+
+
+    <a href="international.pages.html" class="rectangle-hover" style="display:inline-block;
+      font-family: Noto Serif SC;
+      font-size: 37px;  
+      font-weight: 400;
+      text-decoration: none;
+      line-height: 53px;
+      width:109px;
+      height:49px;
+      letter-spacing: 0.06em;
+      text-align: center;
+      margin-top:42px;
+      z-index:1;
+      position:absolute;
+      left:389px">國際</a>
+
+    <a href="life.pages-2.html" class="rectangle-hover" style="display:inline-block;
+      font-family: Noto Serif SC;
+      font-size: 37px;
+      font-weight: 400;
+      text-decoration: none;
+      line-height: 53px;
+      width:109px;
+      height:49px;
+      letter-spacing: 0.06em;
+      text-align: center;
+      margin-top:42px;
+      z-index:1;
+      position:absolute;
+      left:611px">生活</a>
+
+
+    <a href="art.pages.html" class="rectangle" style="display:inline-block;
+      font-family: Noto Serif SC;
+      font-size: 37px;
+      font-weight: 400;
+      text-decoration: none;
+      line-height: 53px;
+      width:180px;
+      height:102px;
+      padding-top:26px;
+      letter-spacing: 0.06em;
+      text-align: center;
+      vertical-align: middle;
+      margin-top:15px;
+      z-index:1;
+      position:absolute;
+      color:white;
+      border-radius: 4px;
+      left:800px">藝文</a>
+
+    <a href="knowledge.pages.html" class="rectangle-hover" style="display:inline-block;
+      font-family: Noto Serif SC;
+      font-size: 37px;
+      font-weight: 400;
+      text-decoration: none;
+      line-height: 53px;
+      width:109px;
+      height:49px;
+      letter-spacing: 0.06em;
+      text-align: center;
+      margin-top:42px;
+      z-index:1;
+      position:absolute;
+      left:1056px">新知</a>
+
+  </div>
+  <div class="line"></div>
+
+  <!--headermobile-->
+  <div class="mobileheader">
+
+    <img src="resources/icon/svg/NS Logo_白_工作區域 1.svg" style="margin-left:90px;
         margin-top:0px;
-        width:275px;
-        height:170px;">
-     
-    <img src="resources/icon/svg/NS banner-03.svg" 
-        style=
-        "position:relative;
-        margin-left:132px;
-        margin-top:40px;
-        width:637px;
-        height:130px;">
-    
-    
-    <div class="header_font" style="left:392px;margin-top:40px;">
-      <a href ="https://example.com" style="text-decoration: none;color:black;">國際</a>
-    </div>
-    <div class="header_font" style="left:580px;margin: top 40px;">
-      <a href="https://example.com"style="text-decoration: none;color:black;">生活</a>
-    </div>
-    <div class="header_font" style="left:740px;margin-top:21px;background-color:#937D54F2;padding-left:50px;padding-right:50px;padding-top:25px;padding-bottom:25px;border-radius:8px;">
-      <a href="https://example.com"style="text-decoration: none;color:white;">藝文</a>
-    </div>
-    <div class="header_font" style="left: 1056px;margin-top:40px;">
-      <a href="https://example.com"style="text-decoration: none;color:black;">新知</a>
+        width:180px;
+        height:120px;
+        justify-content:flex-start;
+      margin-left:5%">
+    <div class="container"></div>
+    <div class="dropdown-menu" style:="margin-right:0px;">
+      <a href="#">____
+        ____
+        ____</a>
+      <ul>
+        <li><a href="international.pages.html" class="mobilefont">國際</a></li>
+        <li><a href="life.pages-2.html" class="mobilefont">生活</a></li>
+        <li><a href="art.pages.html" class="mobilefont">藝文</a></li>
+        <li><a href="knowledge.pages.html" class="mobilefont">新知</a></li>
+      </ul>
     </div>
 
-</div>
-<span class="line"></div>
-        
-        <!-- 文章首圖 -->
-        <img class="page-img"
-            src="resources/imgs/藝文/千秋場.jpeg"
-            alt="新聞標題">
 
-        <!-- 文章大標 -->
-        <div class="page-title">演出最後一場自己 《千秋場》探問劇場存續</div>
+  </div>
 
-        <!-- 文章內文 -->
-        <p class="page-text">　【記者何予綜合報導】「如果這是劇院的最後一場演出，我要把舞台的大幕剪掉，讓它永遠不會落幕。」國立臺北藝術大學戲劇學院2022秋季公演《千秋場》由導演洪千涵帶領學生進行集體創作，從4日起至13日在展演藝術中心戲劇廳共演出8個場次。</p>
-        <p class="page-text">　在所有觀眾的注視下，12位演員穿著戲服，手拿三柱清香，祭拜四方神明祈求開演順利。從開演前的祭台開始，《千秋場》便已經揭開序幕。且不只是祭台，從中場撤換道具和服裝環節，再到演出結束後的拆台和慶功宴，一切道具的聲響、幕後人員的移動，都在鎂光燈下成為演出的一部分。洪千涵表示，這些在舞台之外發生的細節，都是劇場中很美且迷人的一部分。</p>
-        <p class="page-text">　「戲劇本身是建立出一個想像空間，跟現實是分開的。」演員張瀞說明，傳統戲劇以安排好的劇本和角色建立出近乎真實的幻覺，但這些元素在這齣戲裡都被解構。《千秋場》沒有線性的敘事主軸，也沒有特定的角色。演員以「講座式展演」的演出方式，打破習以為常的劇場形式，直接面對觀眾發表演說，以敘述性的台詞傳達自己對於劇場的觀點、思考和情感。</p>
-        <p class="page-text">　在《千秋場》排練初期，演員並不會拿到劇本，演出內容是源於導演和演員對於劇場本質一次次的提問與回應，因此，12位演員在節目單上的職稱是「集體創作暨演出」，在《千秋場》中演員扮演的不再是其他角色，而是自己。現場觀眾Coco（化名）說：「這不只是單純地打破第四道牆，演員在台上終於不是以一個角色讓觀眾看到，而是有自身在戲裡頭。」</p>
-        <p class="page-text">　「千秋場」一詞源自日文，用以指稱舞台劇、演唱會中「最後一個場次」。之所以將此戲命名為《千秋場》，是因為在疫情爆發後，各類活動紛紛轉為線上，對於亟需現場和觀眾的表演藝術產業造成衝擊，洪千涵因此提出「劇場是否會消失？」的假設性問題，思考劇場的未來走向。他也請演員以此命題為自己構思一場最後的獨角戲，這場獨角戲會在台下排演99次，在台上的第100次演出同時也是千秋場。演出一結束後道具會被立刻拆除，演員也會在台上開一場自己的慶功宴，聽自己選好的歌，吃一份自己事先選好的食物，為自己的演出劃下句點。</p>
-        <p class="page-text">　對於《千秋場》探討的命題以及演員給出的回應，Coco說：「這場表演像是演員在跟我說：『我想繼續表演！』他不想要結束這個劇場。」同為戲劇系學生的現場觀眾柯喆堃也表示，看完《千秋場》之後就會知道，劇場不會消失，「只要有一個人在觀看，那劇場就會成立。」他認為劇場只是一種藝術的媒介，表演藝術還是會以不一樣的形式存續在這個世界。</p>
+  </div>
 
-        <!-- 推薦新聞 -->
-    <br>
-    <hr>
-    <br>
-    <div class="related-news-title">推薦新聞</div>
-    <div style="display:flex;
+  <div class="mobileline"></div>
+
+  <!-- 文章首圖 -->
+  <img class="page-img" src="resources/imgs/藝文/千秋場.jpeg" alt="新聞標題">
+
+  <!-- 文章大標 -->
+  <div class="page-title">演出最後一場自己 《千秋場》探問劇場存續</div>
+
+  <!-- 文章內文 -->
+  <p class="page-text">
+    　【記者何予綜合報導】「如果這是劇院的最後一場演出，我要把舞台的大幕剪掉，讓它永遠不會落幕。」國立臺北藝術大學戲劇學院2022秋季公演《千秋場》由導演洪千涵帶領學生進行集體創作，從4日起至13日在展演藝術中心戲劇廳共演出8個場次。
+  </p>
+  <p class="page-text">
+    　在所有觀眾的注視下，12位演員穿著戲服，手拿三柱清香，祭拜四方神明祈求開演順利。從開演前的祭台開始，《千秋場》便已經揭開序幕。且不只是祭台，從中場撤換道具和服裝環節，再到演出結束後的拆台和慶功宴，一切道具的聲響、幕後人員的移動，都在鎂光燈下成為演出的一部分。洪千涵表示，這些在舞台之外發生的細節，都是劇場中很美且迷人的一部分。
+  </p>
+  <p class="page-text">
+    　「戲劇本身是建立出一個想像空間，跟現實是分開的。」演員張瀞說明，傳統戲劇以安排好的劇本和角色建立出近乎真實的幻覺，但這些元素在這齣戲裡都被解構。《千秋場》沒有線性的敘事主軸，也沒有特定的角色。演員以「講座式展演」的演出方式，打破習以為常的劇場形式，直接面對觀眾發表演說，以敘述性的台詞傳達自己對於劇場的觀點、思考和情感。
+  </p>
+  <p class="page-text">
+    　在《千秋場》排練初期，演員並不會拿到劇本，演出內容是源於導演和演員對於劇場本質一次次的提問與回應，因此，12位演員在節目單上的職稱是「集體創作暨演出」，在《千秋場》中演員扮演的不再是其他角色，而是自己。現場觀眾Coco（化名）說：「這不只是單純地打破第四道牆，演員在台上終於不是以一個角色讓觀眾看到，而是有自身在戲裡頭。」
+  </p>
+  <p class="page-text">
+    　「千秋場」一詞源自日文，用以指稱舞台劇、演唱會中「最後一個場次」。之所以將此戲命名為《千秋場》，是因為在疫情爆發後，各類活動紛紛轉為線上，對於亟需現場和觀眾的表演藝術產業造成衝擊，洪千涵因此提出「劇場是否會消失？」的假設性問題，思考劇場的未來走向。他也請演員以此命題為自己構思一場最後的獨角戲，這場獨角戲會在台下排演99次，在台上的第100次演出同時也是千秋場。演出一結束後道具會被立刻拆除，演員也會在台上開一場自己的慶功宴，聽自己選好的歌，吃一份自己事先選好的食物，為自己的演出劃下句點。
+  </p>
+  <p class="page-text">
+    　對於《千秋場》探討的命題以及演員給出的回應，Coco說：「這場表演像是演員在跟我說：『我想繼續表演！』他不想要結束這個劇場。」同為戲劇系學生的現場觀眾柯喆堃也表示，看完《千秋場》之後就會知道，劇場不會消失，「只要有一個人在觀看，那劇場就會成立。」他認為劇場只是一種藝術的媒介，表演藝術還是會以不一樣的形式存續在這個世界。
+  </p>
+
+  <!--手機板-->
+  <!-- 文章首圖 -->
+  <img class="m-page-img" src="resources/imgs/藝文/千秋場.jpeg" alt="新聞標題">
+
+  <!-- 文章大標 -->
+  <div class="m-page-title">演出最後一場自己 《千秋場》探問劇場存續</div>
+
+  <!-- 文章內文 -->
+  <p class="m-page-text">
+    　【記者何予綜合報導】「如果這是劇院的最後一場演出，我要把舞台的大幕剪掉，讓它永遠不會落幕。」國立臺北藝術大學戲劇學院2022秋季公演《千秋場》由導演洪千涵帶領學生進行集體創作，從4日起至13日在展演藝術中心戲劇廳共演出8個場次。
+  </p>
+  <p class="m-page-text">
+    　在所有觀眾的注視下，12位演員穿著戲服，手拿三柱清香，祭拜四方神明祈求開演順利。從開演前的祭台開始，《千秋場》便已經揭開序幕。且不只是祭台，從中場撤換道具和服裝環節，再到演出結束後的拆台和慶功宴，一切道具的聲響、幕後人員的移動，都在鎂光燈下成為演出的一部分。洪千涵表示，這些在舞台之外發生的細節，都是劇場中很美且迷人的一部分。
+  </p>
+  <p class="m-page-text">
+    　「戲劇本身是建立出一個想像空間，跟現實是分開的。」演員張瀞說明，傳統戲劇以安排好的劇本和角色建立出近乎真實的幻覺，但這些元素在這齣戲裡都被解構。《千秋場》沒有線性的敘事主軸，也沒有特定的角色。演員以「講座式展演」的演出方式，打破習以為常的劇場形式，直接面對觀眾發表演說，以敘述性的台詞傳達自己對於劇場的觀點、思考和情感。
+  </p>
+  <p class="m-page-text">
+    　在《千秋場》排練初期，演員並不會拿到劇本，演出內容是源於導演和演員對於劇場本質一次次的提問與回應，因此，12位演員在節目單上的職稱是「集體創作暨演出」，在《千秋場》中演員扮演的不再是其他角色，而是自己。現場觀眾Coco（化名）說：「這不只是單純地打破第四道牆，演員在台上終於不是以一個角色讓觀眾看到，而是有自身在戲裡頭。」
+  </p>
+  <p class="m-page-text">
+    　「千秋場」一詞源自日文，用以指稱舞台劇、演唱會中「最後一個場次」。之所以將此戲命名為《千秋場》，是因為在疫情爆發後，各類活動紛紛轉為線上，對於亟需現場和觀眾的表演藝術產業造成衝擊，洪千涵因此提出「劇場是否會消失？」的假設性問題，思考劇場的未來走向。他也請演員以此命題為自己構思一場最後的獨角戲，這場獨角戲會在台下排演99次，在台上的第100次演出同時也是千秋場。演出一結束後道具會被立刻拆除，演員也會在台上開一場自己的慶功宴，聽自己選好的歌，吃一份自己事先選好的食物，為自己的演出劃下句點。
+  </p>
+  <p class="m-page-text">
+    　對於《千秋場》探討的命題以及演員給出的回應，Coco說：「這場表演像是演員在跟我說：『我想繼續表演！』他不想要結束這個劇場。」同為戲劇系學生的現場觀眾柯喆堃也表示，看完《千秋場》之後就會知道，劇場不會消失，「只要有一個人在觀看，那劇場就會成立。」他認為劇場只是一種藝術的媒介，表演藝術還是會以不一樣的形式存續在這個世界。
+  </p>
+
+  <!-- 推薦新聞 -->
+  <br>
+  <hr>
+  <br>
+  <div class="related-news-title">推薦新聞</div>
+  <div style="display:flex;
                     flex-direction: row;
                     justify-content: center;
                     margin-top: 30px;
                     margin-bottom:30px;">
-      <div>
-        <a href="page_A1.html">
-          <div class="related-news-board">
-            <img class="related-news-img" src="resources/imgs/藝文/北辰.png">
-            <div class="related-news-cardtitle">澎湖是故鄉還是異地？ 〈記北辰市場〉寫盡身份混亂</div>
-          </div>
-        </a>
-      </div>
-      <div>
-        <a href="page_A2.html">
-          <div class="related-news-board">
-            <img class="related-news-img" src="resources/imgs/藝文/引光入室.png">
-            <div class="related-news-cardtitle">茶湯融入空間設計 引光入室「濾」出茶道精神</div>
-          </div>
-        </a>
-      </div>
-      <div>
-        <a href="page_A3.html">
-          <div class="related-news-board">
-            <img class="related-news-img" src="resources/imgs/藝文/無眠.jpg">
-            <div class="related-news-cardtitle">《無眠》映生死徬徨心境 北藝大戲劇探自殺意義</div>
-          </div>
-        </a>
-      </div>
+    <div>
+      <a href="page_A1.html">
+        <div class="related-news-board">
+          <img class="related-news-img" src="resources/imgs/藝文/北辰.png">
+          <div class="related-news-cardtitle">澎湖是故鄉還是異地？ 〈記北辰市場〉寫盡身份混亂</div>
+        </div>
+      </a>
     </div>
-    <br>
+    <div>
+      <a href="page_A2.html">
+        <div class="related-news-board">
+          <img class="related-news-img" src="resources/imgs/藝文/引光入室.png">
+          <div class="related-news-cardtitle">茶湯融入空間設計 引光入室「濾」出茶道精神</div>
+        </div>
+      </a>
+    </div>
+    <div>
+      <a href="page_A3.html">
+        <div class="related-news-board">
+          <img class="related-news-img" src="resources/imgs/藝文/無眠.jpg">
+          <div class="related-news-cardtitle">《無眠》映生死徬徨心境 北藝大戲劇探自殺意義</div>
+        </div>
+      </a>
+    </div>
+  </div>
 
-        <!--footer-->
-    <div class="footer">
-      <img src="resources/icon/svg/NS Logo_工作區域 1.svg" style="margin-left:48px;
+  <!--手機板-->
+  <div class="m-related-news-title">推薦新聞</div>
+  <div style="display:flex;
+                    flex-direction: column;
+                    align-items: center;
+                    margin-top: 30px;
+                    margin-bottom:30px;">
+    <div>
+      <a href="page_A1.html">
+        <div class="m-related-news-board">
+          <img class="m-related-news-img" src="resources/imgs/藝文/北辰.png">
+          <div class="m-related-news-cardtitle">澎湖是故鄉還是異地？ 〈記北辰市場〉寫盡身份混亂</div>
+        </div>
+      </a>
+    </div>
+    <div>
+      <a href="page_A2.html">
+        <div class="m-related-news-board">
+          <img class="m-related-news-img" src="resources/imgs/藝文/引光入室.png">
+          <div class="m-related-news-cardtitle">茶湯融入空間設計 引光入室「濾」出茶道精神</div>
+        </div>
+      </a>
+    </div>
+    <div>
+      <a href="page_A3.html">
+        <div class="m-related-news-board">
+          <img class="m-related-news-img" src="resources/imgs/藝文/無眠.jpg">
+          <div class="m-related-news-cardtitle">《無眠》映生死徬徨心境 北藝大戲劇探自殺意義</div>
+        </div>
+      </a>
+    </div>
+  </div>
+
+  <br>
+
+  <!--footer-->
+  <div class="footer">
+    <img src="resources/icon/svg/NS Logo_工作區域 1.svg" style="margin-left:48px;
       margin-bottom:20px;
       width:275px;
       height:170px;">
 
-      <div class="footer_font" style="margin-left:50px;color: white;">HUNTER｜江昇　方琮翔　鄧芯怡　陳孟樺
-          BIG BOSS｜李法賢
-          SHOOT｜donnot.bother.us@gmail.com
-      </div>
+    <div class="footer_font" style="margin-left:50px;color: white;">HUNTER｜江昇　方琮翔　鄧芯怡　陳孟樺
+      BIG BOSS｜李法賢
+      SHOOT｜donnot.bother.us@gmail.com
+    </div>
 
-      <div class="footer_font" style="left: 861px;margin-top:67px;color:#EBC151;;">copyright©2023 NEWS SAFARI
-      </div>
-
+    <div class="footer_font" style="left: 861px;margin-top:67px;color:#EBC151;;">copyright©2023 NEWS SAFARI
+    </div>
   </div>
-    </div> 
-  </body>
+
+  <!--footermobile-->
+  <div class="mobilefooter">
+
+    <img src="resources/icon/svg/NS Logo_工作區域 1.svg" style="
+         margin-top:auto;
+          margin-bottom:auto;
+          width:180px;
+          height:120px;
+          display:flex;
+          justify-content:flex-start;">
+
+    <div class="mobilefooterfont" style="color: white;width:max-content;justify-content: flex-end;">
+      HUNTER｜江昇　方琮翔　鄧芯怡　陳孟樺
+      BIG BOSS｜李法賢
+      SHOOT｜donnot.bother.us@gmail.com
+      <div style="color:#EBC151;">copyright©2023 NEWS SAFARI</div>
+    </div>
+  </div>
+</body>
